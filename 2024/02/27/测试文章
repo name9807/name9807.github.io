@@ -27,7 +27,7 @@
   
 
   
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/name9807.github.io/favicon.ico">
   
 
   <!--mathjax latex数学公式显示支持-->
@@ -39,7 +39,7 @@
   
 
   
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/name9807.github.io/css/style.css">
 
 </head>
 <body>
@@ -56,7 +56,7 @@
   <div class="navbar-content">
     <!-- logo -->
     <div class="navbar-logo">
-      <a href="/">
+      <a href="/name9807.github.io/">
         
           Hexo
         
@@ -71,11 +71,11 @@
       </div>
       <ul class="navbar-list">
         
-          <li class="navbar-list-item"><a href="/">首页</a></li>
+          <li class="navbar-list-item"><a href="/name9807.github.io/">首页</a></li>
         
-          <li class="navbar-list-item"><a href="/links">友链</a></li>
+          <li class="navbar-list-item"><a href="/name9807.github.io/links">友链</a></li>
         
-          <li class="navbar-list-item"><a href="/about">关于</a></li>
+          <li class="navbar-list-item"><a href="/name9807.github.io/about">关于</a></li>
         
       </ul>
     </div>
@@ -148,7 +148,7 @@
     
     <div class="card-text">
       
-        <a href="/hello-world/" itemprop="url">
+        <a href="/name9807.github.io/2024/02/27/hello-world" itemprop="url">
           <h2 class="card-text--title text-ellipsis">Hello World</h2>
         </a>
       
@@ -340,7 +340,7 @@
 
 
 
-<script src="/js/script.js"></script>
+<script src="/name9807.github.io/js/script.js"></script>
 
 
   
