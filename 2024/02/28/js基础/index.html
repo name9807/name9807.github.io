@@ -100,12 +100,12 @@ Yume Shoka = Hexo</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexoj0moj20zk0m8kgu.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclx6phq6j20zk0m8e36.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciryrr3rj20zk0m8nhk.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicis081o9j20zk0m8dmr.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipex2cdtbj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicm0fdw5cj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevuctzzj20zk0m84qp.jpg"></li>
         </ul>
       </div>
     </header>
@@ -346,115 +346,152 @@ Yume Shoka = Hexo</title>
 <ol>
 <li>为任意的数据加一个空串<ul>
 <li><pre><code class="JavaScript">  var a = 123;
-  a = a + ‘’;//a:&quot;123&quot;
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">2. 转换为Number类型</span><br><span class="line">	1. 在数据前面放个+</span><br><span class="line">		- ```JavaScript</span><br><span class="line">			var a = &#x27;123&#x27;</span><br><span class="line">			a = +a;//a:123</span><br></pre></td></tr></table></figure>
+  a = a + ‘’;//a:&quot;123&quot;```
 </code></pre>
 </li>
 </ul>
 </li>
 </ol>
 </li>
-<li><p>转换为Boolean类型</p>
+<li><p>转换为Number类型</p>
 <ol>
-<li>为任意的数据取两次反<ul>
-<li><pre><code class="JavaScript">  var a = 10;
-  a = !!a;//a:true
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 函数</span><br><span class="line"></span><br><span class="line">## 函数内容</span><br><span class="line"></span><br><span class="line">1. 函数是什么？</span><br><span class="line">	1. 函数是在其中有一组代码的逻辑构件，用来执行特定任务。实际上为了易于调试和维护，函数允许以更有组织的方式去编写代码。函数还允许代码重用。</span><br><span class="line">	2. 在JavaScript里，函数实际上是***对象***， 每个函数都是Function类型的实例， 而Function也有属性和方法。因为函数是对象， 所以函数名就是指向函数对象的指针</span><br><span class="line">	</span><br><span class="line">2. 如何创建一个函数？</span><br><span class="line">	1. 使用Function构造函数创建函数</span><br><span class="line">		1.   在这种方法中，函数是在“函数”的构造函数的帮助下创建的。从技术上讲，这种方法比使用函数表达式语法和函数声明语句语法去声明函数的方法效率要低。</span><br><span class="line"></span><br><span class="line">		2. ```JavaScript</span><br><span class="line">			const sum2 = new Function(&quot;a1&quot;, &quot;a2&quot;, &quot;return a1 + a2&quot;)</span><br><span class="line">			</span><br><span class="line">			console.log(sum2(1, 3));</span><br></pre></td></tr></table></figure>
+<li>在数据前面放个+<ul>
+<li><pre><code class="JavaScript">  var a = &#39;123&#39;
+  a = +a;//a:123
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">3. 转换为Boolean类型</span><br><span class="line">	1. 为任意的数据取两次反</span><br><span class="line">		- ```JavaScript</span><br><span class="line">			var a = 10;</span><br><span class="line">			a = !!a;//a:true</span><br></pre></td></tr></table></figure>
 </code></pre>
 </li>
 </ul>
 </li>
 </ol>
 </li>
-<li><p>使用函数表达式</p>
-<ol>
-<li><p>通常这种方法与变量分配相同。简而言之，函数主体被视为一个表达式，并且该表达式被分配给一个变量。使用这种语法定义的函数可以是命名函数或匿名函数。</p>
+</ol>
 </li>
-<li><pre><code class="JavaScript"> const sum = function (a1, a2) &#123;
-     return a1 + a2
+</ol>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="函数内容"><a href="#函数内容" class="headerlink" title="函数内容"></a>函数内容</h2><ol>
+<li><p>函数是什么？</p>
+<ol>
+<li>函数是在其中有一组代码的逻辑构件，用来执行特定任务。实际上为了易于调试和维护，函数允许以更有组织的方式去编写代码。函数还允许代码重用。</li>
+<li>在JavaScript里，函数实际上是<em><strong>对象</strong></em>， 每个函数都是Function类型的实例， 而Function也有属性和方法。因为函数是对象， 所以函数名就是指向函数对象的指针</li>
+</ol>
+</li>
+<li><p>如何创建一个函数？</p>
+<ol>
+<li><p>使用Function构造函数创建函数</p>
+<ol>
+<li><p>在这种方法中，函数是在“函数”的构造函数的帮助下创建的。从技术上讲，这种方法比使用函数表达式语法和函数声明语句语法去声明函数的方法效率要低。</p>
+</li>
+<li><pre><code class="JavaScript"> const sum2 = new Function(&quot;a1&quot;, &quot;a2&quot;, &quot;return a1 + a2&quot;)
+ 
+ console.log(sum2(1, 3));
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">2. 使用函数表达式</span><br><span class="line">	1.   通常这种方法与变量分配相同。简而言之，函数主体被视为一个表达式，并且该表达式被分配给一个变量。使用这种语法定义的函数可以是命名函数或匿名函数。</span><br><span class="line"></span><br><span class="line">	2. ```JavaScript</span><br><span class="line">		const sum = function (a1, a2) &#123;</span><br><span class="line">		    return a1 + a2</span><br><span class="line">		&#125;</span><br><span class="line">		let a = sum(1, 2)</span><br><span class="line">		console.log(a) </span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>使用函数声明</p>
+<ol>
+<li><p>这种方法是 JavaScript 中常用的老派方法。在关键字“function”之后，你必须指定函数的名称。之后，如果函数接受多个参数或参数，也需要提及它们。虽然这部分是完全可选的。</p>
+</li>
+<li><p>&#x3D;&#x3D;函数提升&#x3D;&#x3D;<br> 使用函数声明创建的函数会在其它代码执行前被创建</p>
+</li>
+<li><pre><code class="JavaScript"> function 函数名(参数1, 参数2) &#123;
+ console.log(&quot;我是一个函数&quot;)
  &#125;
- let a = sum(1, 2)
- console.log(a) 
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">3. 使用函数声明</span><br><span class="line">	1.   这种方法是 JavaScript 中常用的老派方法。在关键字“function”之后，你必须指定函数的名称。之后，如果函数接受多个参数或参数，也需要提及它们。虽然这部分是完全可选的。</span><br><span class="line"></span><br><span class="line">	2. ==函数提升==</span><br><span class="line">		使用函数声明创建的函数会在其它代码执行前被创建</span><br><span class="line"></span><br><span class="line">	3. ```JavaScript</span><br><span class="line">		function 函数名(参数1, 参数2) &#123;</span><br><span class="line">		console.log(&quot;我是一个函数&quot;)</span><br><span class="line">		&#125;</span><br><span class="line">		例 ： </span><br><span class="line">		function sum(a1 , a2) &#123;</span><br><span class="line">		return a1 + a2</span><br><span class="line">		&#125;</span><br><span class="line">		let a=sum(1,2);</span><br></pre></td></tr></table></figure>
+ 例 ： 
+ function sum(a1 , a2) &#123;
+ return a1 + a2
+ &#125;
+ let a=sum(1,2);
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">4. 箭头函数</span><br><span class="line">	</span><br><span class="line">	1.   箭头函数相当于是函数表达式创建函数的更短的版本，但是相对于函数声明，不能使用 arguments，super，也不能用作构造函数，也没有prototype属性</span><br><span class="line">	</span><br><span class="line">	2. ```JavaScript</span><br><span class="line">		let 函数名 = (参数1, 参数2) =&gt; &#123;</span><br><span class="line">		&#125;</span><br><span class="line">		const frontEnd = (frontEnd) =&gt; &#123;</span><br><span class="line">		    console.log(frontEnd + &#x27; yyds&#x27;)</span><br><span class="line">		&#125;</span><br><span class="line">		frontEnd(&#x27;frontEnd&#x27;)</span><br><span class="line">		//如果只有一个参数，甚至可以省略圆括号，使代码更短</span><br><span class="line">		const fe = a =&gt; a + 1</span><br><span class="line">		//如果没有参数，圆括号将是空的（但圆括号应该保留）</span><br><span class="line">		let sayHi = () =&gt; alert(&quot;Hello!&quot;);</span><br><span class="line">		//箭头函数的返回值可以直接写在箭头后面,设置对象作为返回值用()括起来</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><p>立即执行函数(IIFE)<br> 匿名函数,只会调用一次,可以避免变量冲突</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>函数参数</p>
+<ol>
+<li><p>函数重载</p>
+<ol>
+<li>函数通过参数的个数和类型不同来创建不同的函数签名，通过调用函数时传入的参数个数和参数类型来进行命名参数的验证。</li>
+<li>但是 ， 在js中后声明的同名函数会对前面声明的函数进行一个覆盖</li>
+</ol>
+</li>
+<li><p>默认函数值</p>
+<ol>
+<li><p>在有默认参数的函数中，调用arguments<br> <strong><code>arguments</code></strong> 是一个对应于传递给函数的参数的类数组对象</p>
+</li>
+<li><p>函数的默认参数只有在函数被调用的时候才会求值，不会在函数定义时求值</p>
+</li>
+<li><p>函数每次调用都会重新创建默认值</p>
+</li>
+<li><p>计算默认值的函数只有在调用函数但未传相应参数时才会被调用</p>
+</li>
+<li><pre><code class="JavaScript"> function names(name = &#39;frontEnd&#39;) &#123;
+   console.log(name);
+ &#125;
+ names()//frontend
+ 
+ function log() &#123;
+   console.log(&#39;我被调用了&#39;);
+   return 2;
+ &#125;
+ function al(l = log()) &#123;
+   console.log(l);
+ &#125;
+ al(1);//1
+ al();//我被调用了 2
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">3. 类数组arguments对象</span><br><span class="line">	1. 如果一个函数传递了三个参数，你可以以如下方式引用他们：</span><br><span class="line">		- ```JavaScript</span><br><span class="line">			arguments[0]</span><br><span class="line">			arguments[1]</span><br><span class="line">			arguments[2]</span><br></pre></td></tr></table></figure>
+
+ - ```JavaScript
+     var fun = function () &#123;
+         console.log(arguments);
+         console.log(arguments[0]);
+     &#125;
+     fun(1, 2, 3, 4, 5)
+     <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">		- &#123;% asset_img -17091188883801.png img %&#125;</span><br><span class="line"></span><br><span class="line">		- </span><br><span class="line">	</span><br><span class="line">4. this</span><br><span class="line">	&#123;% asset_img image-20240229162438981.png image-20240229162438981 %&#125;</span><br><span class="line">	箭头函数的this</span><br><span class="line">	&#123;% asset_img image-20240229162805185.png image-20240229162805185 %&#125;</span><br><span class="line">	</span><br><span class="line">4. 传递实参是传递不是变量本身,而是变量中储存的值,</span><br><span class="line">	</span><br><span class="line">4. 将函数当做参数</span><br><span class="line">	</span><br><span class="line">	1. 顾名思义，就是某个函数的参数是另一个函数</span><br><span class="line">		- ```JavaScript</span><br><span class="line">			function callSomeFunction(someFunction, someArgnment) &#123;</span><br><span class="line">			  return someFunction(someArgnment)</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			function add(number) &#123;</span><br><span class="line">			  return number + 10</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			function sayHello(name) &#123;</span><br><span class="line">			  return &#x27;Hello &#x27; + name</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			let result = callSomeFunction(add, 10)</span><br><span class="line">			</span><br><span class="line">			console.log(result);</span><br><span class="line">			</span><br><span class="line">			let result2 = callSomeFunction(sayHello, &#x27;xiaobb&#x27;)</span><br><span class="line">			</span><br><span class="line">			console.log(result2);</span><br></pre></td></tr></table></figure>
 </code></pre>
 </li>
 </ol>
 </li>
-<li><p>箭头函数</p>
-<ol>
-<li><p>箭头函数相当于是函数表达式创建函数的更短的版本，但是相对于函数声明，不能使用 arguments，super，也不能用作构造函数，也没有prototype属性</p>
+</ol>
 </li>
-<li><pre><code class="JavaScript"> let 函数名 = (参数1, 参数2) =&gt; &#123;
- &#125;
- const frontEnd = (frontEnd) =&gt; &#123;
-     console.log(frontEnd + &#39; yyds&#39;)
- &#125;
- frontEnd(&#39;frontEnd&#39;)
- //如果只有一个参数，甚至可以省略圆括号，使代码更短
- const fe = a =&gt; a + 1
- //如果没有参数，圆括号将是空的（但圆括号应该保留）
- let sayHi = () =&gt; alert(&quot;Hello!&quot;);
- //箭头函数的返回值可以直接写在箭头后面,设置对象作为返回值用()括起来
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">		</span><br><span class="line">		3. 立即执行函数(IIFE)</span><br><span class="line">			匿名函数,只会调用一次,可以避免变量冲突</span><br><span class="line">	</span><br><span class="line">3. 函数参数</span><br><span class="line">	</span><br><span class="line">	1. 函数重载</span><br><span class="line">		1. 函数通过参数的个数和类型不同来创建不同的函数签名，通过调用函数时传入的参数个数和参数类型来进行命名参数的验证。</span><br><span class="line">		2. 但是 ， 在js中后声明的同名函数会对前面声明的函数进行一个覆盖</span><br><span class="line">		</span><br><span class="line">	2. 默认函数值</span><br><span class="line">		1. 在有默认参数的函数中，调用arguments</span><br><span class="line">			**`arguments`** 是一个对应于传递给函数的参数的类数组对象</span><br><span class="line">		</span><br><span class="line">		2. 函数的默认参数只有在函数被调用的时候才会求值，不会在函数定义时求值</span><br><span class="line">		</span><br><span class="line">		3. 函数每次调用都会重新创建默认值</span><br><span class="line">		</span><br><span class="line">		4. 计算默认值的函数只有在调用函数但未传相应参数时才会被调用</span><br><span class="line">		</span><br><span class="line">		4. ```JavaScript</span><br><span class="line">			function names(name = &#x27;frontEnd&#x27;) &#123;</span><br><span class="line">			  console.log(name);</span><br><span class="line">			&#125;</span><br><span class="line">			names()//frontend</span><br><span class="line">			</span><br><span class="line">			function log() &#123;</span><br><span class="line">			  console.log(&#x27;我被调用了&#x27;);</span><br><span class="line">			  return 2;</span><br><span class="line">			&#125;</span><br><span class="line">			function al(l = log()) &#123;</span><br><span class="line">			  console.log(l);</span><br><span class="line">			&#125;</span><br><span class="line">			al(1);//1</span><br><span class="line">			al();//我被调用了 2</span><br></pre></td></tr></table></figure>
-</code></pre>
+<li><p>回调函数</p>
+<ol>
+<li>什么是回调函数？<ol>
+<li>mdn官腔：回调函数是作为参数传给另一个函数的函数，然后通过在外部函数内部调用该回调函数以完成某种操作。</li>
+<li>人话：回调函数是一个函数，将会在另一个函数完成执行后立即执行。回调函数是一个作为参数传给另一个 JavaScript 函数的函数。这个回调函数会在传给的函数内部执行。</li>
+</ol>
 </li>
 </ol>
 </li>
-<li><p>类数组arguments对象</p>
-<ol>
-<li>如果一个函数传递了三个参数，你可以以如下方式引用他们：<ul>
-<li><pre><code class="JavaScript">  arguments[0]
-  arguments[1]
-  arguments[2]
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">- ```JavaScript</span><br><span class="line">	var fun = function () &#123;</span><br><span class="line">	    console.log(arguments);</span><br><span class="line">	    console.log(arguments[0]);</span><br><span class="line">	&#125;</span><br><span class="line">	fun(1, 2, 3, 4, 5)</span><br></pre></td></tr></table></figure>
-</code></pre>
+<li><p>高阶函数<br> 函数也可以作为返回值<br> 函数作为返回值是可以,动态生成新函数</p>
+<p> 闭包:可以将不想被看到的内容,放到两个函数之间</p>
 </li>
-<li><img data-src="/2024/02/28/js%E5%9F%BA%E7%A1%80/-17091188883801.png" class="" title="img">
-</li>
-<li></li>
+</ol>
+<h2 id="通过call和apply调用函数"><a href="#通过call和apply调用函数" class="headerlink" title="通过call和apply调用函数"></a>通过call和apply调用函数</h2><ol>
+<li><p>call&amp;apply:</p>
+<ul>
+<li>第一个参数,会成为函数的this</li>
 </ul>
 </li>
-</ol>
+<li><p>call的实参直接在第一个参数后一个个列出</p>
 </li>
-<li><p>this</p>
- <img data-src="/2024/02/28/js%E5%9F%BA%E7%A1%80/image-20240229162438981.png" class="" title="image-20240229162438981">
-<p> 箭头函数的this</p>
- <img data-src="/2024/02/28/js%E5%9F%BA%E7%A1%80/image-20240229162805185.png" class="" title="image-20240229162805185">
-</li>
-<li><p>传递实参是传递不是变量本身,而是变量中储存的值,</p>
-</li>
-<li><p>将函数当做参数</p>
-<ol>
-<li>顾名思义，就是某个函数的参数是另一个函数<ul>
-<li><pre><code class="JavaScript">  function callSomeFunction(someFunction, someArgnment) &#123;
-    return someFunction(someArgnment)
-  &#125;
-  
-  function add(number) &#123;
-    return number + 10
-  &#125;
-  
-  function sayHello(name) &#123;
-    return &#39;Hello &#39; + name
-  &#125;
-  
-  let result = callSomeFunction(add, 10)
-  
-  console.log(result);
-  
-  let result2 = callSomeFunction(sayHello, &#39;xiaobb&#39;)
-  
-  console.log(result2);
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">4. 回调函数</span><br><span class="line">	1. 什么是回调函数？</span><br><span class="line">		1. mdn官腔：回调函数是作为参数传给另一个函数的函数，然后通过在外部函数内部调用该回调函数以完成某种操作。</span><br><span class="line">		2. 人话：回调函数是一个函数，将会在另一个函数完成执行后立即执行。回调函数是一个作为参数传给另一个 JavaScript 函数的函数。这个回调函数会在传给的函数内部执行。</span><br><span class="line"></span><br><span class="line">5. 高阶函数</span><br><span class="line">	函数也可以作为返回值</span><br><span class="line">	函数作为返回值是可以,动态生成新函数</span><br><span class="line"></span><br><span class="line">	闭包:可以将不想被看到的内容,放到两个函数之间</span><br><span class="line"></span><br><span class="line">## 通过call和apply调用函数</span><br><span class="line"></span><br><span class="line">1. call&amp;apply:</span><br><span class="line">	- 第一个参数,会成为函数的this</span><br><span class="line"></span><br><span class="line">2. call的实参直接在第一个参数后一个个列出</span><br><span class="line">3. apply得失参需要通过数组传递</span><br><span class="line"></span><br><span class="line">## bind</span><br><span class="line"></span><br><span class="line">用来创建一个新的函数,可以指定this并且绑定参数</span><br><span class="line"></span><br><span class="line">但是箭头函数无法由call,apply bind指定</span><br><span class="line"></span><br><span class="line"># 面向对象思想</span><br><span class="line"></span><br><span class="line">1. 面向过程，就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步步实现，使用时在一个个调用函数就行了</span><br><span class="line">2. 面向对象，就是把事务分解成一个个对象，然后由对象之间分工合作完成。面向对象是以对象功能来划分问题</span><br><span class="line"></span><br><span class="line">举个最简单点的例子，就是把大象放进冰箱。</span><br><span class="line"></span><br><span class="line">面向过程的思路</span><br><span class="line"></span><br><span class="line">```Markdown</span><br><span class="line">打开冰箱门</span><br><span class="line">把大象塞进冰箱</span><br><span class="line">关冰箱门</span><br></pre></td></tr></table></figure>
-</code></pre>
-</li>
-</ul>
+<li><p>apply得失参需要通过数组传递</p>
 </li>
 </ol>
-</li>
+<h2 id="bind"><a href="#bind" class="headerlink" title="bind"></a>bind</h2><p>用来创建一个新的函数,可以指定this并且绑定参数</p>
+<p>但是箭头函数无法由call,apply bind指定</p>
+<h1 id="面向对象思想"><a href="#面向对象思想" class="headerlink" title="面向对象思想"></a>面向对象思想</h1><ol>
+<li>面向过程，就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步步实现，使用时在一个个调用函数就行了</li>
+<li>面向对象，就是把事务分解成一个个对象，然后由对象之间分工合作完成。面向对象是以对象功能来划分问题</li>
 </ol>
-</li>
-</ol>
+<p>举个最简单点的例子，就是把大象放进冰箱。</p>
+<p>面向过程的思路</p>
+<p>打开冰箱门<br>把大象塞进冰箱<br>关冰箱门</p>
 <p>面向对象的思路，是赋予冰箱开门关门的操作，给大象进门的操作，然后冰箱和大象两个对象合作完成任务；</p>
 <p><strong>面向过程的优点：性能比面向对象高，比较适合和硬件联系紧密的东西</strong></p>
 <p><strong>面向对象的优点：易维护、易复用、易扩展、更适合多人合作的大项目。</strong></p>
@@ -523,18 +560,18 @@ Yume Shoka = Hexo</title>
 <h3 id="对象的声明方式"><a href="#对象的声明方式" class="headerlink" title="对象的声明方式"></a>对象的声明方式</h3><ol>
 <li>声明字面量对象</li>
 <li>通过Object类创建对象<ol>
-<li><pre><code class="JavaScript"> // 创建空对象
- let obj1 = &#123;&#125;
- let obj2 = new Object();
- // 添加属性
- obj1.key1 = &quot;value1&quot;
- obj2.key2 = 12
- obj1[&quot;key&quot;] = false
- // 添加方法
- obj2.hi=function()&#123;
-     console.log(&quot;hi&quot;)
- &#125;
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 枚举属性</span><br><span class="line"></span><br><span class="line">for in语句//符号添加的属性是不可枚举的</span><br><span class="line"></span><br><span class="line">&#123;% asset_img image-20240228204239196.png image-20240228204239196 %&#125;</span><br><span class="line"></span><br><span class="line">### 可变类型</span><br><span class="line"></span><br><span class="line">&#123;% asset_img image-20240228204447632.png image-20240228204447632 %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% asset_img image-20240228204733271.png image-20240228204733271 %&#125;</span><br><span class="line"></span><br><span class="line">两个变量同时修改</span><br><span class="line"></span><br><span class="line">## window对象</span><br><span class="line"></span><br><span class="line">&#123;% asset_img image-20240229153320807.png image-20240229153320807 %&#125;</span><br><span class="line"></span><br><span class="line">向window对象添加的属性会自动成为全局变量</span><br><span class="line"></span><br><span class="line">使用var设置的全局变量,都会作为window对象的属性保存(let不会,而是存在???,增加了变量的安全性)</span><br><span class="line"></span><br><span class="line">使用function声明的函数都会作为window对象的方法保存</span><br><span class="line"></span><br><span class="line">## instanceof hasown</span><br><span class="line"></span><br><span class="line">1. instanceof检查一个对象是否是一个类的实例,实际是检查该对象的原型链是否有改父类实例.</span><br><span class="line">	object是所有对象的原型,object自己也有原型</span><br><span class="line">2. in原型和自身都检查,hasown检查自身是否含有某属性</span><br><span class="line"></span><br><span class="line">## new运算符</span><br><span class="line"></span><br><span class="line">&#123;% asset_img image-20240229172439111.png image-20240229172439111 %&#125;</span><br><span class="line"></span><br><span class="line"># js数组与字符串</span><br><span class="line"></span><br><span class="line">### 字符串</span><br><span class="line"></span><br><span class="line">#### 字符串是什么？</span><br><span class="line"></span><br><span class="line">上过小学二年级的我们都知道，JS有7种基本数据类型和复杂数据类型，基本数据类型存储在栈中，和其他语言不同，JS中的字符串是基本数据类型中的一种</span><br><span class="line"></span><br><span class="line">#### 语法基础</span><br><span class="line"></span><br><span class="line">字符串可以用双引号包裹，也可以用单引号包裹，JS中的字符串是动态的，不需要去为他设置长度。</span><br><span class="line"></span><br><span class="line">#### 字符串常用属性方法</span><br><span class="line"></span><br><span class="line">至于为什么字符串有方法，这点和JS中的包装类有关，大家课后可以自行去了解，目前大家只需要会用就可以了。</span><br><span class="line"></span><br><span class="line">##### 获得字符串长度的length属性：</span><br><span class="line"></span><br><span class="line">使用字符串的length属性可以查看当前字符串中字符的数量，就算其中包括双字符也会按照单字符计算：</span><br><span class="line"></span><br><span class="line">&#123;% asset_img -17091189837393.png img %&#125;</span><br><span class="line"></span><br><span class="line">str长度按理来讲正常会为5，为6的原因是“😧”是进行增补过编码的字符，length属性按照16位码元作为一个字符去处理字符串，但是“😧”会占32位，所以他会被当成“😧”两个字符看待。</span><br><span class="line"></span><br><span class="line">##### 拼接字符串的concat方法</span><br><span class="line"></span><br><span class="line">concat方法用于连接（合并/拼接）字符串，使用方法为:==也可以拼接数组==</span><br><span class="line"></span><br><span class="line">```JavaScript</span><br><span class="line">let str = &quot;hello&quot;;</span><br><span class="line">let str2 = str.concat(&quot; world&quot;, &quot; qwq&quot;);</span><br><span class="line">console.log(str); </span><br><span class="line">console.log(str2); </span><br></pre></td></tr></table></figure>
+<li><pre><code class="javascript"> // 创建空对象
+         let obj1 = &#123;&#125;
+         let obj2 = new Object();
+         // 添加属性
+         obj1.key1 = &quot;value1&quot;
+         obj2.key2 = 12
+         obj1[&quot;key&quot;] = false
+         // 添加方法
+         obj2.hi=function()&#123;
+             console.log(&quot;hi&quot;)
+         &#125;
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">		</span><br><span class="line">	</span><br><span class="line">### 枚举属性</span><br><span class="line"></span><br><span class="line">for in语句  符号添加的属性是不可枚举的</span><br><span class="line"></span><br><span class="line">&#123;% asset_img image-20240228204239196.png image-20240228204239196 %&#125;</span><br><span class="line"></span><br><span class="line">### 可变类型</span><br><span class="line"></span><br><span class="line">&#123;% asset_img image-20240228204447632.png image-20240228204447632 %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% asset_img image-20240228204733271.png image-20240228204733271 %&#125;</span><br><span class="line"></span><br><span class="line">两个变量同时修改</span><br><span class="line"></span><br><span class="line">## window对象</span><br><span class="line"></span><br><span class="line">&#123;% asset_img image-20240229153320807.png image-20240229153320807 %&#125;</span><br><span class="line"></span><br><span class="line">向window对象添加的属性会自动成为全局变量</span><br><span class="line"></span><br><span class="line">使用var设置的全局变量,都会作为window对象的属性保存(let不会,而是存在???,增加了变量的安全性)</span><br><span class="line"></span><br><span class="line">使用function声明的函数都会作为window对象的方法保存</span><br><span class="line"></span><br><span class="line">## instanceof hasown</span><br><span class="line"></span><br><span class="line">1. instanceof检查一个对象是否是一个类的实例,实际是检查该对象的原型链是否有改父类实例.</span><br><span class="line">	object是所有对象的原型,object自己也有原型</span><br><span class="line">2. in原型和自身都检查,hasown检查自身是否含有某属性</span><br><span class="line"></span><br><span class="line">## new运算符</span><br><span class="line"></span><br><span class="line">&#123;% asset_img image-20240229172439111.png image-20240229172439111 %&#125;</span><br><span class="line"></span><br><span class="line"># js数组与字符串</span><br><span class="line"></span><br><span class="line">### 字符串</span><br><span class="line"></span><br><span class="line">#### 字符串是什么？</span><br><span class="line"></span><br><span class="line">上过小学二年级的我们都知道，JS有7种基本数据类型和复杂数据类型，基本数据类型存储在栈中，和其他语言不同，JS中的字符串是基本数据类型中的一种</span><br><span class="line"></span><br><span class="line">#### 语法基础</span><br><span class="line"></span><br><span class="line">字符串可以用双引号包裹，也可以用单引号包裹，JS中的字符串是动态的，不需要去为他设置长度。</span><br><span class="line"></span><br><span class="line">#### 字符串常用属性方法</span><br><span class="line"></span><br><span class="line">至于为什么字符串有方法，这点和JS中的包装类有关，大家课后可以自行去了解，目前大家只需要会用就可以了。</span><br><span class="line"></span><br><span class="line">##### 获得字符串长度的length属性：</span><br><span class="line"></span><br><span class="line">使用字符串的length属性可以查看当前字符串中字符的数量，就算其中包括双字符也会按照单字符计算：</span><br><span class="line"></span><br><span class="line">&#123;% asset_img -17091189837393.png img %&#125;</span><br><span class="line"></span><br><span class="line">str长度按理来讲正常会为5，为6的原因是“😧”是进行增补过编码的字符，length属性按照16位码元作为一个字符去处理字符串，但是“😧”会占32位，所以他会被当成“😧”两个字符看待。</span><br><span class="line"></span><br><span class="line">##### 拼接字符串的concat方法</span><br><span class="line"></span><br><span class="line">concat方法用于连接（合并/拼接）字符串，使用方法为:==也可以拼接数组==</span><br><span class="line"></span><br><span class="line">```JavaScript</span><br><span class="line">let str = &quot;hello&quot;;</span><br><span class="line">let str2 = str.concat(&quot; world&quot;, &quot; qwq&quot;);</span><br><span class="line">console.log(str); </span><br><span class="line">console.log(str2); </span><br></pre></td></tr></table></figure>
 </code></pre>
 </li>
 </ol>
@@ -677,7 +714,7 @@ Yume Shoka = Hexo</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2024-02-29 20:06:16" itemprop="dateModified" datetime="2024-02-29T20:06:16+08:00">2024-02-29</time>
+    <time title="修改时间：2024-02-29 20:25:34" itemprop="dateModified" datetime="2024-02-29T20:25:34+08:00">2024-02-29</time>
   </span>
 </div>
 
@@ -732,7 +769,7 @@ Yume Shoka = Hexo</title>
     <div class="item left">
       
 
-  <a href="/2024/02/28/html/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipet8c1a2j20zk0m8kct.jpg" title="html和css">
+  <a href="/2024/02/28/html/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipevo9j1jj20zk0m8e81.jpg" title="html和css">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>html和css</h3>
@@ -756,7 +793,7 @@ Yume Shoka = Hexo</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">1.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.0.1.</span> <span class="toc-text">作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87"><span class="toc-number">1.0.2.</span> <span class="toc-text">变量提升</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%90%E5%8D%87%E7%9A%84%E6%84%8F%E4%B9%89"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">提升的意义</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#javascript%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-number">2.</span> <span class="toc-text">javascript标识符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%80%BC%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-number">4.</span> <span class="toc-text">值的比较</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">5.</span> <span class="toc-text">类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-number">5.1.</span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-number">5.2.</span> <span class="toc-text">构造函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%81%E8%A3%85"><span class="toc-number">5.3.</span> <span class="toc-text">封装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E6%80%81"><span class="toc-number">5.4.</span> <span class="toc-text">多态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-number">5.5.</span> <span class="toc-text">继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84"><span class="toc-number">5.6.</span> <span class="toc-text">对象的内存结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%EF%BC%9A"><span class="toc-number">5.7.</span> <span class="toc-text">对象：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7"><span class="toc-number">5.7.1.</span> <span class="toc-text">对象属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="toc-number">5.7.2.</span> <span class="toc-text">对象方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-number">5.7.3.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7"><span class="toc-number">5.7.4.</span> <span class="toc-text">访问对象属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="toc-number">5.7.5.</span> <span class="toc-text">访问对象方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%A3%B0%E6%98%8E%E6%96%B9%E5%BC%8F"><span class="toc-number">5.7.6.</span> <span class="toc-text">对象的声明方式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%87%E7%89%87%E6%96%B9%E6%B3%95slice%E3%80%81substr%E3%80%81substring"><span class="toc-number">5.7.6.0.1.</span> <span class="toc-text">字符串切片方法slice、substr、substring</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%B7%A6%E5%8F%B3%E7%A9%BA%E6%A0%BC%E7%9A%84trim%E6%96%B9%E6%B3%95"><span class="toc-number">5.7.6.0.2.</span> <span class="toc-text">删除左右空格的trim方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%93%E7%A2%8E%E6%88%90%E6%95%B0%E7%BB%84%E7%9A%84split%E6%96%B9%E6%B3%95"><span class="toc-number">5.7.6.0.3.</span> <span class="toc-text">将字符串打碎成数组的split方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E6%96%B9%E6%B3%95toLowerCase-toUpperCase"><span class="toc-number">5.7.6.0.4.</span> <span class="toc-text">字符串的大小写转换方法toLowerCase toUpperCase</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#includes"><span class="toc-number">5.7.6.0.5.</span> <span class="toc-text">includes</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#startwith-endwith"><span class="toc-number">5.7.6.0.6.</span> <span class="toc-text">startwith endwith</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#padstart-end"><span class="toc-number">5.7.6.0.7.</span> <span class="toc-text">padstart end</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#replace-replaceAll"><span class="toc-number">5.7.6.0.8.</span> <span class="toc-text">replace&#x2F;replaceAll</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">5.7.7.</span> <span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">5.7.7.1.</span> <span class="toc-text">数组是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%AE%BF%E9%97%AE%E6%95%B0%E7%BB%84%EF%BC%9F"><span class="toc-number">5.7.7.2.</span> <span class="toc-text">如何访问数组？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5%E6%95%B0%E7%BB%84%E9%95%BF%E5%BA%A6%E7%9A%84length%E5%B1%9E%E6%80%A7"><span class="toc-number">5.7.7.3.</span> <span class="toc-text">检查数组长度的length属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2%E6%95%B0%E7%BB%84%E4%B8%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84join%E6%96%B9%E6%B3%95"><span class="toc-number">5.7.7.4.</span> <span class="toc-text">转换数组为字符串的join方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E6%8E%A8%E5%85%A5%E4%B8%8E%E5%88%A0%E9%99%A4push-pop-shift-unshift-splice-reverse"><span class="toc-number">5.7.7.5.</span> <span class="toc-text">数组的推入与删除push pop shift unshift splice reverse</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#push%E5%92%8Cpop%E6%96%B9%E6%B3%95%E5%8F%AF%E4%BB%A5%E6%9E%84%E5%BB%BA%E7%B1%BB%E4%BC%BC%E6%A0%88%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F"><span class="toc-number">5.7.7.5.1.</span> <span class="toc-text">push和pop方法可以构建类似栈的处理方式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#shift%E5%92%8Cpush%E6%96%B9%E6%B3%95%E5%8F%AF%E4%BB%A5%E6%9E%84%E5%BB%BA%E7%B1%BB%E4%BC%BC%E9%98%9F%E5%88%97%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F"><span class="toc-number">5.7.7.5.2.</span> <span class="toc-text">shift和push方法可以构建类似队列的处理方式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95map%EF%BC%8CforEach"><span class="toc-number">5.7.7.6.</span> <span class="toc-text">数组的迭代方法map，forEach</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#forof%E8%AF%AD%E5%8F%A5"><span class="toc-number">5.7.7.6.1.</span> <span class="toc-text">forof语句:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#forEach%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">5.7.7.6.2.</span> <span class="toc-text">forEach方法：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#map%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">5.7.7.6.3.</span> <span class="toc-text">map方法：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E8%BF%87%E6%BB%A4%E6%96%B9%E6%B3%95filter"><span class="toc-number">5.7.7.7.</span> <span class="toc-text">数组的过滤方法filter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%9F%90%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E4%BD%8D%E7%BD%AEindexOf"><span class="toc-number">5.7.7.8.</span> <span class="toc-text">数组中查找某个元素的位置indexOf</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC"><span class="toc-number">6.</span> <span class="toc-text">解构赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%EF%BC%89%E6%95%B0%E7%BB%84%E8%A7%A3%E6%9E%84"><span class="toc-number">6.0.0.0.1.</span> <span class="toc-text">1）数组解构</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%EF%BC%89%E5%AF%B9%E8%B1%A1%E8%A7%A3%E6%9E%84"><span class="toc-number">6.0.0.0.2.</span> <span class="toc-text">2）对象解构</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3%EF%BC%89%E5%B0%8F%E7%BB%93"><span class="toc-number">6.0.0.0.3.</span> <span class="toc-text">3）小结</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="toc-number">7.</span> <span class="toc-text">对象字面量</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E7%9A%84%E7%AE%80%E6%B4%81%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-number">7.0.0.0.1.</span> <span class="toc-text">属性的简洁表示法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E5%90%8D%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">7.0.0.0.2.</span> <span class="toc-text">属性名表达式</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">8.</span> <span class="toc-text">对象的拓展运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-number">8.0.0.0.1.</span> <span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AF%E7%94%A8%E4%BA%8E%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E5%AF%B9%E8%B1%A1"><span class="toc-number">8.0.0.0.2.</span> <span class="toc-text">可用于合并两个对象</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#map"><span class="toc-number">9.</span> <span class="toc-text">map</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#set"><span class="toc-number">10.</span> <span class="toc-text">set</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">11.</span> <span class="toc-text">正则表达式</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">1.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.0.1.</span> <span class="toc-text">作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87"><span class="toc-number">1.0.2.</span> <span class="toc-text">变量提升</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%90%E5%8D%87%E7%9A%84%E6%84%8F%E4%B9%89"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">提升的意义</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#javascript%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-number">2.</span> <span class="toc-text">javascript标识符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%80%BC%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-number">4.</span> <span class="toc-text">值的比较</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">5.</span> <span class="toc-text">类型转换</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">6.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%86%85%E5%AE%B9"><span class="toc-number">6.1.</span> <span class="toc-text">函数内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E8%BF%87call%E5%92%8Capply%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">6.2.</span> <span class="toc-text">通过call和apply调用函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bind"><span class="toc-number">6.3.</span> <span class="toc-text">bind</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%9D%E6%83%B3"><span class="toc-number">7.</span> <span class="toc-text">面向对象思想</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-number">7.1.</span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-number">7.2.</span> <span class="toc-text">构造函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%81%E8%A3%85"><span class="toc-number">7.3.</span> <span class="toc-text">封装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E6%80%81"><span class="toc-number">7.4.</span> <span class="toc-text">多态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-number">7.5.</span> <span class="toc-text">继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84"><span class="toc-number">7.6.</span> <span class="toc-text">对象的内存结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%EF%BC%9A"><span class="toc-number">7.7.</span> <span class="toc-text">对象：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7"><span class="toc-number">7.7.1.</span> <span class="toc-text">对象属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="toc-number">7.7.2.</span> <span class="toc-text">对象方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-number">7.7.3.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7"><span class="toc-number">7.7.4.</span> <span class="toc-text">访问对象属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="toc-number">7.7.5.</span> <span class="toc-text">访问对象方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%A3%B0%E6%98%8E%E6%96%B9%E5%BC%8F"><span class="toc-number">7.7.6.</span> <span class="toc-text">对象的声明方式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%87%E7%89%87%E6%96%B9%E6%B3%95slice%E3%80%81substr%E3%80%81substring"><span class="toc-number">7.7.6.0.1.</span> <span class="toc-text">字符串切片方法slice、substr、substring</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%B7%A6%E5%8F%B3%E7%A9%BA%E6%A0%BC%E7%9A%84trim%E6%96%B9%E6%B3%95"><span class="toc-number">7.7.6.0.2.</span> <span class="toc-text">删除左右空格的trim方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%93%E7%A2%8E%E6%88%90%E6%95%B0%E7%BB%84%E7%9A%84split%E6%96%B9%E6%B3%95"><span class="toc-number">7.7.6.0.3.</span> <span class="toc-text">将字符串打碎成数组的split方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E6%96%B9%E6%B3%95toLowerCase-toUpperCase"><span class="toc-number">7.7.6.0.4.</span> <span class="toc-text">字符串的大小写转换方法toLowerCase toUpperCase</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#includes"><span class="toc-number">7.7.6.0.5.</span> <span class="toc-text">includes</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#startwith-endwith"><span class="toc-number">7.7.6.0.6.</span> <span class="toc-text">startwith endwith</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#padstart-end"><span class="toc-number">7.7.6.0.7.</span> <span class="toc-text">padstart end</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#replace-replaceAll"><span class="toc-number">7.7.6.0.8.</span> <span class="toc-text">replace&#x2F;replaceAll</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">7.7.7.</span> <span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">7.7.7.1.</span> <span class="toc-text">数组是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%AE%BF%E9%97%AE%E6%95%B0%E7%BB%84%EF%BC%9F"><span class="toc-number">7.7.7.2.</span> <span class="toc-text">如何访问数组？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5%E6%95%B0%E7%BB%84%E9%95%BF%E5%BA%A6%E7%9A%84length%E5%B1%9E%E6%80%A7"><span class="toc-number">7.7.7.3.</span> <span class="toc-text">检查数组长度的length属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2%E6%95%B0%E7%BB%84%E4%B8%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84join%E6%96%B9%E6%B3%95"><span class="toc-number">7.7.7.4.</span> <span class="toc-text">转换数组为字符串的join方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E6%8E%A8%E5%85%A5%E4%B8%8E%E5%88%A0%E9%99%A4push-pop-shift-unshift-splice-reverse"><span class="toc-number">7.7.7.5.</span> <span class="toc-text">数组的推入与删除push pop shift unshift splice reverse</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#push%E5%92%8Cpop%E6%96%B9%E6%B3%95%E5%8F%AF%E4%BB%A5%E6%9E%84%E5%BB%BA%E7%B1%BB%E4%BC%BC%E6%A0%88%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F"><span class="toc-number">7.7.7.5.1.</span> <span class="toc-text">push和pop方法可以构建类似栈的处理方式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#shift%E5%92%8Cpush%E6%96%B9%E6%B3%95%E5%8F%AF%E4%BB%A5%E6%9E%84%E5%BB%BA%E7%B1%BB%E4%BC%BC%E9%98%9F%E5%88%97%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F"><span class="toc-number">7.7.7.5.2.</span> <span class="toc-text">shift和push方法可以构建类似队列的处理方式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95map%EF%BC%8CforEach"><span class="toc-number">7.7.7.6.</span> <span class="toc-text">数组的迭代方法map，forEach</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#forof%E8%AF%AD%E5%8F%A5"><span class="toc-number">7.7.7.6.1.</span> <span class="toc-text">forof语句:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#forEach%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">7.7.7.6.2.</span> <span class="toc-text">forEach方法：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#map%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">7.7.7.6.3.</span> <span class="toc-text">map方法：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E8%BF%87%E6%BB%A4%E6%96%B9%E6%B3%95filter"><span class="toc-number">7.7.7.7.</span> <span class="toc-text">数组的过滤方法filter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%9F%90%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E4%BD%8D%E7%BD%AEindexOf"><span class="toc-number">7.7.7.8.</span> <span class="toc-text">数组中查找某个元素的位置indexOf</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC"><span class="toc-number">8.</span> <span class="toc-text">解构赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%EF%BC%89%E6%95%B0%E7%BB%84%E8%A7%A3%E6%9E%84"><span class="toc-number">8.0.0.0.1.</span> <span class="toc-text">1）数组解构</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%EF%BC%89%E5%AF%B9%E8%B1%A1%E8%A7%A3%E6%9E%84"><span class="toc-number">8.0.0.0.2.</span> <span class="toc-text">2）对象解构</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3%EF%BC%89%E5%B0%8F%E7%BB%93"><span class="toc-number">8.0.0.0.3.</span> <span class="toc-text">3）小结</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="toc-number">9.</span> <span class="toc-text">对象字面量</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E7%9A%84%E7%AE%80%E6%B4%81%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-number">9.0.0.0.1.</span> <span class="toc-text">属性的简洁表示法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E5%90%8D%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">9.0.0.0.2.</span> <span class="toc-text">属性名表达式</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">10.</span> <span class="toc-text">对象的拓展运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-number">10.0.0.0.1.</span> <span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AF%E7%94%A8%E4%BA%8E%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E5%AF%B9%E8%B1%A1"><span class="toc-number">10.0.0.0.2.</span> <span class="toc-text">可用于合并两个对象</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#map"><span class="toc-number">11.</span> <span class="toc-text">map</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#set"><span class="toc-number">12.</span> <span class="toc-text">set</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">13.</span> <span class="toc-text">正则表达式</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
       </div>
@@ -823,15 +860,6 @@ Yume Shoka = Hexo</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2024/02/28/js%E5%9F%BA%E7%A1%80/" title="js基础">js基础</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
     <span><a href="/2024/02/27/hello-world/" title="Hello World">Hello World</a></span>
   </li>
 
@@ -841,7 +869,7 @@ Yume Shoka = Hexo</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2024/02/28/%E6%B5%8B%E8%AF%95%E4%BA%8C/" title="测试二">测试二</a></span>
+    <span><a href="/2024/02/28/html/" title="html和css">html和css</a></span>
   </li>
 
       
@@ -859,7 +887,16 @@ Yume Shoka = Hexo</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2024/02/28/html/" title="html和css">html和css</a></span>
+    <span><a href="/2024/02/28/js%E5%9F%BA%E7%A1%80/" title="js基础">js基础</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2024/02/28/%E6%B5%8B%E8%AF%95%E4%BA%8C/" title="测试二">测试二</a></span>
   </li>
 
   </ul>
