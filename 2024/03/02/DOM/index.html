@@ -1,155 +1,145 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#FFF">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
-  <meta http-equiv="Cache-Control" content="no-transform">
-  <meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-<link rel="alternate" type="application/rss+xml" title="Hexo" href="https://name9807.github.io/rss.xml" />
-<link rel="alternate" type="application/atom+xml" title="Hexo" href="https://name9807.github.io/atom.xml" />
-<link rel="alternate" type="application/json" title="Hexo" href="https://name9807.github.io/feed.json" />
-
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-
-<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="generator" content="Hexo 7.1.1">
 
   
 
-<link rel="canonical" href="https://name9807.github.io/2024/03/02/DOM/">
-
-
-
-  <title>
-DOM |
-Yume Shoka = Hexo</title>
-<meta name="generator" content="Hexo 7.1.1"></head>
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div id="loading">
-    <div class="cat">
-      <div class="body"></div>
-      <div class="head">
-        <div class="face"></div>
-      </div>
-      <div class="foot">
-        <div class="tummy-end"></div>
-        <div class="bottom"></div>
-        <div class="legs left"></div>
-        <div class="legs right"></div>
-      </div>
-      <div class="paw">
-        <div class="hands left"></div>
-        <div class="hands right"></div>
-      </div>
-    </div>
-  </div>
-  <div id="container">
-    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="inner">
-        <div id="brand">
-          <div class="pjax">
-          
-  <h1 itemprop="name headline">DOM
-  </h1>
   
-<div class="meta">
-  <span class="item" title="创建时间：2024-03-02 12:56:03">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <span class="text">发表于</span>
-    <time itemprop="dateCreated datePublished" datetime="2024-03-02T12:56:03+08:00">2024-03-02</time>
-  </span>
-</div>
 
+  
+    <meta name="author" content="呼佳慧">
+  
 
-          </div>
-        </div>
-        <nav id="nav">
-  <div class="inner">
-    <div class="toggle">
-      <div class="lines" aria-label="切换导航栏">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </div>
+  
+
+  
+
+  <title>DOM | 随便写吧</title>
+
+  
+
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+
+  <!--mathjax latex数学公式显示支持-->
+  
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          随便写吧
+        
+      </a>
     </div>
-    <ul class="menu">
-      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
-    </ul>
-    <ul class="right">
-      <li class="item theme">
-        <i class="ic i-sun"></i>
-      </li>
-      <li class="item search">
-        <i class="ic i-search"></i>
-      </li>
-    </ul>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">首页</a></li>
+        
+          <li class="navbar-list-item"><a href="/links">友链</a></li>
+        
+          <li class="navbar-list-item"><a href="/about">关于</a></li>
+        
+      </ul>
+    </div>
   </div>
 </nav>
 
-      </div>
-      <div id="imgs" class="pjax">
-        <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicm0n457cj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclx6phq6j20zk0m8e36.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
-        </ul>
-      </div>
-    </header>
-    <div id="waves">
-      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-        <g class="parallax">
-          <use xlink:href="#gentle-wave" x="48" y="0" />
-          <use xlink:href="#gentle-wave" x="48" y="3" />
-          <use xlink:href="#gentle-wave" x="48" y="5" />
-          <use xlink:href="#gentle-wave" x="48" y="7" />
-        </g>
-      </svg>
-    </div>
-    <main>
-      <div class="inner">
-        <div id="main" class="pjax">
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">DOM</h1>
+          <h2 class="title-sub-wrap">
+            <strong>呼佳慧</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2024-03-02T04:56:03.000Z" itemprop="datePublished">2024-03-02</time>
+          </h2>
           
-  <div class="article wrap">
-    
-<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-<i class="ic i-home"></i>
-<span><a href="/">首页</a></span>
-</div>
+            <h2 class="last-time">
+              <span>最后更新于</span>
+              <time  class="article-updated" datetime="2024-03-03T10:10:06.431Z" itemprop="dateUpdated">2024-03-03</time>
+            </h2>
+          
+          
+          <ul class="wrap-list dark">
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+</ul>
+        </div>
+      </div>
+    </div>
+  
 
-    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
-  <link itemprop="mainEntityOfPage" href="https://name9807.github.io/2024/03/02/DOM/">
+  
+  
+  
+</header>
 
-  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="image" content="/images/avatar.jpg">
-    <meta itemprop="name" content="呼佳慧">
-    <meta itemprop="description" content=", ">
-  </span>
+    <!-- 文章 -->
 
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-  </span>
-
-  <div class="body md" itemprop="articleBody">
-    
-
-    <h1 id="DOM对象"><a href="#DOM对象" class="headerlink" title="DOM对象"></a>DOM对象</h1><h2 id="dom"><a href="#dom" class="headerlink" title="dom"></a>dom</h2><ol>
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <div class="article-info">
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <h1 id="DOM对象"><a href="#DOM对象" class="headerlink" title="DOM对象"></a>DOM对象</h1><h2 id="dom"><a href="#dom" class="headerlink" title="dom"></a>dom</h2><ol>
 <li>dom对象是浏览器根据html标签生成的js对象</li>
 <li>dom核心思想:将网页内容当做对象处理</li>
 </ol>
@@ -320,288 +310,228 @@ Yume Shoka = Hexo</title>
 <h2 id="navigator对象"><a href="#navigator对象" class="headerlink" title="navigator对象"></a>navigator对象</h2><p>浏览器的相关信息</p>
 <h2 id="history对象"><a href="#history对象" class="headerlink" title="history对象"></a>history对象</h2><p>实现网页后退和前进<br>back()&#x2F;forward()<br>go(1&#x2F;-1)</p>
 
-  </div>
-
-   <footer>
-
-    <div class="meta">
-  <span class="item">
-    <span class="icon">
-      <i class="ic i-calendar-check"></i>
-    </span>
-    <span class="text">更新于</span>
-    <time title="修改时间：2024-03-03 18:10:06" itemprop="dateModified" datetime="2024-03-03T18:10:06+08:00">2024-03-03</time>
-  </span>
-</div>
+      </section>
 
       
-<div class="reward">
-  <button><i class="ic i-heartbeat"></i> 赞赏</button>
-  <p>请我喝[茶]~(￣▽￣)~*</p>
-  <div id="qr">
       
-      <div>
-        <img data-src="/images/wechatpay.png" alt="呼佳慧 微信支付">
-        <p>微信支付</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/alipay.png" alt="呼佳慧 支付宝">
-        <p>支付宝</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/paypal.png" alt="呼佳慧 贝宝">
-        <p>贝宝</p>
-      </div>
-  </div>
-</div>
-
-      
-
-<div id="copyright">
-<ul>
-  <li class="author">
-    <strong>本文作者： </strong>呼佳慧 <i class="ic i-at"><em>@</em></i>Hexo
-  </li>
-  <li class="link">
-    <strong>本文链接：</strong>
-    <a href="https://name9807.github.io/2024/03/02/DOM/" title="DOM">https://name9807.github.io/2024/03/02/DOM/</a>
-  </li>
-  <li class="license">
-    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
-
-  </footer>
-
-</article>
-
-  </div>
-  
-
-<div class="post-nav">
-    <div class="item left">
-      
-
-  <a href="/2024/02/28/js%E5%9F%BA%E7%A1%80/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhtuo6nj20zk0m8ttm.jpg" title="js基础">
-  <span class="type">上一篇</span>
-  <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>js基础</h3>
-  </a>
-
-    </div>
-    <div class="item right">
-      
-
-  <a href="/2024/03/04/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9B%B8%E5%85%B3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicit4jrvuj20zk0m8785.jpg" title="浏览器相关">
-  <span class="type">下一篇</span>
-  <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>浏览器相关</h3>
-  </a>
-
-    </div>
-</div>
-
-  
-  <div class="wrap" id="comments"></div>
-
-
-        </div>
-        <div id="sidebar">
+        <nav class="article-nav">
           
-
-<div class="inner">
-
-  <div class="panels">
-    <div class="inner">
-      <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DOM%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.</span> <span class="toc-text">DOM对象</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#dom"><span class="toc-number">1.1.</span> <span class="toc-text">dom</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dom%E6%A0%91"><span class="toc-number">1.2.</span> <span class="toc-text">dom树</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96DOM%E5%85%83%E7%B4%A0"><span class="toc-number">2.</span> <span class="toc-text">获取DOM元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E5%85%83%E7%B4%A0%E5%86%85%E5%AE%B9"><span class="toc-number">3.</span> <span class="toc-text">操作元素内容</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7"><span class="toc-number">4.</span> <span class="toc-text">操作元素属性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8-%E9%97%B4%E6%AD%87%E5%87%BD%E6%95%B0"><span class="toc-number">5.</span> <span class="toc-text">定时器-间歇函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC-%E7%BB%91%E5%AE%9A"><span class="toc-number">6.</span> <span class="toc-text">事件监听(绑定)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1"><span class="toc-number">7.</span> <span class="toc-text">事件对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E6%B5%81"><span class="toc-number">8.</span> <span class="toc-text">事件流</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98"><span class="toc-number">9.</span> <span class="toc-text">事件委托</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%BB%E6%AD%A2%E9%BB%98%E8%AE%A4%E8%A1%8C%E4%B8%BA"><span class="toc-number">10.</span> <span class="toc-text">阻止默认行为</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E4%BA%8B%E4%BB%B6"><span class="toc-number">11.</span> <span class="toc-text">其他事件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E7%9A%84%E5%B0%BA%E5%AF%B8%E5%92%8C%E4%BD%8D%E7%BD%AE"><span class="toc-number">12.</span> <span class="toc-text">元素的尺寸和位置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%AE%BD%E9%AB%98"><span class="toc-number">12.1.</span> <span class="toc-text">获取宽高:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E4%BD%8D%E7%BD%AE"><span class="toc-number">12.2.</span> <span class="toc-text">获取位置:</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1"><span class="toc-number">13.</span> <span class="toc-text">日期对象</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B%E5%8C%96"><span class="toc-number">13.1.</span> <span class="toc-text">实例化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="toc-number">13.2.</span> <span class="toc-text">日期对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E6%88%B3"><span class="toc-number">13.3.</span> <span class="toc-text">时间戳</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C"><span class="toc-number">14.</span> <span class="toc-text">节点操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM%E8%8A%82%E7%82%B9"><span class="toc-number">14.1.</span> <span class="toc-text">DOM节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E7%B1%BB%E5%9E%8B"><span class="toc-number">14.2.</span> <span class="toc-text">节点类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E8%8A%82%E7%82%B9"><span class="toc-number">14.3.</span> <span class="toc-text">查找节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E8%8A%82%E7%82%B9"><span class="toc-number">14.4.</span> <span class="toc-text">修改节点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#M%E7%AB%AF%E4%BA%8B%E4%BB%B6"><span class="toc-number">15.</span> <span class="toc-text">M端事件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#js%E6%8F%92%E4%BB%B6"><span class="toc-number">16.</span> <span class="toc-text">js插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BOM"><span class="toc-number">17.</span> <span class="toc-text">BOM</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8-%E5%BB%B6%E6%97%B6%E5%87%BD%E6%95%B0"><span class="toc-number">17.1.</span> <span class="toc-text">定时器-延时函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#js%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6"><span class="toc-number">17.2.</span> <span class="toc-text">js执行机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#location%E5%AF%B9%E8%B1%A1"><span class="toc-number">17.3.</span> <span class="toc-text">location对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#navigator%E5%AF%B9%E8%B1%A1"><span class="toc-number">17.4.</span> <span class="toc-text">navigator对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#history%E5%AF%B9%E8%B1%A1"><span class="toc-number">17.5.</span> <span class="toc-text">history对象</span></a></li></ol></li></ol>
-      </div>
-      <div class="related panel pjax" data-title="系列文章">
-      </div>
-      <div class="overview panel" data-title="站点概览">
-        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <img class="image" itemprop="image" alt="呼佳慧"
-      data-src="/images/avatar.jpg">
-  <p class="name" itemprop="name">呼佳慧</p>
-  <div class="description" itemprop="description"></div>
-</div>
-
-<nav class="state">
-    <div class="item posts">
-      <a href="/archives/">
-        <span class="count">7</span>
-        <span class="name">文章</span>
-      </a>
-    </div>
-</nav>
-
-<div class="social">
-</div>
-
-<ul class="menu">
-  
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-  <li class="item">
-    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
-  </li>
-
-
-</ul>
-
-      </div>
+    <div class="card-text">
+      
+        <a href="/2024/03/04/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9B%B8%E5%85%B3/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">浏览器相关</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
     </div>
-  </div>
-
-  <ul id="quick">
-    <li class="prev pjax">
-        <a href="/2024/02/28/js%E5%9F%BA%E7%A1%80/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
-    </li>
-    <li class="up"><i class="ic i-arrow-up"></i></li>
-    <li class="down"><i class="ic i-arrow-down"></i></li>
-    <li class="next pjax">
-        <a href="/2024/03/04/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9B%B8%E5%85%B3/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
-    </li>
-    <li class="percent"></li>
-  </ul>
+  </article>
 </div>
-
-
-        </div>
-        <div class="dimmer"></div>
-      </div>
-    </main>
-    <footer id="footer">
-      <div class="inner">
-        <div class="widgets">
           
-<div class="rpost pjax">
-  <h2>随机文章</h2>
-  <ul>
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
       
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2024/03/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络">计算机网络</a></span>
-  </li>
-
+        <a href="/2024/02/28/js%E5%9F%BA%E7%A1%80/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">js基础</h2>
+        </a>
       
-  <li class="item">
-    
-<div class="breadcrumb">
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
 </div>
-
-    <span><a href="/2024/03/04/css%E5%8A%A8%E7%94%BB/" title="css动画">css动画</a></span>
-  </li>
-
+          
+        </nav>
       
-  <li class="item">
+
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
     
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2024/02/28/js%E5%9F%BA%E7%A1%80/" title="js基础">js基础</a></span>
-  </li>
-
-      
-  <li class="item">
+      <img src="https://s.gravatar.com/avatar/2d6b803eea37de0257620d5fabee7e64?s=200&amp;r=g&amp;d=retro" class="soft-size--round soft-style--box" alt="Sukoshi">
     
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2024/02/28/html/" title="html和css">html和css</a></span>
-  </li>
-
-      
-  <li class="item">
     
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2024/03/04/Ajax/" title="Ajax">Ajax</a></span>
-  </li>
-
-      
-  <li class="item">
+      <h2>Sukoshi</h2>
     
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2024/03/04/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9B%B8%E5%85%B3/" title="浏览器相关">浏览器相关</a></span>
-  </li>
-
-      
-  <li class="item">
     
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2024/03/02/DOM/" title="DOM">DOM</a></span>
-  </li>
-
-  </ul>
-</div>
-<div>
-  <h2>最新评论</h2>
-  <ul class="leancloud-recent-comment"></ul>
-</div>
-
-        </div>
-        <div class="status">
-  <div class="copyright">
+      <p>贵在坚持</p>
     
-    &copy; 2010 – 
-    <span itemprop="copyrightYear">2024</span>
-    <span class="with-love">
-      <i class="ic i-sakura rotate"></i>
-    </span>
-    <span class="author" itemprop="copyrightHolder">呼佳慧 @ Yume Shoka</span>
-  </div>
-  <div class="powered-by">
-    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
-  </div>
-</div>
 
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>9</span>
       </div>
-    </footer>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        0
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        0
+      </div>
+    </div>
   </div>
-<script data-config type="text/javascript">
-  var LOCAL = {
-    path: '2024/03/02/DOM/',
-    favicon: {
-      show: "（●´3｀●）やれやれだぜ",
-      hide: "(´Д｀)大変だ！"
-    },
-    search : {
-      placeholder: "文章搜索",
-      empty: "关于 「 ${query} 」，什么也没搜到",
-      stats: "${time} ms 内找到 ${hits} 条结果"
-    },
-    valine: true,fancybox: true,
-    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
-    ignores : [
-      function(uri) {
-        return uri.includes('#');
-      },
-      function(uri) {
-        return new RegExp(LOCAL.path+"$").test(uri);
-      }
-    ]
-  };
-</script>
+</section>
 
-<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+      
 
-<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
-
-<script src="/js/app.js?v=0.2.5"></script>
+      
+<section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-notice" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 945.02305225v28.15620663a24.27259221 24.27259221 0 0 1-24.27259221 24.27259335H394.0352a48.54518557 48.54518557 0 0 1-41.74885888-23.78714112l-110.68302222-184.47170332a132.04290333 132.04290333 0 0 1-17.47626667-48.54518557h118.4502511a200.97706667 200.97706667 0 0 1 76.21594113 14.56355556l20.38897777 133.49925888a48.54518557 48.54518557 0 0 0 36.40888888 27.67075555l16.01991111 2.91271112a24.27259221 24.27259221 0 0 1 20.38897778 25.72894889zM997.45185223 463.45481443a194.18074112 194.18074112 0 0 1-38.8361489 116.50844445 24.75804445 24.75804445 0 0 1-36.4088889 0l-34.95253333-34.95253333a24.27259221 24.27259221 0 0 1-2.91271111-30.58346667 97.09036999 97.09036999 0 0 0 0-106.79940665 24.27259221 24.27259221 0 0 1 2.91271111-30.58346666l34.95253333-34.95253334a24.75804445 24.75804445 0 0 1 18.93262223-7.28177777 26.2144 26.2144 0 0 1 17.47626667 9.70903665A194.18074112 194.18074112 0 0 1 997.45185223 463.45481443z m-194.18074112-388.36148111v776.72296335a48.54518557 48.54518557 0 0 1-48.54518556 48.54518443h-28.64165888a48.54518557 48.54518557 0 0 1-33.98163001-14.07810332l-145.63555556-143.20829668A291.27111111 291.27111111 0 0 0 342.57730333 657.63555556H172.18370333a145.63555556 145.63555556 0 0 1-145.63555556-145.63555556v-97.09036999a145.63555556 145.63555556 0 0 1 145.63555556-145.63555556h170.3936a291.27111111 291.27111111 0 0 0 206.31703779-85.43952668l145.63555555-143.20829554a48.54518557 48.54518557 0 0 1 33.98162888-14.07810446H754.72592555a48.54518557 48.54518557 0 0 1 48.54518556 48.54518555z" fill="currentColor"></path>
+</svg>
+    <span>NOTICE</span>
+  </div>
+  <div class="widget-body">
+    <p>flex-block主题部分重构，详情查看https://github.com/miiiku/flex-block</p>
+  </div>
+</section>
 
 
+      <section class="widget-categorys widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+    <span>CATEGORYS</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categorys-list">
+      
+    </ul>
+  </div>
+</section>
+
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/miiiku/" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+        
+          <a href="https://twitter.com/guanquanhong" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-twitter" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M962.285714 233.142857q-38.285714 56-92.571429 95.428571 0.571429 8 0.571429 24 0 74.285714-21.714286 148.285714t-66 142-105.428571 120.285714-147.428571 83.428571-184.571429 31.142857q-154.857143 0-283.428571-82.857143 20 2.285714 44.571429 2.285714 128.571429 0 229.142857-78.857143-60-1.142857-107.428571-36.857143t-65.142857-91.142857q18.857143 2.857143 34.857143 2.857143 24.571429 0 48.571429-6.285714-64-13.142857-106-63.714286t-42-117.428571l0-2.285714q38.857143 21.714286 83.428571 23.428571-37.714286-25.142857-60-65.714286t-22.285714-88q0-50.285714 25.142857-93.142857 69.142857 85.142857 168.285714 136.285714t212.285714 56.857143q-4.571429-21.714286-4.571429-42.285714 0-76.571429 54-130.571429t130.571429-54q80 0 134.857143 58.285714 62.285714-12 117.142857-44.571429-21.142857 65.714286-81.142857 101.714286 53.142857-5.714286 106.285714-28.571429z"></path>
+</svg>
+          </a>
+        
+      
+    </div>
+     
+    <p>&copy; 2024 <a href="/" target="_blank">呼佳慧</a></p>
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  <!-- aplayer -->
 
 
+<!-- dplayer -->
+
+
+<!-- copy button  -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<!-- https://clipboardjs.com/ -->
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
 </body>
 </html>
