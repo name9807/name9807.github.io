@@ -22,7 +22,7 @@
 
   
 
-  <title>第一次面试 | 随便写吧</title>
+  <title>发布订阅模式vs观察者模式 | 随便写吧</title>
 
   
 
@@ -99,11 +99,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">第一次面试</h1>
+          <h1 class="title-wrap">发布订阅模式vs观察者模式</h1>
           <h2 class="title-sub-wrap">
             <strong>呼佳慧</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2024-06-04T12:51:53.000Z" itemprop="datePublished">2024-06-04</time>
+            <time  class="article-date" datetime="2024-09-20T09:27:57.000Z" itemprop="datePublished">2024-09-20</time>
           </h2>
           
           
@@ -134,160 +134,29 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="osi七层模型"><a href="#osi七层模型" class="headerlink" title="osi七层模型"></a>osi七层模型</h1><p>应用层,表示层,会话层,传输层,网络层,数据链路层,物理层</p>
-<h1 id="GET和POST"><a href="#GET和POST" class="headerlink" title="GET和POST"></a>GET和POST</h1><p>客户向服务器请求服务时，只需传送请求方法和路径。请求方法常用的有GET、HEAD、POST。</p>
-<table>
-<thead>
-<tr>
-<th>1</th>
-<th>GET</th>
-<th>请求指定的页面信息，并返回实体主体。</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>2</td>
-<td>HEAD</td>
-<td>类似于 GET 请求，只不过返回的响应中没有具体的内容，用于获取报头</td>
-</tr>
-<tr>
-<td>3</td>
-<td>POST</td>
-<td>向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在请求体中。POST 请求可能会导致新的资源的建立和&#x2F;或已有资源的修改。</td>
-</tr>
-<tr>
-<td>4</td>
-<td>PUT</td>
-<td>从客户端向服务器传送的数据取代指定的文档的内容。</td>
-</tr>
-<tr>
-<td>5</td>
-<td>DELETE</td>
-<td>请求服务器删除指定的页面。</td>
-</tr>
-<tr>
-<td>6</td>
-<td>CONNECT</td>
-<td>HTTP&#x2F;1.1 协议中预留给能够将连接改为管道方式的代理服务器。</td>
-</tr>
-<tr>
-<td>7</td>
-<td>OPTIONS</td>
-<td>允许客户端查看服务器的性能。</td>
-</tr>
-<tr>
-<td>8</td>
-<td>TRACE</td>
-<td>回显服务器收到的请求，主要用于测试或诊断。</td>
-</tr>
-<tr>
-<td>9</td>
-<td>PATCH</td>
-<td>是对 PUT 方法的补充，用来对已知资源进行局部更新 。</td>
-</tr>
-</tbody></table>
-<p>DOM.addEventListener(事件类型,事件处理函数,是否使用捕获机制)<br>&#x2F;&#x2F;第三个参数传入true代表是捕获阶段出发(很少使用)false是冒泡触发</p>
-<table>
-<thead>
-<tr>
-<th align="left">值</th>
-<th align="left">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">button</td>
-<td align="left">定义可点击的按钮（通常与 JavaScript 一起使用来启动脚本）。</td>
-</tr>
-<tr>
-<td align="left">checkbox</td>
-<td align="left">定义复选框。</td>
-</tr>
-<tr>
-<td align="left">color<strong>New</strong></td>
-<td align="left">定义拾色器。</td>
-</tr>
-<tr>
-<td align="left">date<strong>New</strong></td>
-<td align="left">定义 date 控件（包括年、月、日，不包括时间）。</td>
-</tr>
-<tr>
-<td align="left">datetime<strong>New</strong></td>
-<td align="left">定义 date 和 time 控件（包括年、月、日、时、分、秒、几分之一秒，基于 UTC 时区）。</td>
-</tr>
-<tr>
-<td align="left">datetime-local<strong>New</strong></td>
-<td align="left">定义 date 和 time 控件（包括年、月、日、时、分、秒、几分之一秒，不带时区）。</td>
-</tr>
-<tr>
-<td align="left">email<strong>New</strong></td>
-<td align="left">定义用于 e-mail 地址的字段。</td>
-</tr>
-<tr>
-<td align="left">file</td>
-<td align="left">定义文件选择字段和 “浏览…” 按钮，供文件上传。</td>
-</tr>
-<tr>
-<td align="left">hidden</td>
-<td align="left">定义隐藏输入字段。</td>
-</tr>
-<tr>
-<td align="left">image</td>
-<td align="left">定义图像作为提交按钮。</td>
-</tr>
-<tr>
-<td align="left">month<strong>New</strong></td>
-<td align="left">定义 month 和 year 控件（不带时区）。</td>
-</tr>
-<tr>
-<td align="left">number<strong>New</strong></td>
-<td align="left">定义用于输入数字的字段。</td>
-</tr>
-<tr>
-<td align="left">password</td>
-<td align="left">定义密码字段（字段中的字符会被遮蔽）。</td>
-</tr>
-<tr>
-<td align="left">radio</td>
-<td align="left">定义单选按钮。</td>
-</tr>
-<tr>
-<td align="left">range<strong>New</strong></td>
-<td align="left">定义用于精确值不重要的输入数字的控件（比如 slider 控件）。</td>
-</tr>
-<tr>
-<td align="left">reset</td>
-<td align="left">定义重置按钮（重置所有的表单值为默认值）。</td>
-</tr>
-<tr>
-<td align="left">search<strong>New</strong></td>
-<td align="left">定义用于输入搜索字符串的文本字段。</td>
-</tr>
-<tr>
-<td align="left">submit</td>
-<td align="left">定义提交按钮。</td>
-</tr>
-<tr>
-<td align="left">tel<strong>New</strong></td>
-<td align="left">定义用于输入电话号码的字段。</td>
-</tr>
-<tr>
-<td align="left">text</td>
-<td align="left">默认。定义一个单行的文本字段（默认宽度为 20 个字符）。</td>
-</tr>
-<tr>
-<td align="left">time<strong>New</strong></td>
-<td align="left">定义用于输入时间的控件（不带时区）。</td>
-</tr>
-<tr>
-<td align="left">url<strong>New</strong></td>
-<td align="left">定义用于输入 URL 的字段。</td>
-</tr>
-<tr>
-<td align="left">week<strong>New</strong></td>
-<td align="left">定义 week 和 year 控件（不带时区）。</td>
-</tr>
-</tbody></table>
-<p>空格&amp;nbsp、大于号&amp;gt、小于号&amp;lt常用</p>
-<p>使元素脱离了<strong>标准流，</strong>向左或向右移动，直到碰到父元素或另一个浮动元素的边缘为止</p>
+        <h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h3><p>wiki中将<a target="_blank" rel="noopener" href="https://link.segmentfault.com/?enc=7mNXgLOmt5uQC2Z4zH3EYQ==.xvuj/NqVLNRF/5SlKJ/pfRDdIPa0swHV7GFQTUkyMKijhWZ1J2Jk0PEC1OyNpPB1P4B7sbw7SU2Rl7p4H+P/8A==">设计模式</a>分为四类，分别是：</p>
+<ul>
+<li>创建模式（creational patterns）</li>
+<li>结构模式（structural patterns）</li>
+<li>行为模式（behavioral patterns）</li>
+<li>并发模式（concurrency patterns）</li>
+</ul>
+<p>观察者&#x2F;发布订阅模式属于其中的行为模式。</p>
+<h3 id="实际情境"><a href="#实际情境" class="headerlink" title="实际情境"></a>实际情境</h3><h4 id="公众号订阅"><a href="#公众号订阅" class="headerlink" title="公众号订阅"></a>公众号订阅</h4><p>说到发布订阅，拿微信公众号举例，就很好理解，有n个人订阅了某公众号，在该公众号发布了推文后，这n个人就会收到推文发布的消息。</p>
+<h4 id="状态更新"><a href="#状态更新" class="headerlink" title="状态更新"></a>状态更新</h4><p>在实际编程过程中，有一种情况很多人应该碰到过，就是在页面上完成一些与接口的交互操作后，要更新页面的某些状态，但这个状态由于某些原因无法立即获得，如果要得到状态的更新结果，可以有两种选择，一种是重复请求接口以获取，可以是用户手动刷新页面或请求接口、或者交互结束后自动开启接口轮询；第二种是建立长连接，等待服务端推送结果。第二种方式，就可以算作是一种发布-订阅，订阅者是客户端，订阅内容是页面状态，发布者就是服务端。</p>
+<p>为什么说观察者&#x2F;发布订阅属于行为模式从上述例子就可以理解，原本的行为是客户端主动去获取内容，应用了此模式后，行为变成了客户端订阅（发起长连接请求）、由服务端来推送消息，行为方式发生了变化；并且我们也可以看出，这样做提高了应用的性能，客户端不必要再多次地去发起请求，减少了建立网络请求的消耗。</p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>定义了对象之间一对多的依赖关系，其中一个对象的状态变更，会使其所有依赖对象收到通知并自动更新。</p>
+<p>可以看出，这两个模式处理的是存在一对多依赖关系的双方之间的交互行为。</p>
+<p>虽然描述相同，但两者的实际实现还是存在区别，我们可以再进一步了解。</p>
+<h3 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h3><p>主体对象维护依赖对象(观察者)的列表,制动通知他们的任何变化,通过调用他们的方法</p>
+<h3 id="发布-订阅模式"><a href="#发布-订阅模式" class="headerlink" title="发布-订阅模式"></a>发布-订阅模式</h3><p>发布者将消息分类,再有订阅者接受,同样，订阅者对一个或多个类别表示感兴趣，只是接收感兴趣的信息，但并不知道有哪些发布者（如果有的话）。</p>
+<p>发布-订阅是消息队列模式的同类，通常是更大的面向消息的中间件系统的一部分。大多数消息传递系统的API中同时支持发布&#x2F;订阅和消息队列模型；比如Java消息服务（JMS）。</p>
+<p>该模式提供了更高的网络可扩展性和更动态的网络拓扑结构，但也因此降低了修改发布者和发布数据结构的灵活性。</p>
+<p>由上述两个定义可知，<strong>在发布-订阅模式中，发布者和订阅者的耦合度更低</strong>，订阅者并不知道消息的发布者，在这种模式下，通常会存在一个第三方的订阅中心，订阅中心接收到发布者的消息，然后再将消息分发给订阅者；而在观察者模式中，观察者是通过在主体身上放置监听器从而直接观察主体，相当于是发布者（主体）直接将消息传递给订阅者（观察者），此时两者的耦合性更高，这种模式下，观察者需要实现统一的接口以供主体调用，而主体则需要维护一个观察者的集合。</p>
+<h2 id="目前应用"><a href="#目前应用" class="headerlink" title="目前应用"></a>目前应用</h2><p>vue的事件总线</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个事件总线并导出</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">EventBus</span> = <span class="keyword">new</span> <span class="title class_">Vue</span>();</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">EventBus</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在主文件中引入EventBus，并挂载到全局</span></span><br><span class="line"><span class="keyword">import</span> bus <span class="keyword">from</span> <span class="string">&#x27;EventBus文件路径&#x27;</span>;</span><br><span class="line"><span class="title class_">Vue</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">bus</span> = bus;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 订阅事件“someEvent”</span></span><br><span class="line"><span class="comment">// 这里func指someEvent这个事件的监听函数，也即在收到消息后通知订阅者的方法</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">bus</span>.$on(<span class="string">&#x27;someEvent&#x27;</span>, func);<span class="comment">//订阅者</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 发布（触发）事件“someEvent”</span></span><br><span class="line"><span class="comment">// 这里params指someEvent这个事件被触发时回调函数接收的入参，也就是传递给订阅者的状态</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">bus</span>.$emit(<span class="string">&#x27;someEvent&#x27;</span>, params);<span class="comment">//发布者</span></span><br></pre></td></tr></table></figure>
+
+<p>vue3的ref实现</p>
 
       </section>
 
@@ -295,28 +164,14 @@
       
         <nav class="article-nav">
           
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-    <div class="card-text">
-      
-        <a href="/2024/06/04/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E9%9D%A2%E8%AF%95/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">第二次面试</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
-          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
     <div class="card-text">
       
-        <a href="/2024/03/04/css%E5%8A%A8%E7%94%BB/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">css动画</h2>
+        <a href="/2024/06/04/copy%E6%9D%A5%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85%E7%AC%94%E8%AE%B0/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">copy来的作用域闭包笔记</h2>
         </a>
       
       <div class="card-text--row">Older</div>
