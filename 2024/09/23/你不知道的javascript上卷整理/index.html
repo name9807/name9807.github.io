@@ -22,7 +22,7 @@
 
   
 
-  <title>第一次面试 | 随便写吧</title>
+  <title>你不知道的javascript上卷整理 | 随便写吧</title>
 
   
 
@@ -99,12 +99,17 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">第一次面试</h1>
+          <h1 class="title-wrap">你不知道的javascript上卷整理</h1>
           <h2 class="title-sub-wrap">
             <strong>呼佳慧</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2024-06-04T12:51:53.000Z" itemprop="datePublished">2024-06-04</time>
+            <time  class="article-date" datetime="2024-09-23T04:18:18.000Z" itemprop="datePublished">2024-09-23</time>
           </h2>
+          
+            <h2 class="last-time">
+              <span>最后更新于</span>
+              <time  class="article-updated" datetime="2024-09-26T09:00:58.514Z" itemprop="dateUpdated">2024-09-26</time>
+            </h2>
           
           
           <ul class="wrap-list dark">
@@ -134,189 +139,56 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="osi七层模型"><a href="#osi七层模型" class="headerlink" title="osi七层模型"></a>osi七层模型</h1><p>应用层,表示层,会话层,传输层,网络层,数据链路层,物理层</p>
-<h1 id="GET和POST"><a href="#GET和POST" class="headerlink" title="GET和POST"></a>GET和POST</h1><p>客户向服务器请求服务时，只需传送请求方法和路径。请求方法常用的有GET、HEAD、POST。</p>
-<table>
-<thead>
-<tr>
-<th>1</th>
-<th>GET</th>
-<th>请求指定的页面信息，并返回实体主体。</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>2</td>
-<td>HEAD</td>
-<td>类似于 GET 请求，只不过返回的响应中没有具体的内容，用于获取报头</td>
-</tr>
-<tr>
-<td>3</td>
-<td>POST</td>
-<td>向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在请求体中。POST 请求可能会导致新的资源的建立和&#x2F;或已有资源的修改。</td>
-</tr>
-<tr>
-<td>4</td>
-<td>PUT</td>
-<td>从客户端向服务器传送的数据取代指定的文档的内容。</td>
-</tr>
-<tr>
-<td>5</td>
-<td>DELETE</td>
-<td>请求服务器删除指定的页面。</td>
-</tr>
-<tr>
-<td>6</td>
-<td>CONNECT</td>
-<td>HTTP&#x2F;1.1 协议中预留给能够将连接改为管道方式的代理服务器。</td>
-</tr>
-<tr>
-<td>7</td>
-<td>OPTIONS</td>
-<td>允许客户端查看服务器的性能。</td>
-</tr>
-<tr>
-<td>8</td>
-<td>TRACE</td>
-<td>回显服务器收到的请求，主要用于测试或诊断。</td>
-</tr>
-<tr>
-<td>9</td>
-<td>PATCH</td>
-<td>是对 PUT 方法的补充，用来对已知资源进行局部更新 。</td>
-</tr>
-</tbody></table>
-<p>DOM.addEventListener(事件类型,事件处理函数,是否使用捕获机制)<br>&#x2F;&#x2F;第三个参数传入true代表是捕获阶段出发(很少使用)false是冒泡触发</p>
-<table>
-<thead>
-<tr>
-<th align="left">值</th>
-<th align="left">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">button</td>
-<td align="left">定义可点击的按钮（通常与 JavaScript 一起使用来启动脚本）。</td>
-</tr>
-<tr>
-<td align="left">checkbox</td>
-<td align="left">定义复选框。</td>
-</tr>
-<tr>
-<td align="left">color<strong>New</strong></td>
-<td align="left">定义拾色器。</td>
-</tr>
-<tr>
-<td align="left">date<strong>New</strong></td>
-<td align="left">定义 date 控件（包括年、月、日，不包括时间）。</td>
-</tr>
-<tr>
-<td align="left">datetime<strong>New</strong></td>
-<td align="left">定义 date 和 time 控件（包括年、月、日、时、分、秒、几分之一秒，基于 UTC 时区）。</td>
-</tr>
-<tr>
-<td align="left">datetime-local<strong>New</strong></td>
-<td align="left">定义 date 和 time 控件（包括年、月、日、时、分、秒、几分之一秒，不带时区）。</td>
-</tr>
-<tr>
-<td align="left">email<strong>New</strong></td>
-<td align="left">定义用于 e-mail 地址的字段。</td>
-</tr>
-<tr>
-<td align="left">file</td>
-<td align="left">定义文件选择字段和 “浏览…” 按钮，供文件上传。</td>
-</tr>
-<tr>
-<td align="left">hidden</td>
-<td align="left">定义隐藏输入字段。</td>
-</tr>
-<tr>
-<td align="left">image</td>
-<td align="left">定义图像作为提交按钮。</td>
-</tr>
-<tr>
-<td align="left">month<strong>New</strong></td>
-<td align="left">定义 month 和 year 控件（不带时区）。</td>
-</tr>
-<tr>
-<td align="left">number<strong>New</strong></td>
-<td align="left">定义用于输入数字的字段。</td>
-</tr>
-<tr>
-<td align="left">password</td>
-<td align="left">定义密码字段（字段中的字符会被遮蔽）。</td>
-</tr>
-<tr>
-<td align="left">radio</td>
-<td align="left">定义单选按钮。</td>
-</tr>
-<tr>
-<td align="left">range<strong>New</strong></td>
-<td align="left">定义用于精确值不重要的输入数字的控件（比如 slider 控件）。</td>
-</tr>
-<tr>
-<td align="left">reset</td>
-<td align="left">定义重置按钮（重置所有的表单值为默认值）。</td>
-</tr>
-<tr>
-<td align="left">search<strong>New</strong></td>
-<td align="left">定义用于输入搜索字符串的文本字段。</td>
-</tr>
-<tr>
-<td align="left">submit</td>
-<td align="left">定义提交按钮。</td>
-</tr>
-<tr>
-<td align="left">tel<strong>New</strong></td>
-<td align="left">定义用于输入电话号码的字段。</td>
-</tr>
-<tr>
-<td align="left">text</td>
-<td align="left">默认。定义一个单行的文本字段（默认宽度为 20 个字符）。</td>
-</tr>
-<tr>
-<td align="left">time<strong>New</strong></td>
-<td align="left">定义用于输入时间的控件（不带时区）。</td>
-</tr>
-<tr>
-<td align="left">url<strong>New</strong></td>
-<td align="left">定义用于输入 URL 的字段。</td>
-</tr>
-<tr>
-<td align="left">week<strong>New</strong></td>
-<td align="left">定义 week 和 year 控件（不带时区）。</td>
-</tr>
-</tbody></table>
-<p>空格&amp;nbsp、大于号&amp;gt、小于号&amp;lt常用</p>
-<p>使元素脱离了<strong>标准流，</strong>向左或向右移动，直到碰到父元素或另一个浮动元素的边缘为止</p>
-
+        <h1 id="作用域是什么"><a href="#作用域是什么" class="headerlink" title="作用域是什么"></a>作用域是什么</h1><h2 id="编译原理"><a href="#编译原理" class="headerlink" title="编译原理"></a>编译原理</h2><p><strong>传统编译语言流程</strong>:</p>
+<ul>
+<li>分词&#x2F;词法分析:编程语言的字符串分解成词法单元</li>
+<li>解析&#x2F;语法分析:将词法单元流(数组)转换成元素组成的代表程序语法结构的树–<strong>抽象语法树</strong></li>
+<li>代码生成:将抽象语法树转化为可执行代码(和语言,目标平台相关)—–<strong>通过某种方法转换成机器指令执行想执行的任务</strong></li>
+</ul>
+<p>但是javascript有更复杂的引擎,会在语法分析和生成代码阶段优化运行性能</p>
+<p>对于javascript来说编译仅发生在执行前几微妙—作用域背后javascript引擎会用许多方法延迟编译来保证性能更好</p>
+<h2 id="理解作用域"><a href="#理解作用域" class="headerlink" title="理解作用域"></a>理解作用域</h2><ul>
+<li>引擎:负责整个js程序的编译和执行过程</li>
+<li>编译器:负责编译中的语法分析和代码生成</li>
+<li>作用域:收集和维护标识符组成的查询,确定代码对当前标识符的访问权限——&gt;<strong>根据名称找变量的一套规则</strong></li>
+</ul>
+<p>&#x3D;&#x3D;javascript的执行:&#x3D;&#x3D;<br>编译器先进行分词,语法分析——&gt;<strong>编译器</strong>向作用域集合查找该变量名,(没有就声明)—-&gt;<strong>编译器</strong>生成运行时代码,引擎询问<strong>作用域</strong>查找变量,查找并赋值</p>
+<p>&#x3D;&#x3D;左查找和右查找&#x3D;&#x3D;</p>
+<ul>
+<li>左查找:试图找到变量的容器本身,从而可以对其赋值<br>  eg:某变量的赋值,函数参数的赋值</li>
+<li>右查找:找到他的值(非左侧查找)<br>  eg:函数调用,值的使用</li>
+</ul>
+<h2 id="作用域嵌套"><a href="#作用域嵌套" class="headerlink" title="作用域嵌套"></a>作用域嵌套</h2><p>当块或者函数嵌套在另一个块或者函数中的时候,发生了作用域的嵌套,在当前作用域中无法找到某个变量时,引擎会在外城嵌套的作用域中继续查找,知道抵达最外层的作用域或者找到该变量.</p>
+<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><ul>
+<li>右查找找不到时:抛出referenceError<br>  右查找找到了但操作不合法:typeError</li>
+<li>左查找找不到时:创建一个该名称变量返还给引擎</li>
+</ul>
+<p>严格模式:</p>
+<ul>
+<li>左查找失败:referenceError</li>
+<li>同上</li>
+</ul>
+<h1 id="词法作用域"><a href="#词法作用域" class="headerlink" title="词法作用域"></a>词法作用域</h1><p><strong>词法作用域vs动态作用域</strong></p>
+<h2 id="词法阶段"><a href="#词法阶段" class="headerlink" title="词法阶段"></a>词法阶段</h2><p>词法化:编译器的工作第一阶段(分词和语法分析)</p>
+<p>词法作用域是一个由词法化这个词衍生出来的词语.是定义在词法阶段的作用域,是由写代码是变量和块作用域写在哪里实现的.</p>
+<p>作用域会根据词法作用域的嵌套结构提供的位置信息,由引擎进行查找,并在查找到第一个符合的标识符停止,因此对外层产生了遮蔽效应</p>
+<p>[^如果是全局变量,实际是全局对象的属性,例如浏览器的window对象,在遮蔽的情况下可以被通过window.变量名访问,其他则不可访问]: </p>
+<h2 id="欺骗词法"><a href="#欺骗词法" class="headerlink" title="欺骗词法"></a>欺骗词法</h2><p>两种会导致性能下降的机制可以欺骗词法作用域</p>
+<h1 id="函数作用域和块作用域"><a href="#函数作用域和块作用域" class="headerlink" title="函数作用域和块作用域"></a>函数作用域和块作用域</h1>
       </section>
 
       
       
         <nav class="article-nav">
           
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-    <div class="card-text">
-      
-        <a href="/2024/06/04/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E9%9D%A2%E8%AF%95/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">第二次面试</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
-          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
     <div class="card-text">
       
-        <a href="/2024/03/04/css%E5%8A%A8%E7%94%BB/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">css动画</h2>
+        <a href="/2024/09/23/vue3%E5%A4%8D%E4%B9%A0/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">vue3复习</h2>
         </a>
       
       <div class="card-text--row">Older</div>
