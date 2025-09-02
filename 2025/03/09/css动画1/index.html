@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="generator" content="Hexo 7.1.1">
+
+  
+
+  
+
+  
+    <meta name="author" content="呼佳慧">
+  
+
+  
+
+  
+
+  <title>随便写吧</title>
+
+  
+
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+
+  <!--mathjax latex数学公式显示支持-->
+  
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          随便写吧
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">首页</a></li>
+        
+          <li class="navbar-list-item"><a href="/links">友链</a></li>
+        
+          <li class="navbar-list-item"><a href="/about">关于</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap"></h1>
+          <h2 class="title-sub-wrap">
+            <strong>呼佳慧</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2025-03-09T07:44:26.537Z" itemprop="datePublished">2025-03-09</time>
+          </h2>
+          
+            <h2 class="last-time">
+              <span>最后更新于</span>
+              <time  class="article-updated" datetime="2025-01-23T10:02:25.653Z" itemprop="dateUpdated">2025-01-23</time>
+            </h2>
+          
+          
+          <ul class="wrap-list dark">
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+</ul>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  
+  
+</header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <div class="article-info">
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <h2 id="css变换"><a href="#css变换" class="headerlink" title="css变换"></a>css变换</h2><p>Transform属性应用于元素的2D或3D转换。这个属性允许你将元素旋转，缩放，移动，倾斜等。</p>
+<p>transform: none|<em>transform-functions</em>;变换函数</p>
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">none</td>
+<td align="left">定义不进行转换。</td>
+</tr>
+<tr>
+<td align="left">matrix(<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>)</td>
+<td align="left">定义 2D 转换，使用六个值的矩阵。</td>
+</tr>
+<tr>
+<td align="left">matrix3d(<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>)</td>
+<td align="left">定义 3D 转换，使用 16 个值的 4x4 矩阵。</td>
+</tr>
+<tr>
+<td align="left">translate(<em>x</em>,<em>y</em>)</td>
+<td align="left">定义 2D 转换。</td>
+</tr>
+<tr>
+<td align="left">translate3d(<em>x</em>,<em>y</em>,<em>z</em>)</td>
+<td align="left">定义 3D 转换。</td>
+</tr>
+<tr>
+<td align="left">translateX(<em>x</em>)</td>
+<td align="left">定义转换，只是用 X 轴的值。</td>
+</tr>
+<tr>
+<td align="left">translateY(<em>y</em>)</td>
+<td align="left">定义转换，只是用 Y 轴的值。</td>
+</tr>
+<tr>
+<td align="left">translateZ(<em>z</em>)</td>
+<td align="left">定义 3D 转换，只是用 Z 轴的值。</td>
+</tr>
+<tr>
+<td align="left">scale(<em>x</em>[,<em>y</em>]?)</td>
+<td align="left">定义 2D 缩放转换。</td>
+</tr>
+<tr>
+<td align="left">scale3d(<em>x</em>,<em>y</em>,<em>z</em>)</td>
+<td align="left">定义 3D 缩放转换。</td>
+</tr>
+<tr>
+<td align="left">scaleX(<em>x</em>)</td>
+<td align="left">通过设置 X 轴的值来定义缩放转换。</td>
+</tr>
+<tr>
+<td align="left">scaleY(<em>y</em>)</td>
+<td align="left">通过设置 Y 轴的值来定义缩放转换。</td>
+</tr>
+<tr>
+<td align="left">scaleZ(<em>z</em>)</td>
+<td align="left">通过设置 Z 轴的值来定义 3D 缩放转换。</td>
+</tr>
+<tr>
+<td align="left">rotate(<em>angle</em>)</td>
+<td align="left">定义 2D 旋转，在参数中规定角度。</td>
+</tr>
+<tr>
+<td align="left">rotate3d(<em>x</em>,<em>y</em>,<em>z</em>,<em>angle</em>)</td>
+<td align="left">定义 3D 旋转。</td>
+</tr>
+<tr>
+<td align="left">rotateX(<em>angle</em>)</td>
+<td align="left">定义沿着 X 轴的 3D 旋转。</td>
+</tr>
+<tr>
+<td align="left">rotateY(<em>angle</em>)</td>
+<td align="left">定义沿着 Y 轴的 3D 旋转。</td>
+</tr>
+<tr>
+<td align="left">rotateZ(<em>angle</em>)</td>
+<td align="left">定义沿着 Z 轴的 3D 旋转。</td>
+</tr>
+<tr>
+<td align="left">skew(<em>x-angle</em>,<em>y-angle</em>)</td>
+<td align="left">定义沿着 X 和 Y 轴的 2D 倾斜转换。</td>
+</tr>
+<tr>
+<td align="left">skewX(<em>angle</em>)</td>
+<td align="left">定义沿着 X 轴的 2D 倾斜转换。</td>
+</tr>
+<tr>
+<td align="left">skewY(<em>angle</em>)</td>
+<td align="left">定义沿着 Y 轴的 2D 倾斜转换。</td>
+</tr>
+<tr>
+<td align="left">perspective(<em>n</em>)</td>
+<td align="left">为 3D 转换元素定义透视视图。</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function">https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function</a></p>
+<h2 id="css动画两种实践方式"><a href="#css动画两种实践方式" class="headerlink" title="css动画两种实践方式"></a>css动画两种实践方式</h2><h3 id="1-过渡动画"><a href="#1-过渡动画" class="headerlink" title="1. 过渡动画"></a>1. 过渡动画</h3><p>transition 是最简单的动画实现方式，主要用于从一个状态平滑过渡到另一个状态(可以是不同伪元素之间的切换,:hover或者:active,或者通过js操作状态变化)。&#x2F;&#x2F;eg.hover触发和settimeOut添加类</p>
+<h4 id="基本语法："><a href="#基本语法：" class="headerlink" title="基本语法："></a>基本语法：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition: property duration timing-function delay;</span><br></pre></td></tr></table></figure>
+
+<p>主要属性说明：</p>
+<ul>
+<li><strong>transition-property</strong>: 指定要过渡的 CSS 属性的名称。例如，<code>color</code>、<code>background-color</code> 等。</li>
+<li><strong>transition-duration</strong>: 指定过渡效果持续的时间，以秒或毫秒为单位。</li>
+<li><strong>transition-timing-function</strong>: 指定过渡效果的速度曲线。它可以是 <code>linear</code>（线性）、<code>ease</code>（渐入渐出）、<code>ease-in</code>（渐入）、<code>ease-out</code>（渐出）、<code>ease-in-out</code>（先渐入后渐出）等等。</li>
+</ul>
+<blockquote>
+<ul>
+<li><code>ease</code>：默认值，缓慢加速，然后缓慢减速的过渡效果。</li>
+<li><code>linear</code>：匀速过渡效果。</li>
+<li><code>ease-in</code>：缓慢加速的过渡效果。</li>
+<li><code>ease-out</code>：缓慢减速的过渡效果。</li>
+<li><code>ease-in-out</code>：先缓慢加速，再缓慢减速的过渡效果。</li>
+<li><code>cubic-bezier(n,n,n,n)</code>：自定义的贝塞尔曲线函数，通过四个值来定义曲线的控制点，分别对应 <code>x1</code>、<code>y1</code>、<code>x2</code>、<code>y2</code>。</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>transition-delay</strong>: 指定过渡效果开始之前的延迟时间，以秒或毫秒为单位。</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.button &#123;</span><br><span class="line">    background-color: blue;</span><br><span class="line">    transition: background-color 0.3s ease;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.button:hover &#123;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-animation-关键帧动画"><a href="#2-animation-关键帧动画" class="headerlink" title="2. animation 关键帧动画"></a>2. animation 关键帧动画</h3><p>animation 提供了更强大的动画控制能力，可以通过设置关键帧来定义动画的具体内容。</p>
+<h4 id="基本语法：-1"><a href="#基本语法：-1" class="headerlink" title="基本语法："></a>基本语法：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">animation: name duration timing-function delay iteration-count direction fill-mode play-state;</span><br></pre></td></tr></table></figure>
+
+<p>主要属性说明：</p>
+<ul>
+<li><code>animation-name</code>：动画的名称（对应 @keyframes）</li>
+<li><code>animation-duration</code>：动画持续时间</li>
+<li><code>animation-timing-function</code>：动画的速度曲线</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">linear</td>
+<td align="left">动画从头到尾的速度是相同的。</td>
+</tr>
+<tr>
+<td align="left">ease</td>
+<td align="left">默认。动画以低速开始，然后加快，在结束前变慢。</td>
+</tr>
+<tr>
+<td align="left">ease-in</td>
+<td align="left">动画以低速开始。</td>
+</tr>
+<tr>
+<td align="left">ease-out</td>
+<td align="left">动画以低速结束。</td>
+</tr>
+<tr>
+<td align="left">ease-in-out</td>
+<td align="left">动画以低速开始和结束。</td>
+</tr>
+<tr>
+<td align="left">steps(int,start|end)</td>
+<td align="left">指定了时间函数中的间隔数量（步长）。有两个参数，第一个参数指定函数的间隔数，该参数是一个正整数（大于 0）。 第二个参数是可选的，表示动画是从时间段的开头连续还是末尾连续。含义分别如下：start：表示直接开始。end：默认值，表示戛然而止。</td>
+</tr>
+<tr>
+<td align="left">cubic-bezier(<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>)</td>
+<td align="left">在 cubic-bezier 函数中自己的值。可能的值是从 0 到 1 的数值。</td>
+</tr>
+</tbody></table>
+<ul>
+<li><code>animation-delay</code>：动画延迟时间</li>
+<li><code>animation-iteration-count</code>：动画重复次数</li>
+<li><code>animation-direction</code>：动画方向</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">normal</td>
+<td align="left">默认值。动画按正常播放。</td>
+</tr>
+<tr>
+<td align="left">reverse</td>
+<td align="left">动画反向播放。</td>
+</tr>
+<tr>
+<td align="left">alternate</td>
+<td align="left">动画在奇数次（1、3、5…）正向播放，在偶数次（2、4、6…）反向播放。</td>
+</tr>
+<tr>
+<td align="left">alternate-reverse</td>
+<td align="left">动画在奇数次（1、3、5…）反向播放，在偶数次（2、4、6…）正向播放。</td>
+</tr>
+<tr>
+<td align="left">initial</td>
+<td align="left">设置该属性为它的默认值。</td>
+</tr>
+<tr>
+<td align="left">inherit</td>
+<td align="left">从父元素继承该属性。</td>
+</tr>
+</tbody></table>
+<ul>
+<li><code>animation-fill-mode</code>：动画结束时的状态</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">none</td>
+<td align="left">默认值。动画在动画执行之前和之后不会应用任何样式到目标元素。</td>
+</tr>
+<tr>
+<td align="left">forwards</td>
+<td align="left">目标将保留由执行期间遇到的最后一个<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes">关键帧</a>计算值。最后一个关键帧取决于<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-direction"><code>animation-direction</code></a>和<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-iteration-count"><code>animation-iteration-count</code></a>的值：</td>
+</tr>
+<tr>
+<td align="left">backwards</td>
+<td align="left">动画将在应用于目标时立即应用第一个关键帧中定义的值，并在<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-delay"><code>animation-delay</code></a>期间保留此值。第一个关键帧取决于<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-direction"><code>animation-direction</code></a>的值：</td>
+</tr>
+<tr>
+<td align="left">both</td>
+<td align="left">动画遵循 forwards 和 backwards 的规则。也就是说，动画会在两个方向上扩展动画属性。</td>
+</tr>
+<tr>
+<td align="left">initial</td>
+<td align="left">设置该属性为它的默认值。</td>
+</tr>
+<tr>
+<td align="left">inherit</td>
+<td align="left">从父元素继承该属性。</td>
+</tr>
+</tbody></table>
+<ul>
+<li><code>animation-play-state</code>：动画的运行状态</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">paused</td>
+<td align="left">指定暂停动画</td>
+</tr>
+<tr>
+<td align="left">running</td>
+<td align="left">指定正在运行的动画</td>
+</tr>
+</tbody></table>
+<h2 id="常用动画效果实例"><a href="#常用动画效果实例" class="headerlink" title="常用动画效果实例"></a>常用动画效果实例</h2><h4 id="标签定义及使用说明"><a href="#标签定义及使用说明" class="headerlink" title="标签定义及使用说明"></a>标签定义及使用说明</h4><p>使用@keyframes规则，你可以创建动画。</p>
+<p>创建动画是通过逐步改变从一个CSS样式设定到另一个。</p>
+<p>在动画过程中，您可以更改CSS样式的设定多次。</p>
+<p>指定的变化时发生时使用％，或关键字”from”和”to”，这是和0％到100％相同。</p>
+<p>0％是开头动画，100％是当动画完成。</p>
+<h3 id="1-淡入淡出效果"><a href="#1-淡入淡出效果" class="headerlink" title="1. 淡入淡出效果"></a>1. 淡入淡出效果</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.fade &#123;</span><br><span class="line">    opacity: 1;</span><br><span class="line">    transition: opacity 0.3s ease;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fade:hover &#123;</span><br><span class="line">    opacity: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-放大缩小效果"><a href="#2-放大缩小效果" class="headerlink" title="2. 放大缩小效果"></a>2. 放大缩小效果</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.scale &#123;</span><br><span class="line">    transform: scale(1);</span><br><span class="line">    transition: transform 0.3s ease;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.scale:hover &#123;</span><br><span class="line">    transform: scale(1.2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-旋转效果"><a href="#3-旋转效果" class="headerlink" title="3. 旋转效果"></a>3. 旋转效果</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@keyframes rotate &#123;</span><br><span class="line">    from &#123;</span><br><span class="line">        transform: rotate(0deg);</span><br><span class="line">    &#125;</span><br><span class="line">    to &#123;</span><br><span class="line">        transform: rotate(360deg);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.rotate &#123;</span><br><span class="line">    animation: rotate 2s linear infinite;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-弹跳效果"><a href="#4-弹跳效果" class="headerlink" title="4. 弹跳效果"></a>4. 弹跳效果</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@keyframes bounce &#123;</span><br><span class="line">    0%, 100% &#123;</span><br><span class="line">        transform: translateY(0);</span><br><span class="line">    &#125;</span><br><span class="line">    50% &#123;</span><br><span class="line">        transform: translateY(-20px);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.bounce &#123;</span><br><span class="line">    animation: bounce 1s ease infinite;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      </section>
+
+      
+      
+        <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2025/08/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-25-8/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">计算机网络/25/8</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2025/03/09/class%E5%92%8Cinterface/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">(no title)</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
+
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
+    
+      <img src="https://s.gravatar.com/avatar/2d6b803eea37de0257620d5fabee7e64?s=200&amp;r=g&amp;d=retro" class="soft-size--round soft-style--box" alt="好家伙">
+    
+    
+      <h2>好家伙</h2>
+    
+    
+      <p>贵在坚持</p>
+    
+
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>26</span>
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        0
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        0
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+      
+<section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-notice" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 945.02305225v28.15620663a24.27259221 24.27259221 0 0 1-24.27259221 24.27259335H394.0352a48.54518557 48.54518557 0 0 1-41.74885888-23.78714112l-110.68302222-184.47170332a132.04290333 132.04290333 0 0 1-17.47626667-48.54518557h118.4502511a200.97706667 200.97706667 0 0 1 76.21594113 14.56355556l20.38897777 133.49925888a48.54518557 48.54518557 0 0 0 36.40888888 27.67075555l16.01991111 2.91271112a24.27259221 24.27259221 0 0 1 20.38897778 25.72894889zM997.45185223 463.45481443a194.18074112 194.18074112 0 0 1-38.8361489 116.50844445 24.75804445 24.75804445 0 0 1-36.4088889 0l-34.95253333-34.95253333a24.27259221 24.27259221 0 0 1-2.91271111-30.58346667 97.09036999 97.09036999 0 0 0 0-106.79940665 24.27259221 24.27259221 0 0 1 2.91271111-30.58346666l34.95253333-34.95253334a24.75804445 24.75804445 0 0 1 18.93262223-7.28177777 26.2144 26.2144 0 0 1 17.47626667 9.70903665A194.18074112 194.18074112 0 0 1 997.45185223 463.45481443z m-194.18074112-388.36148111v776.72296335a48.54518557 48.54518557 0 0 1-48.54518556 48.54518443h-28.64165888a48.54518557 48.54518557 0 0 1-33.98163001-14.07810332l-145.63555556-143.20829668A291.27111111 291.27111111 0 0 0 342.57730333 657.63555556H172.18370333a145.63555556 145.63555556 0 0 1-145.63555556-145.63555556v-97.09036999a145.63555556 145.63555556 0 0 1 145.63555556-145.63555556h170.3936a291.27111111 291.27111111 0 0 0 206.31703779-85.43952668l145.63555555-143.20829554a48.54518557 48.54518557 0 0 1 33.98162888-14.07810446H754.72592555a48.54518557 48.54518557 0 0 1 48.54518556 48.54518555z" fill="currentColor"></path>
+</svg>
+    <span>NOTICE</span>
+  </div>
+  <div class="widget-body">
+    <p>flex-block主题部分重构，详情查看https://github.com/miiiku/flex-block</p>
+  </div>
+</section>
+
+
+      <section class="widget-categorys widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+    <span>CATEGORYS</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categorys-list">
+      
+    </ul>
+  </div>
+</section>
+
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/miiiku/" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+    </div>
+     
+    <p>&copy; 2025 <a href="/" target="_blank">呼佳慧</a></p>
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  <!-- aplayer -->
+
+
+<!-- dplayer -->
+
+
+<!-- copy button  -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<!-- https://clipboardjs.com/ -->
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+</body>
+</html>
