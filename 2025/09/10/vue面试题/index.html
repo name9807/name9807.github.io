@@ -22,7 +22,7 @@
 
   
 
-  <title>随便写吧</title>
+  <title>vue面试题 | 随便写吧</title>
 
   
 
@@ -99,17 +99,12 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap"></h1>
+          <h1 class="title-wrap">vue面试题</h1>
           <h2 class="title-sub-wrap">
             <strong>呼佳慧</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2024-12-11T10:27:34.875Z" itemprop="datePublished">2024-12-11</time>
+            <time  class="article-date" datetime="2025-09-10T06:01:39.000Z" itemprop="datePublished">2025-09-10</time>
           </h2>
-          
-            <h2 class="last-time">
-              <span>最后更新于</span>
-              <time  class="article-updated" datetime="2024-12-12T09:00:27.183Z" itemprop="dateUpdated">2024-12-12</time>
-            </h2>
           
           
           <ul class="wrap-list dark">
@@ -139,176 +134,79 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="Linux系统如何收发网络包"><a href="#Linux系统如何收发网络包" class="headerlink" title="Linux系统如何收发网络包"></a>Linux系统如何收发网络包</h1><h2 id="网络模型"><a href="#网络模型" class="headerlink" title="网络模型"></a>网络模型</h2><p>为了各种设备能够通过网络相互通信,解决不同设备在网络互联中的兼容性问题,制定了 <strong>开放式系统互联通信参考模型</strong> OSI网络模型</p>
-<p>共七层,应用层,表示层,会话层,传输层,网络层,数据链路层,以及物理层</p>
+        <h1 id="VUE3面试题：如何理解vue"><a href="#VUE3面试题：如何理解vue" class="headerlink" title="VUE3面试题：如何理解vue"></a>VUE3面试题：如何理解vue</h1><p>vue是一个用于构建用户界面的，渐进式框架。vue的核心库只关心图层。</p>
+<h3 id="1-1-声明式框架"><a href="#1-1-声明式框架" class="headerlink" title="1.1 声明式框架"></a>1.1 声明式框架</h3><p>需求：记住上一次的登录用户名</p>
 <ul>
-<li>应用层: 给程序提供统一接口</li>
-<li>表示层: 数据转换成兼容另一个系统的格式</li>
-<li>会话层: 建立管理和终止表示层实体之间的通信会话</li>
-<li>传输层: 负责端到端的数据传输</li>
-<li>网络层: 负责数据的路由,转发,分片</li>
-<li>数据链路层: 负责数据的封帧和差错检测,以及MAC寻址</li>
-<li>物理层:负责在物理网络中传输数据帧</li>
+<li><p>命令式：<em><strong>UI的更新是由程序员使用代码主动刷新，UI与数据并无必然的映射关系，这种我们称之为命令式UI</strong></em></p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//基于JQuery的实现</span><br><span class="line">const lastLoginUsername = localstorage.getItem(&quot;lastLoginUsername&quot;)</span><br><span class="line">$(&quot;#username&quot;).val(lastLoginUsername);//主动刷新UI </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>声明式：<em><strong>UI的更新并非由程序员使用代码来主动刷新，而是由后面隐藏机制来负责维护UI的刷新，UI与数据有映射关系，这种我们就称之为声明式UI</strong></em></p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//代码做了删减，只保留了有关的部分</span><br><span class="line">export const LoginView = observer(() =&gt; &#123;</span><br><span class="line">  const [username, setUsername] = useState(localStorage.getItem(&#x27;login_username&#x27;));</span><br><span class="line">  return (&lt;Input className=&quot;input_username&quot; value=&#123;username&#125; onChange=&#123;e =&gt; setUsername(e.target.value)&#125; /&gt;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
 </ul>
-<p>但是它过于复杂,分层也是是概念和理论,其实没有具体实现方案</p>
-<p>实际上常见且实用的是四层模型,TCP&#x2F;IP模型</p>
+<p>因此声明式的UI会更加简单。</p>
+<h3 id="1-2-MVVM模式"><a href="#1-2-MVVM模式" class="headerlink" title="1.2 MVVM模式"></a>1.2 MVVM模式</h3><p>如何设计一个程序的结构，这是一门专门的学问，叫做”架构模式”（architectural pattern），属于编程的方法论。</p>
 <ul>
-<li>应用层: 提供应用程序,如HTTP,DNS,FTP等<br>  (http报文的响应头啊,方法啊啥的)</li>
-<li>传输层: 负责端到端的通信,TCP,UDP<br>  (头部含端口号,负责对应的端口)</li>
-<li>网络层: 网络包的封装,分片,路由,转发等,例如 IP, ICMP等<br>  (包含分片数据包,协议号,还有源ip地址和目标ip地址,实现这些内容交给了IP协议这样的东西)</li>
-<li>网络接口层: 负责网络包在屋里网络中的传输,例如 网络包的封帧, MAC寻址,差错检测,以及网卡传输网络帧等<br>  (这部分)</li>
-</ul>
-<h1 id="HTTP面试题"><a href="#HTTP面试题" class="headerlink" title="HTTP面试题"></a>HTTP面试题</h1><ol>
-<li>http的基本概念</li>
-<li>get与post</li>
-<li>http特性</li>
-<li>http缓存技术</li>
-<li>https和http</li>
-<li>1.1&#x2F;2&#x2F;3的区别</li>
-</ol>
-<img src="/2024/12/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C3/image-20241211205044205.png" class="" title="image-20241211205044205">
-
-<h2 id="HTTP基本概念"><a href="#HTTP基本概念" class="headerlink" title="HTTP基本概念"></a>HTTP基本概念</h2><p>http超文本传输协议</p>
-<ul>
-<li>超文本: 超越了普通文本,是混合体</li>
-<li>传输: 双向协议,是专门用来在<strong>两点之间传输数据</strong>的约定和规范,允许中间有中转或接力,只要不打扰基本数据传输</li>
-<li>协议: 使用计算机能够理解的语言确立计算机间交流通信的规范,以及相关的各种控制和错误处理方式</li>
-</ul>
+<li><p>MVC：<em><strong>MVC是三个单词的首字母缩写，它们是Model（模型）、View（视图）和Controller（控制）。</strong></em><br>  应用程序的数据、业务逻辑和用户界面进行分离，使得每个组件的职责更加明确，代码更易于组织和维护。<br>  当用户与View进行交互时，View会将事件通知给Controller，Controller根据事件的类型和用户输入处理相关的业务逻辑，并更新Model中的数据。然后，Controller将更新后的数据传递给View，使得View可以展示最新的数据给用户。</p>
 <blockquote>
-<p>因此HTTP是计算机世界里专门进行[<em>两点</em>]之间[<em>传输</em>]文字图片音频等[<em>超文本</em>]数据的[<em>约定和规范</em>]</p>
+<ol>
+<li>最顶层，直接面向最终用户的 “视图层”。</li>
+<li>中间层，“控制层”，根据用户从“视图”输入的指令，选取“数据”，进行操作，产生结果。</li>
+<li>最低层，核心“数据层”。</li>
+</ol>
 </blockquote>
-<h3 id="http状态码"><a href="#http状态码" class="headerlink" title="http状态码"></a>http状态码</h3><img src="/2024/12/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C3/image-20241211210129929.png" class="" title="image-20241211210129929">
-
-<ul>
-<li><p>1xx : 提示信息, <em>协议处理的中间状态,很少使用</em></p>
+<p>  后来由于需求越来越庞大，controller层越来越复杂，因此隐藏了controller的MVVM模型出现了。</p>
 </li>
-<li><p>2xx : 服务器成功处理了客户端请求</p>
-<ol>
-<li>[ 200 ok ] 一切正常 (非head请求会带有body数据) <strong>看不懂,待补充</strong></li>
-<li>[ 204 no content] 响应头没有body数据</li>
-<li>[ 206 partial content] http分块下载或断点续传,表示相应返回的body并非全部</li>
-</ol>
-</li>
-<li><p>3xx : 客户端请求的资源发生了变动,需要客户端用新的url重新发送请求获取, 即 <strong>重定向</strong></p>
-<ol>
-<li>[ 301 moved permanently] 永久重定向,资源已经不存在了</li>
-<li>[ 302 found ] 临时重定向,资源存在,但是需要另一个url访问</li>
-</ol>
-<p>  都会在响应头使用Location字段,知名后续跳转,可以自动重定向到新的</p>
-</li>
-<li><p>4xx : 表示客户端发送到报文有误,服务器无法处理,错误码</p>
-<ol>
-<li>[ 400 bad request ] 报文有错,</li>
-<li>[ 403 Forbidden ] 服务器禁止访问资源</li>
-<li>[ 404 not found ] 请求的资源在服务器上不存在未找到</li>
-</ol>
-</li>
-<li><p>5xx : 报文正确,但是 <strong>服务器处理事内部发生了错误</strong>,是服务端的错误码</p>
-<ol>
-<li>500 通用</li>
-<li>[ 501 not implemente] 功能还不支持</li>
-<li>[ 502 bad gateway ] 服务器作为网关或者代理时返回的错误码,自身正常,后端服务器发生错误</li>
-<li>[ 503 service unavailable ] 服务器很忙暂时无法响应</li>
-</ol>
-</li>
-</ul>
-<h3 id="HTTP常见字段"><a href="#HTTP常见字段" class="headerlink" title="HTTP常见字段"></a>HTTP常见字段</h3><ul>
-<li><em>Host</em><br>  制定服务器域名,可以发往 <strong>同一台</strong> 服务器的不同网站</li>
-<li><em>content-length</em><br>  服务器返回数据时,表明本次回应的数据长度,浏览器可以以这个字段的长度找到 <strong>HTTP body 的边界</strong> 而httphead的便捷靠回车或换行——解决了”粘包” <strong>待补充</strong></li>
-<li><em>connection</em><br>  用于客户端要求服务器使用 <em>http长连接</em> 机制, 以便其他请求复用<br>  只要忍一段没有明确提出断开连接,就保持TCP的链接状态</li>
-<li><em>content-type</em><br>  服务器回应时告诉客户端,本次是什么格式;什么编码<br>  而客户端请求的时候可以使用 <em>Accept</em> 字段声明自己可以接受那些数据格式</li>
-<li><em>content-encoding</em><br>  数据的压缩方法,表示服务器端使用了什么压缩格式<br>  对应客户端 <em>accept-encoding</em></li>
-</ul>
-<h2 id="GET-和-POST"><a href="#GET-和-POST" class="headerlink" title="GET 和 POST"></a>GET 和 POST</h2><h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><p>根据 <em>RFC规范</em> get和post 有 <strong>语义上的区别</strong></p>
-<ul>
-<li>GET : 从服务器获取指定资源, 参数写在URL中(query参数,在浏览器地址栏里面,浏览器也会对url有限制)</li>
-<li>POST : 根据 <strong>请求负荷</strong> 对指定资源做出处理,(body参数) body可以是任意格式的数据</li>
-</ul>
-<h3 id="都是安全和幂等的吗"><a href="#都是安全和幂等的吗" class="headerlink" title="都是安全和幂等的吗?"></a>都是安全和幂等的吗?</h3><ol>
-<li>安全 : 该请求方法不会 <strong>破坏</strong> 服务器上的资源</li>
-<li>幂等 : 执行多次相同的操作,结果都是 <strong>相同</strong> 的</li>
-</ol>
-<p>如果按照了RFC规范定义的语义:</p>
-<ul>
-<li>GET<strong>是安全且幂等的</strong>，<br>  <em>因此浏览器可以对GET请求的数据作缓存,这个缓存可以做到避免浏览器发请求,或者做到代理上</em>   代理什么意思?? <strong>待补充</strong></li>
-<li>POST <strong>是不安全的，不冪等的</strong>，</li>
-</ul>
+<li><p>MVVM：<br>  本质是<strong>解耦</strong>。<em><strong>将应用程序的UI与其底层数据模型分离，通过数据绑定实现数据和UI的自动同步，从而降低代码的耦合度，提高应用程序的可维护性和可测试性。</strong></em><br>  在传统的MVVM模式中，数据和视图的绑定是必须的。但是vue并没有完全遵循MVVM模型，例如，vue中类似ref的api可以操作数据。</p>
 <blockquote>
-<p>RFC规范并没有规定GET请求不能带body, 但是因为语义上不需要用到body,所以基本不用</p>
-</blockquote>
-<h2 id="HTTP缓存技术"><a href="#HTTP缓存技术" class="headerlink" title="HTTP缓存技术"></a>HTTP缓存技术</h2><h3 id="有哪些实现方式"><a href="#有哪些实现方式" class="headerlink" title="有哪些实现方式?"></a>有哪些实现方式?</h3><h4 id="强制缓存"><a href="#强制缓存" class="headerlink" title="强制缓存"></a>强制缓存</h4><p>浏览器判断缓存没有过期,就直接使用浏览器的本地缓存—– 由浏览器决定</p>
-<img src="/2024/12/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C3/image-20241212142749338.png" class="" title="image-20241212142749338">
-
-<p>强缓存由http头部的两个字段实现,表示资源在客户端缓存的有效期</p>
-<ul>
-<li>cache-control : 相对时间 优先级更高, 设置更加精细<ol>
-<li>第一次访问服务器资源师,服务器会在返回这个资源的同时,在响应头部加上这个字段,设置了过期时间的大小</li>
-<li>再次访问时, 浏览器会根据请求资源的时间和时间大小计算出是否过期,过期重新请求</li>
-<li>再次收到后就更新</li>
-</ol>
-</li>
-<li>expires : 绝对时间</li>
-</ul>
-<h4 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h4><p>某些请求的响应码是 <strong>304</strong> , 这个是告诉浏览器 可以使用本地缓存的资源 , 这种通过服务端告知客户端是否可以使用缓存的方式被称为协商缓存</p>
-<img src="/2024/12/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C3/image-20241212143450646.png" class="" title="image-20241212143450646">
-
-<p>协商缓存基于两种头部来实现</p>
-<p>第一种 请求头部中的 <strong>If-Modified-Since</strong> 字段 和响应头部中的 <strong>Last-Modified</strong> 字段实现</p>
-<ul>
-<li>last-modified : 标志着这个响应资源的最后修改时间, (服务端)</li>
-<li>fi-modified-since : 当资源过期了,发现响应头中有 (之前返回的时候带着的) 最后修改时间的声明 ,那么发请求的时候带上这个   最后修改时间 (放在这个 是否修改时间 if这个字段里面) 服务器发现有这个字段之后,与最后的修改时间进行对比,如果被改动过,就返回最新的,如果没修改,那么就响应 http 304 走缓存</li>
-</ul>
-<p>第二种 请求头中的 <strong>If-None-Match</strong> 和 响应头中的 <strong>ETag</strong> 字段</p>
-<ul>
-<li>if -none-match : 当资源过期时,浏览器发现响应头里有Etag,再次向服务器发起请求,会将这个值设置成etag的值,服务器收到请求后进行对比,如果资源没有变化就返回304,如果资源变化了就返回200</li>
-<li>etag : 唯一标识响应资源</li>
-</ul>
-<p>后者是基于一个唯一标识实现,比起时间更为准确,因此etag的优先级更高</p>
-<p>因为它能够解决几个时间难以处理的问题:</p>
 <ol>
-<li>没有修改文件内容的情况下,时间也可能改变</li>
-<li>有些文件是秒级以内修改,但是最后修改时间现查不到</li>
-<li>有的服务器不能精确获取最后修改文件时间</li>
+<li>V：“视图层”，面向用户的界面。</li>
+<li>VM：“视图模型”，视图和视图模型的数据应该同步连接，二者共同变化，自动更新。</li>
+<li>M: ”模型&#x2F;数据层“。</li>
 </ol>
-<p>都需要配合cache-control 使用,未命中强制缓存时, (  <strong>即过期时间已经超过了</strong> ) 这时候才会发起带有协商缓存字段的请求</p>
-<h2 id="HTTP特性"><a href="#HTTP特性" class="headerlink" title="HTTP特性"></a>HTTP特性</h2><h3 id="HTTP-1-1-的优点"><a href="#HTTP-1-1-的优点" class="headerlink" title="HTTP&#x2F;1.1 的优点"></a>HTTP&#x2F;1.1 的优点</h3><ol>
-<li>简单 : 基本报文格式是 header +body 头部信息是 key-value 的简单文本形式,易于理解</li>
-<li>灵活和易于扩展 : 各类请求方法, URI&#x2F;URL, 状态码 , 头字段没有被固定死,允许自定<br> 作用在应用层,下层可以随意变化<ul>
-<li>HTTPS 就是在http和tcp之间增加了ssl&#x2F;tsl安全传输层</li>
-<li>而http&#x2F;1.1 http&#x2F;2.0 使用tcp协议, 3.0改用udp协议</li>
-</ul>
+</blockquote>
 </li>
-<li>应用广泛 可以跨平台</li>
+</ul>
+<h3 id="1-3-采用虚拟dom"><a href="#1-3-采用虚拟dom" class="headerlink" title="1.3 采用虚拟dom"></a>1.3 采用虚拟dom</h3><blockquote>
+<p>为什么需要虚拟dom</p>
+</blockquote>
+<p>操作DOM的代价是非常昂贵的，频繁的操作会造成页面卡顿，影响用户的体验。传统原生api和jQuery去操作dom时，浏览器会从构建dom树开始从头到尾执行一遍渲染流程。如果多次更新，那么这个流程也会被执行多次。</p>
+<blockquote>
+<p>vue虚拟dom的好处</p>
+</blockquote>
+<p>通过vnode，更新dom时，现将更新的diff内容保存到js对象中，再一次性更新dom树。<em><strong>但是，虚拟dom最大的优势是抽象了原来的渲染过程，给予了框架跨平台的能力。</strong></em></p>
+<h3 id="1-4-区分编译时和运行时"><a href="#1-4-区分编译时和运行时" class="headerlink" title="1.4 区分编译时和运行时"></a>1.4 区分编译时和运行时</h3><p>vue渲染的核心是调用render方法将虚拟dom渲染成真是dom。&#x2F;&#x2F;待补充？？</p>
+<h3 id="1-5-组件化"><a href="#1-5-组件化" class="headerlink" title="1.5 组件化"></a>1.5 组件化</h3><blockquote>
+<p>什么是组件化？</p>
+</blockquote>
+<p>一句话来说就是把图形、非图形的各种逻辑均抽象为一个统一的概念（组件）来实现开发的模式。</p>
+<blockquote>
+<p>优势？</p>
+</blockquote>
+<ul>
+<li>降低整个系统的耦合度，在保持接口不变的情况下，我们可以替换不同的组件快速完成需求，例如输入框，可以替换为日历、时间、范围等组件作具体的实现</li>
+<li>调试方便，由于整个系统是通过组件组合起来的，在出现问题的时候，可以用排除法直接移除组件，或者根据报错的组件快速定位问题，之所以能够快速定位，是因为每个组件之间低耦合，职责单一，所以逻辑会比分析整个系统要简单</li>
+<li>提高可维护性，由于每个组件的职责单一，并且组件在系统中是被复用的，所以对代码进行优化可获得系统的整体升级</li>
+</ul>
+<p>参考：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1305654">深入理解MVVM</a></li>
+<li><a target="_blank" rel="noopener" href="https://vue3js.cn/interview/vue/vnode.html#%E4%BA%8C%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E8%99%9A%E6%8B%9Fdom">虚拟dom</a></li>
 </ol>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3>
+
       </section>
 
       
       
         <nav class="article-nav">
           
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-    <div class="card-text">
-      
-        <a href="/2025/03/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C1/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">(no title)</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
-          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
     <div class="card-text">
       
-        <a href="/2024/12/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C2/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">(no title)</h2>
+        <a href="/2025/09/02/%E7%AE%97%E6%B3%95/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">算法</h2>
         </a>
       
       <div class="card-text--row">Older</div>
