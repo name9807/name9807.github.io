@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="author" content="呼佳慧"/><meta name="copyright" content="呼佳慧"/><meta name="theme-color" content="#FFB347"/><meta name="format-detection" content="telephone=no"/><meta name="keywords" content="Hexo Theme MEOW"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-touch-fullscreen" content="yes"/><meta name="application-name" content="你不知道的javascript上卷整理 | 随便写吧"/><meta name="apple-mobile-web-app-title" content="你不知道的javascript上卷整理 | 随便写吧"/><meta name="apple-mobile-web-app-status-bar-style" content="#FFB347"/><link rel="canonical" href="https://name9807.github.io/2024/09/23/你不知道的javascript上卷整理/"/><meta name="description" content="作用域是什么编译原理传统编译语言流程:  分词&#x2F;词法分析:编程语言的字符串分解成词法单元 解析&#x2F;语法分析:将词法单元流(数组)转换成元素组成的代表程序语法结构的树–抽象语法树 代码生成:将抽象语法树转化为可执行代码(和语言,目标平台相关)—–通过某种方法转换成机器指令执行想执行的任务  但是javascript有更复杂的引擎,会在语法分析和生成代码阶段优化运行性能 对于j...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="你不知道的javascript上卷整理 | 随便写吧">
+<meta property="og:url" content="https://name9807.github.io/2024/09/23/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84javascript%E4%B8%8A%E5%8D%B7%E6%95%B4%E7%90%86/index.html">
+<meta property="og:site_name" content="随便写吧">
+<meta property="og:description" content="作用域是什么编译原理传统编译语言流程:  分词&#x2F;词法分析:编程语言的字符串分解成词法单元 解析&#x2F;语法分析:将词法单元流(数组)转换成元素组成的代表程序语法结构的树–抽象语法树 代码生成:将抽象语法树转化为可执行代码(和语言,目标平台相关)—–通过某种方法转换成机器指令执行想执行的任务  但是javascript有更复杂的引擎,会在语法分析和生成代码阶段优化运行性能 对于j...">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://name9807.github.io/2024/09/23/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84javascript%E4%B8%8A%E5%8D%B7%E6%95%B4%E7%90%86/assets/images/Hexo-Theme-MEOW.png">
+<meta property="article:published_time" content="2024-09-23T04:18:18.000Z">
+<meta property="article:modified_time" content="2024-09-26T09:00:58.514Z">
+<meta property="article:author" content="呼佳慧">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://name9807.github.io/2024/09/23/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84javascript%E4%B8%8A%E5%8D%B7%E6%95%B4%E7%90%86/assets/images/Hexo-Theme-MEOW.png"><meta name="robots" content="index,follow"/><meta name="googlebot" content="index,follow"/><meta name="revisit-after" content="1 days"/><title>你不知道的javascript上卷整理 | 随便写吧</title><link rel="shortcut icon" href="/assets/images/Hexo-Theme-MEOW.ico"><link rel="preconnect" href="/assets"/><link rel="preconnect" href="assets"/>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="prefetch" href="/"/><link rel="prefetch" href="/archives"/><link rel="prefetch" href="/tags"/><meta name="generator" content="Hexo 7.1.1"></head><body bg-style="none"><header><div id="navbar"><div id="nav-info"><a id="site-icon" href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a id="site-name" href="/" title="主页"><div>随便写吧</div><img src="/assets/images/svg/uc/uc-home.svg" class="icon noview" alt="Icon"></a></div><div id="nav-menu"></div><div id="nav-function"><div id="menu-btn"><a href="javascript:void(0);" title="打开菜单"><img src="/assets/images/svg/uc/uc-menu.svg" class="icon noview" alt="Icon"></a></div></div></div></header><div id="menu-aside"><div id="menu-aside-container"><div id="menu-aside-info"><a href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a href="/" title="主页">随便写吧</a></div><hr/></div></div><main><div class="banner"><div class="banner-info"><div class="banner-avatar"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Avatar"/></div><div class="banner-title">「 MEOW 」</div></div></div><div class="post-container"><div class="post-main"><div class="post-content"><h1 class="post-title">你不知道的javascript上卷整理</h1><div class="post-author"><span>作者: 呼佳慧</span></div><div class="post-meta"><div class="post-info"><div class="post-date"><div class="post-pubdate"><img src="/assets/images/svg/ta/ta-pubdate.svg" class="icon noview" alt="Icon"><span>发表于2024-09-23</span></div><div class="post-update"><img src="/assets/images/svg/ta/ta-update.svg" class="icon noview" alt="Icon"><span>更新于2025-09-10</span></div></div><div class="post-read"></div></div><div class="post-attribute"></div></div><div class="post markdown" indent="false"><h1 id="作用域是什么"><a href="#作用域是什么" class="headerlink" title="作用域是什么"></a>作用域是什么</h1><h2 id="编译原理"><a href="#编译原理" class="headerlink" title="编译原理"></a>编译原理</h2><p><strong>传统编译语言流程</strong>:</p>
+<ul>
+<li>分词&#x2F;词法分析:编程语言的字符串分解成词法单元</li>
+<li>解析&#x2F;语法分析:将词法单元流(数组)转换成元素组成的代表程序语法结构的树–<strong>抽象语法树</strong></li>
+<li>代码生成:将抽象语法树转化为可执行代码(和语言,目标平台相关)—–<strong>通过某种方法转换成机器指令执行想执行的任务</strong></li>
+</ul>
+<p>但是javascript有更复杂的引擎,会在语法分析和生成代码阶段优化运行性能</p>
+<p>对于javascript来说编译仅发生在执行前几微妙—作用域背后javascript引擎会用许多方法延迟编译来保证性能更好</p>
+<h2 id="理解作用域"><a href="#理解作用域" class="headerlink" title="理解作用域"></a>理解作用域</h2><ul>
+<li>引擎:负责整个js程序的编译和执行过程</li>
+<li>编译器:负责编译中的语法分析和代码生成</li>
+<li>作用域:收集和维护标识符组成的查询,确定代码对当前标识符的访问权限——&gt;<strong>根据名称找变量的一套规则</strong></li>
+</ul>
+<p>&#x3D;&#x3D;javascript的执行:&#x3D;&#x3D;<br>编译器先进行分词,语法分析——&gt;<strong>编译器</strong>向作用域集合查找该变量名,(没有就声明)—-&gt;<strong>编译器</strong>生成运行时代码,引擎询问<strong>作用域</strong>查找变量,查找并赋值</p>
+<p>&#x3D;&#x3D;左查找和右查找&#x3D;&#x3D;</p>
+<ul>
+<li>左查找:试图找到变量的容器本身,从而可以对其赋值<br>  eg:某变量的赋值,函数参数的赋值</li>
+<li>右查找:找到他的值(非左侧查找)<br>  eg:函数调用,值的使用</li>
+</ul>
+<h2 id="作用域嵌套"><a href="#作用域嵌套" class="headerlink" title="作用域嵌套"></a>作用域嵌套</h2><p>当块或者函数嵌套在另一个块或者函数中的时候,发生了作用域的嵌套,在当前作用域中无法找到某个变量时,引擎会在外城嵌套的作用域中继续查找,知道抵达最外层的作用域或者找到该变量.</p>
+<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><ul>
+<li>右查找找不到时:抛出referenceError<br>  右查找找到了但操作不合法:typeError</li>
+<li>左查找找不到时:创建一个该名称变量返还给引擎</li>
+</ul>
+<p>严格模式:</p>
+<ul>
+<li>左查找失败:referenceError</li>
+<li>同上</li>
+</ul>
+<h1 id="词法作用域"><a href="#词法作用域" class="headerlink" title="词法作用域"></a>词法作用域</h1><p><strong>词法作用域vs动态作用域</strong></p>
+<h2 id="词法阶段"><a href="#词法阶段" class="headerlink" title="词法阶段"></a>词法阶段</h2><p>词法化:编译器的工作第一阶段(分词和语法分析)</p>
+<p>词法作用域是一个由词法化这个词衍生出来的词语.是定义在词法阶段的作用域,是由写代码是变量和块作用域写在哪里实现的.</p>
+<p>作用域会根据词法作用域的嵌套结构提供的位置信息,由引擎进行查找,并在查找到第一个符合的标识符停止,因此对外层产生了遮蔽效应</p>
+<p>[^如果是全局变量,实际是全局对象的属性,例如浏览器的window对象,在遮蔽的情况下可以被通过window.变量名访问,其他则不可访问]: </p>
+<h2 id="欺骗词法"><a href="#欺骗词法" class="headerlink" title="欺骗词法"></a>欺骗词法</h2><p>两种会导致性能下降的机制可以欺骗词法作用域</p>
+<h1 id="函数作用域和块作用域"><a href="#函数作用域和块作用域" class="headerlink" title="函数作用域和块作用域"></a>函数作用域和块作用域</h1></div><div class="post-reward"><div class="post-reward-btn" title="赞赏作者"><img src="/assets/images/svg/uc/uc-gift.svg" class="icon noview" alt="Icon"><span></span></div><div class="post-reward-content"><div class="post-reward-text"></div><div class="post-reward-list"><a href="/null" target="_blank">致谢名单</a></div></div></div><div class="post-copyright"><div class="post-copyright-info">本作品由 呼佳慧 于 2024-09-23 12:18:18 发布</div><div class="post-copyright-link"><span>作品地址：<a href="https://name9807.github.io/2024/09/23/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84javascript%E4%B8%8A%E5%8D%B7%E6%95%B4%E7%90%86/">你不知道的javascript上卷整理</a></span><button class="copy-text" type="button" data-text="https://name9807.github.io/2024/09/23/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84javascript%E4%B8%8A%E5%8D%B7%E6%95%B4%E7%90%86/">复制</button></div><div class="post-copyright-detail">除特别声明外，本站作品均采用 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' title='Attribution-NonCommercial-ShareAlike' target='_blank'>CC BY-NC-SA 4.0</a> 许可协议，转载请注明来自 <a href='/'>随便写吧</a></div><img class="post-copyright-icon noview" src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></div><div class="post-tail-tags"></div></div><aside id="post-sidebar" status="show"><div id="toc-container"><div class="toc-title"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"><span>目录</span></div><div class="toc-content" id="toc-div"><ol class="toc-list"><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-list-text">作用域是什么</span></a><ol class="toc-list-child"><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86"><span class="toc-list-text">编译原理</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E7%90%86%E8%A7%A3%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-list-text">理解作用域</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%B5%8C%E5%A5%97"><span class="toc-list-text">作用域嵌套</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E5%BC%82%E5%B8%B8"><span class="toc-list-text">异常</span></a></li></ol></li><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#%E8%AF%8D%E6%B3%95%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-list-text">词法作用域</span></a><ol class="toc-list-child"><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E8%AF%8D%E6%B3%95%E9%98%B6%E6%AE%B5"><span class="toc-list-text">词法阶段</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E6%AC%BA%E9%AA%97%E8%AF%8D%E6%B3%95"><span class="toc-list-text">欺骗词法</span></a></li></ol></li><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%9D%97%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-list-text">函数作用域和块作用域</span></a></li></ol></div></div></aside></div></div><div id="toolbar" hide=""><div id="toolbar-setting-container" hide=""><div class="toolbar-item"><button id="tool-color-mode" title="深色模式" type="button"><img src="/assets/images/svg/ta/ta-moon.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button class="copy-text" id="tool-share" title="分享" type="button" data-text="https://name9807.github.io/2024/09/23/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84javascript%E4%B8%8A%E5%8D%B7%E6%95%B4%E7%90%86/"><img src="/assets/images/svg/ta/ta-share.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-plus" title="放大字体" type="button"><img src="/assets/images/svg/ta/ta-text-plus.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-minus" title="缩小字体" type="button"><img src="/assets/images/svg/ta/ta-text-minus.svg" class="icon noview" alt="Icon"></button></div></div><div class="toolbar-container"><div class="toolbar-item"><button id="tool-setting" title="设置" type="button"><img src="/assets/images/svg/ta/ta-setting.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-toc" title="目录" type="button"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-gototop" title="返回顶部" type="button"><img src="/assets/images/svg/ta/ta-up.svg" class="icon noview" alt="Icon"></button></div></div></div></main><footer><div class="footer"><div id="footer-copyright">© 2024 - 2025 <span>💗</span> <a href="/null">呼佳慧</a></div><div id="footer-info"><div id="footer-framework">🚀本站由 <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/chanwj/hexo-theme-meow" title="3.1.0" target="_blank">Meow</a> 强力驱动</div><div id="footer-runtime"><span id="runtime" data-startdate="2024-04-02T22:16:20.000Z">🌻已稳定运行.年.月.天</span></div></div></div></footer><div class="scripts"><script>const GLOBALCONFIG = {
+  root: '/',
+  toolbar: true,
+  lazyload_src: '/assets/images/Meow-Loading.webp',
+  friends: false,
+  codeblock: true,
+  share_text: '🐱Share From Meow',
+  onblur_title: 'Please Come Back～✧(´▽`ʃ♡ƪ)',
+  mouse_click: false,
+  notify:{
+    enable: false,
+    info: '复制成功～转载请标注本文地址',
+    f12_info: '开发者模式已打开，请遵循本站版权协议'
+  },
+  search: {
+    enable: false,
+    path: 'search.json',
+    local: {
+      top_n_per_article: 1,
+      preload: false
+    }
+  },
+  encrypt: false,
+};
+</script><script>if (!localStorage.getItem('color-mode')) {
+  localStorage.setItem('color-mode', 'light' || 'light');
+}
+document.body.setAttribute('data-mode', localStorage.getItem('color-mode'));
+</script>
+<script src="/js/theme/tools/utils.js"></script>
+
+<script src="/js/plugins/dist/lazyload.min.js"></script>
+
+<script src="/js/plugins/view-image.min.js"></script>
+<script>if (localStorage.getItem('font-size')) {
+  document.querySelector('.post').style.fontSize = localStorage.getItem('font-size') + 'px';
+}
+</script>
+<script src="/js/main.js" type="module"></script>
+</div></body></html>

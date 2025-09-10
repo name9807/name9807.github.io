@@ -1,0 +1,325 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="author" content="呼佳慧"/><meta name="copyright" content="呼佳慧"/><meta name="theme-color" content="#FFB347"/><meta name="format-detection" content="telephone=no"/><meta name="keywords" content="Hexo Theme MEOW"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-touch-fullscreen" content="yes"/><meta name="application-name" content="随便写吧 | 随便写吧"/><meta name="apple-mobile-web-app-title" content="随便写吧 | 随便写吧"/><meta name="apple-mobile-web-app-status-bar-style" content="#FFB347"/><link rel="canonical" href="https://name9807.github.io/2025/03/09/css动画1/"/><meta name="description" content="css变换Transform属性应用于元素的2D或3D转换。这个属性允许你将元素旋转，缩放，移动，倾斜等。 transform: none|transform-functions;变换函数    值 描述    none 定义不进行转换。   matrix(n,n,n,n,n,n) 定义 2D 转换，使用六个值的矩阵。   matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="随便写吧 | 随便写吧">
+<meta property="og:url" content="https://name9807.github.io/2025/03/09/css%E5%8A%A8%E7%94%BB1/index.html">
+<meta property="og:site_name" content="随便写吧">
+<meta property="og:description" content="css变换Transform属性应用于元素的2D或3D转换。这个属性允许你将元素旋转，缩放，移动，倾斜等。 transform: none|transform-functions;变换函数    值 描述    none 定义不进行转换。   matrix(n,n,n,n,n,n) 定义 2D 转换，使用六个值的矩阵。   matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n...">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://name9807.github.io/2025/03/09/css%E5%8A%A8%E7%94%BB1/assets/images/Hexo-Theme-MEOW.png">
+<meta property="article:published_time" content="2025-03-09T07:44:26.537Z">
+<meta property="article:modified_time" content="2025-01-23T10:02:25.653Z">
+<meta property="article:author" content="呼佳慧">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://name9807.github.io/2025/03/09/css%E5%8A%A8%E7%94%BB1/assets/images/Hexo-Theme-MEOW.png"><meta name="robots" content="index,follow"/><meta name="googlebot" content="index,follow"/><meta name="revisit-after" content="1 days"/><title>随便写吧 | 随便写吧</title><link rel="shortcut icon" href="/assets/images/Hexo-Theme-MEOW.ico"><link rel="preconnect" href="/assets"/><link rel="preconnect" href="assets"/>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="prefetch" href="/"/><link rel="prefetch" href="/archives"/><link rel="prefetch" href="/tags"/><meta name="generator" content="Hexo 7.1.1"></head><body bg-style="none"><header><div id="navbar"><div id="nav-info"><a id="site-icon" href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a id="site-name" href="/" title="主页"><div>随便写吧</div><img src="/assets/images/svg/uc/uc-home.svg" class="icon noview" alt="Icon"></a></div><div id="nav-menu"></div><div id="nav-function"><div id="menu-btn"><a href="javascript:void(0);" title="打开菜单"><img src="/assets/images/svg/uc/uc-menu.svg" class="icon noview" alt="Icon"></a></div></div></div></header><div id="menu-aside"><div id="menu-aside-container"><div id="menu-aside-info"><a href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a href="/" title="主页">随便写吧</a></div><hr/></div></div><main><div class="banner"><div class="banner-info"><div class="banner-avatar"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Avatar"/></div><div class="banner-title">「 MEOW 」</div></div></div><div class="post-container"><div class="post-main"><div class="post-content"><h1 class="post-title"></h1><div class="post-author"><span>作者: 呼佳慧</span></div><div class="post-meta"><div class="post-info"><div class="post-date"><div class="post-pubdate"><img src="/assets/images/svg/ta/ta-pubdate.svg" class="icon noview" alt="Icon"><span>发表于2025-03-09</span></div><div class="post-update"><img src="/assets/images/svg/ta/ta-update.svg" class="icon noview" alt="Icon"><span>更新于2025-09-10</span></div></div><div class="post-read"></div></div><div class="post-attribute"></div></div><div class="post markdown" indent="false"><h2 id="css变换"><a href="#css变换" class="headerlink" title="css变换"></a>css变换</h2><p>Transform属性应用于元素的2D或3D转换。这个属性允许你将元素旋转，缩放，移动，倾斜等。</p>
+<p>transform: none|<em>transform-functions</em>;变换函数</p>
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">none</td>
+<td align="left">定义不进行转换。</td>
+</tr>
+<tr>
+<td align="left">matrix(<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>)</td>
+<td align="left">定义 2D 转换，使用六个值的矩阵。</td>
+</tr>
+<tr>
+<td align="left">matrix3d(<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>)</td>
+<td align="left">定义 3D 转换，使用 16 个值的 4x4 矩阵。</td>
+</tr>
+<tr>
+<td align="left">translate(<em>x</em>,<em>y</em>)</td>
+<td align="left">定义 2D 转换。</td>
+</tr>
+<tr>
+<td align="left">translate3d(<em>x</em>,<em>y</em>,<em>z</em>)</td>
+<td align="left">定义 3D 转换。</td>
+</tr>
+<tr>
+<td align="left">translateX(<em>x</em>)</td>
+<td align="left">定义转换，只是用 X 轴的值。</td>
+</tr>
+<tr>
+<td align="left">translateY(<em>y</em>)</td>
+<td align="left">定义转换，只是用 Y 轴的值。</td>
+</tr>
+<tr>
+<td align="left">translateZ(<em>z</em>)</td>
+<td align="left">定义 3D 转换，只是用 Z 轴的值。</td>
+</tr>
+<tr>
+<td align="left">scale(<em>x</em>[,<em>y</em>]?)</td>
+<td align="left">定义 2D 缩放转换。</td>
+</tr>
+<tr>
+<td align="left">scale3d(<em>x</em>,<em>y</em>,<em>z</em>)</td>
+<td align="left">定义 3D 缩放转换。</td>
+</tr>
+<tr>
+<td align="left">scaleX(<em>x</em>)</td>
+<td align="left">通过设置 X 轴的值来定义缩放转换。</td>
+</tr>
+<tr>
+<td align="left">scaleY(<em>y</em>)</td>
+<td align="left">通过设置 Y 轴的值来定义缩放转换。</td>
+</tr>
+<tr>
+<td align="left">scaleZ(<em>z</em>)</td>
+<td align="left">通过设置 Z 轴的值来定义 3D 缩放转换。</td>
+</tr>
+<tr>
+<td align="left">rotate(<em>angle</em>)</td>
+<td align="left">定义 2D 旋转，在参数中规定角度。</td>
+</tr>
+<tr>
+<td align="left">rotate3d(<em>x</em>,<em>y</em>,<em>z</em>,<em>angle</em>)</td>
+<td align="left">定义 3D 旋转。</td>
+</tr>
+<tr>
+<td align="left">rotateX(<em>angle</em>)</td>
+<td align="left">定义沿着 X 轴的 3D 旋转。</td>
+</tr>
+<tr>
+<td align="left">rotateY(<em>angle</em>)</td>
+<td align="left">定义沿着 Y 轴的 3D 旋转。</td>
+</tr>
+<tr>
+<td align="left">rotateZ(<em>angle</em>)</td>
+<td align="left">定义沿着 Z 轴的 3D 旋转。</td>
+</tr>
+<tr>
+<td align="left">skew(<em>x-angle</em>,<em>y-angle</em>)</td>
+<td align="left">定义沿着 X 和 Y 轴的 2D 倾斜转换。</td>
+</tr>
+<tr>
+<td align="left">skewX(<em>angle</em>)</td>
+<td align="left">定义沿着 X 轴的 2D 倾斜转换。</td>
+</tr>
+<tr>
+<td align="left">skewY(<em>angle</em>)</td>
+<td align="left">定义沿着 Y 轴的 2D 倾斜转换。</td>
+</tr>
+<tr>
+<td align="left">perspective(<em>n</em>)</td>
+<td align="left">为 3D 转换元素定义透视视图。</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function">https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function</a></p>
+<h2 id="css动画两种实践方式"><a href="#css动画两种实践方式" class="headerlink" title="css动画两种实践方式"></a>css动画两种实践方式</h2><h3 id="1-过渡动画"><a href="#1-过渡动画" class="headerlink" title="1. 过渡动画"></a>1. 过渡动画</h3><p>transition 是最简单的动画实现方式，主要用于从一个状态平滑过渡到另一个状态(可以是不同伪元素之间的切换,:hover或者:active,或者通过js操作状态变化)。&#x2F;&#x2F;eg.hover触发和settimeOut添加类</p>
+<h4 id="基本语法："><a href="#基本语法：" class="headerlink" title="基本语法："></a>基本语法：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition: property duration timing-function delay;</span><br></pre></td></tr></table></figure>
+
+<p>主要属性说明：</p>
+<ul>
+<li><strong>transition-property</strong>: 指定要过渡的 CSS 属性的名称。例如，<code>color</code>、<code>background-color</code> 等。</li>
+<li><strong>transition-duration</strong>: 指定过渡效果持续的时间，以秒或毫秒为单位。</li>
+<li><strong>transition-timing-function</strong>: 指定过渡效果的速度曲线。它可以是 <code>linear</code>（线性）、<code>ease</code>（渐入渐出）、<code>ease-in</code>（渐入）、<code>ease-out</code>（渐出）、<code>ease-in-out</code>（先渐入后渐出）等等。</li>
+</ul>
+<blockquote>
+<ul>
+<li><code>ease</code>：默认值，缓慢加速，然后缓慢减速的过渡效果。</li>
+<li><code>linear</code>：匀速过渡效果。</li>
+<li><code>ease-in</code>：缓慢加速的过渡效果。</li>
+<li><code>ease-out</code>：缓慢减速的过渡效果。</li>
+<li><code>ease-in-out</code>：先缓慢加速，再缓慢减速的过渡效果。</li>
+<li><code>cubic-bezier(n,n,n,n)</code>：自定义的贝塞尔曲线函数，通过四个值来定义曲线的控制点，分别对应 <code>x1</code>、<code>y1</code>、<code>x2</code>、<code>y2</code>。</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>transition-delay</strong>: 指定过渡效果开始之前的延迟时间，以秒或毫秒为单位。</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.button &#123;</span><br><span class="line">    background-color: blue;</span><br><span class="line">    transition: background-color 0.3s ease;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.button:hover &#123;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-animation-关键帧动画"><a href="#2-animation-关键帧动画" class="headerlink" title="2. animation 关键帧动画"></a>2. animation 关键帧动画</h3><p>animation 提供了更强大的动画控制能力，可以通过设置关键帧来定义动画的具体内容。</p>
+<h4 id="基本语法：-1"><a href="#基本语法：-1" class="headerlink" title="基本语法："></a>基本语法：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">animation: name duration timing-function delay iteration-count direction fill-mode play-state;</span><br></pre></td></tr></table></figure>
+
+<p>主要属性说明：</p>
+<ul>
+<li><code>animation-name</code>：动画的名称（对应 @keyframes）</li>
+<li><code>animation-duration</code>：动画持续时间</li>
+<li><code>animation-timing-function</code>：动画的速度曲线</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">linear</td>
+<td align="left">动画从头到尾的速度是相同的。</td>
+</tr>
+<tr>
+<td align="left">ease</td>
+<td align="left">默认。动画以低速开始，然后加快，在结束前变慢。</td>
+</tr>
+<tr>
+<td align="left">ease-in</td>
+<td align="left">动画以低速开始。</td>
+</tr>
+<tr>
+<td align="left">ease-out</td>
+<td align="left">动画以低速结束。</td>
+</tr>
+<tr>
+<td align="left">ease-in-out</td>
+<td align="left">动画以低速开始和结束。</td>
+</tr>
+<tr>
+<td align="left">steps(int,start|end)</td>
+<td align="left">指定了时间函数中的间隔数量（步长）。有两个参数，第一个参数指定函数的间隔数，该参数是一个正整数（大于 0）。 第二个参数是可选的，表示动画是从时间段的开头连续还是末尾连续。含义分别如下：start：表示直接开始。end：默认值，表示戛然而止。</td>
+</tr>
+<tr>
+<td align="left">cubic-bezier(<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>)</td>
+<td align="left">在 cubic-bezier 函数中自己的值。可能的值是从 0 到 1 的数值。</td>
+</tr>
+</tbody></table>
+<ul>
+<li><code>animation-delay</code>：动画延迟时间</li>
+<li><code>animation-iteration-count</code>：动画重复次数</li>
+<li><code>animation-direction</code>：动画方向</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">normal</td>
+<td align="left">默认值。动画按正常播放。</td>
+</tr>
+<tr>
+<td align="left">reverse</td>
+<td align="left">动画反向播放。</td>
+</tr>
+<tr>
+<td align="left">alternate</td>
+<td align="left">动画在奇数次（1、3、5…）正向播放，在偶数次（2、4、6…）反向播放。</td>
+</tr>
+<tr>
+<td align="left">alternate-reverse</td>
+<td align="left">动画在奇数次（1、3、5…）反向播放，在偶数次（2、4、6…）正向播放。</td>
+</tr>
+<tr>
+<td align="left">initial</td>
+<td align="left">设置该属性为它的默认值。</td>
+</tr>
+<tr>
+<td align="left">inherit</td>
+<td align="left">从父元素继承该属性。</td>
+</tr>
+</tbody></table>
+<ul>
+<li><code>animation-fill-mode</code>：动画结束时的状态</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">none</td>
+<td align="left">默认值。动画在动画执行之前和之后不会应用任何样式到目标元素。</td>
+</tr>
+<tr>
+<td align="left">forwards</td>
+<td align="left">目标将保留由执行期间遇到的最后一个<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes">关键帧</a>计算值。最后一个关键帧取决于<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-direction"><code>animation-direction</code></a>和<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-iteration-count"><code>animation-iteration-count</code></a>的值：</td>
+</tr>
+<tr>
+<td align="left">backwards</td>
+<td align="left">动画将在应用于目标时立即应用第一个关键帧中定义的值，并在<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-delay"><code>animation-delay</code></a>期间保留此值。第一个关键帧取决于<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-direction"><code>animation-direction</code></a>的值：</td>
+</tr>
+<tr>
+<td align="left">both</td>
+<td align="left">动画遵循 forwards 和 backwards 的规则。也就是说，动画会在两个方向上扩展动画属性。</td>
+</tr>
+<tr>
+<td align="left">initial</td>
+<td align="left">设置该属性为它的默认值。</td>
+</tr>
+<tr>
+<td align="left">inherit</td>
+<td align="left">从父元素继承该属性。</td>
+</tr>
+</tbody></table>
+<ul>
+<li><code>animation-play-state</code>：动画的运行状态</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">paused</td>
+<td align="left">指定暂停动画</td>
+</tr>
+<tr>
+<td align="left">running</td>
+<td align="left">指定正在运行的动画</td>
+</tr>
+</tbody></table>
+<h2 id="常用动画效果实例"><a href="#常用动画效果实例" class="headerlink" title="常用动画效果实例"></a>常用动画效果实例</h2><h4 id="标签定义及使用说明"><a href="#标签定义及使用说明" class="headerlink" title="标签定义及使用说明"></a>标签定义及使用说明</h4><p>使用@keyframes规则，你可以创建动画。</p>
+<p>创建动画是通过逐步改变从一个CSS样式设定到另一个。</p>
+<p>在动画过程中，您可以更改CSS样式的设定多次。</p>
+<p>指定的变化时发生时使用％，或关键字”from”和”to”，这是和0％到100％相同。</p>
+<p>0％是开头动画，100％是当动画完成。</p>
+<h3 id="1-淡入淡出效果"><a href="#1-淡入淡出效果" class="headerlink" title="1. 淡入淡出效果"></a>1. 淡入淡出效果</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.fade &#123;</span><br><span class="line">    opacity: 1;</span><br><span class="line">    transition: opacity 0.3s ease;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fade:hover &#123;</span><br><span class="line">    opacity: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-放大缩小效果"><a href="#2-放大缩小效果" class="headerlink" title="2. 放大缩小效果"></a>2. 放大缩小效果</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.scale &#123;</span><br><span class="line">    transform: scale(1);</span><br><span class="line">    transition: transform 0.3s ease;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.scale:hover &#123;</span><br><span class="line">    transform: scale(1.2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-旋转效果"><a href="#3-旋转效果" class="headerlink" title="3. 旋转效果"></a>3. 旋转效果</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@keyframes rotate &#123;</span><br><span class="line">    from &#123;</span><br><span class="line">        transform: rotate(0deg);</span><br><span class="line">    &#125;</span><br><span class="line">    to &#123;</span><br><span class="line">        transform: rotate(360deg);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.rotate &#123;</span><br><span class="line">    animation: rotate 2s linear infinite;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-弹跳效果"><a href="#4-弹跳效果" class="headerlink" title="4. 弹跳效果"></a>4. 弹跳效果</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@keyframes bounce &#123;</span><br><span class="line">    0%, 100% &#123;</span><br><span class="line">        transform: translateY(0);</span><br><span class="line">    &#125;</span><br><span class="line">    50% &#123;</span><br><span class="line">        transform: translateY(-20px);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.bounce &#123;</span><br><span class="line">    animation: bounce 1s ease infinite;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><div class="post-reward"><div class="post-reward-btn" title="赞赏作者"><img src="/assets/images/svg/uc/uc-gift.svg" class="icon noview" alt="Icon"><span></span></div><div class="post-reward-content"><div class="post-reward-text"></div><div class="post-reward-list"><a href="/null" target="_blank">致谢名单</a></div></div></div><div class="post-copyright"><div class="post-copyright-info">本作品由 呼佳慧 于 2025-03-09 15:44:26 发布</div><div class="post-copyright-link"><span>作品地址：<a href="https://name9807.github.io/2025/03/09/css%E5%8A%A8%E7%94%BB1/"></a></span><button class="copy-text" type="button" data-text="https://name9807.github.io/2025/03/09/css%E5%8A%A8%E7%94%BB1/">复制</button></div><div class="post-copyright-detail">除特别声明外，本站作品均采用 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' title='Attribution-NonCommercial-ShareAlike' target='_blank'>CC BY-NC-SA 4.0</a> 许可协议，转载请注明来自 <a href='/'>随便写吧</a></div><img class="post-copyright-icon noview" src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></div><div class="post-tail-tags"></div></div><aside id="post-sidebar" status="show"><div id="toc-container"><div class="toc-title"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"><span>目录</span></div><div class="toc-content" id="toc-div"><ol class="toc-list"><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#css%E5%8F%98%E6%8D%A2"><span class="toc-list-text">css变换</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#css%E5%8A%A8%E7%94%BB%E4%B8%A4%E7%A7%8D%E5%AE%9E%E8%B7%B5%E6%96%B9%E5%BC%8F"><span class="toc-list-text">css动画两种实践方式</span></a><ol class="toc-list-child"><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#1-%E8%BF%87%E6%B8%A1%E5%8A%A8%E7%94%BB"><span class="toc-list-text">1. 过渡动画</span></a></li><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#2-animation-%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB"><span class="toc-list-text">2. animation 关键帧动画</span></a></li></ol></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E5%B8%B8%E7%94%A8%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C%E5%AE%9E%E4%BE%8B"><span class="toc-list-text">常用动画效果实例</span></a><ol class="toc-list-child"><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#1-%E6%B7%A1%E5%85%A5%E6%B7%A1%E5%87%BA%E6%95%88%E6%9E%9C"><span class="toc-list-text">1. 淡入淡出效果</span></a></li><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#2-%E6%94%BE%E5%A4%A7%E7%BC%A9%E5%B0%8F%E6%95%88%E6%9E%9C"><span class="toc-list-text">2. 放大缩小效果</span></a></li><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#3-%E6%97%8B%E8%BD%AC%E6%95%88%E6%9E%9C"><span class="toc-list-text">3. 旋转效果</span></a></li><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#4-%E5%BC%B9%E8%B7%B3%E6%95%88%E6%9E%9C"><span class="toc-list-text">4. 弹跳效果</span></a></li></ol></li></ol></div></div></aside></div></div><div id="toolbar" hide=""><div id="toolbar-setting-container" hide=""><div class="toolbar-item"><button id="tool-color-mode" title="深色模式" type="button"><img src="/assets/images/svg/ta/ta-moon.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button class="copy-text" id="tool-share" title="分享" type="button" data-text="https://name9807.github.io/2025/03/09/css%E5%8A%A8%E7%94%BB1/"><img src="/assets/images/svg/ta/ta-share.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-plus" title="放大字体" type="button"><img src="/assets/images/svg/ta/ta-text-plus.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-minus" title="缩小字体" type="button"><img src="/assets/images/svg/ta/ta-text-minus.svg" class="icon noview" alt="Icon"></button></div></div><div class="toolbar-container"><div class="toolbar-item"><button id="tool-setting" title="设置" type="button"><img src="/assets/images/svg/ta/ta-setting.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-toc" title="目录" type="button"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-gototop" title="返回顶部" type="button"><img src="/assets/images/svg/ta/ta-up.svg" class="icon noview" alt="Icon"></button></div></div></div></main><footer><div class="footer"><div id="footer-copyright">© 2024 - 2025 <span>💗</span> <a href="/null">呼佳慧</a></div><div id="footer-info"><div id="footer-framework">🚀本站由 <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/chanwj/hexo-theme-meow" title="3.1.0" target="_blank">Meow</a> 强力驱动</div><div id="footer-runtime"><span id="runtime" data-startdate="2024-04-02T22:16:20.000Z">🌻已稳定运行.年.月.天</span></div></div></div></footer><div class="scripts"><script>const GLOBALCONFIG = {
+  root: '/',
+  toolbar: true,
+  lazyload_src: '/assets/images/Meow-Loading.webp',
+  friends: false,
+  codeblock: true,
+  share_text: '🐱Share From Meow',
+  onblur_title: 'Please Come Back～✧(´▽`ʃ♡ƪ)',
+  mouse_click: false,
+  notify:{
+    enable: false,
+    info: '复制成功～转载请标注本文地址',
+    f12_info: '开发者模式已打开，请遵循本站版权协议'
+  },
+  search: {
+    enable: false,
+    path: 'search.json',
+    local: {
+      top_n_per_article: 1,
+      preload: false
+    }
+  },
+  encrypt: false,
+};
+</script><script>if (!localStorage.getItem('color-mode')) {
+  localStorage.setItem('color-mode', 'light' || 'light');
+}
+document.body.setAttribute('data-mode', localStorage.getItem('color-mode'));
+</script>
+<script src="/js/theme/tools/utils.js"></script>
+
+<script src="/js/plugins/dist/lazyload.min.js"></script>
+
+<script src="/js/plugins/view-image.min.js"></script>
+<script>if (localStorage.getItem('font-size')) {
+  document.querySelector('.post').style.fontSize = localStorage.getItem('font-size') + 'px';
+}
+</script>
+<script src="/js/main.js" type="module"></script>
+</div></body></html>

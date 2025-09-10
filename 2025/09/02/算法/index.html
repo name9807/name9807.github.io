@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="author" content="呼佳慧"/><meta name="copyright" content="呼佳慧"/><meta name="theme-color" content="#FFB347"/><meta name="format-detection" content="telephone=no"/><meta name="keywords" content="Hexo Theme MEOW"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-touch-fullscreen" content="yes"/><meta name="application-name" content="算法 | 随便写吧"/><meta name="apple-mobile-web-app-title" content="算法 | 随便写吧"/><meta name="apple-mobile-web-app-status-bar-style" content="#FFB347"/><link rel="canonical" href="https://name9807.github.io/2025/09/02/算法/"/><meta name="description" content="算法哈希表用空间换时间  两数之和： 最简单的哈希表用法，在第一次遍历是把以往的查询结果全部记录下来。 字母异位词： 比起上一个键是nums的数值，值是索引，多了一些小思考，一个是map的键是字符串排序后的结果，值是数组的引用。 最长连续序列： 先对nums去重排序，这题没有使用map，而是使用了另一个等长的数组，在对应位置维护这个位置数的最长连续数，通过递推公式补充完整。  双指针双指针非...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法 | 随便写吧">
+<meta property="og:url" content="https://name9807.github.io/2025/09/02/%E7%AE%97%E6%B3%95/index.html">
+<meta property="og:site_name" content="随便写吧">
+<meta property="og:description" content="算法哈希表用空间换时间  两数之和： 最简单的哈希表用法，在第一次遍历是把以往的查询结果全部记录下来。 字母异位词： 比起上一个键是nums的数值，值是索引，多了一些小思考，一个是map的键是字符串排序后的结果，值是数组的引用。 最长连续序列： 先对nums去重排序，这题没有使用map，而是使用了另一个等长的数组，在对应位置维护这个位置数的最长连续数，通过递推公式补充完整。  双指针双指针非...">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://name9807.github.io/2025/09/02/%E7%AE%97%E6%B3%95/assets/images/Hexo-Theme-MEOW.png">
+<meta property="article:published_time" content="2025-09-02T08:49:12.000Z">
+<meta property="article:modified_time" content="2025-09-07T12:20:26.418Z">
+<meta property="article:author" content="呼佳慧">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://name9807.github.io/2025/09/02/%E7%AE%97%E6%B3%95/assets/images/Hexo-Theme-MEOW.png"><meta name="robots" content="index,follow"/><meta name="googlebot" content="index,follow"/><meta name="revisit-after" content="1 days"/><title>算法 | 随便写吧</title><link rel="shortcut icon" href="/assets/images/Hexo-Theme-MEOW.ico"><link rel="preconnect" href="/assets"/><link rel="preconnect" href="assets"/>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="prefetch" href="/"/><link rel="prefetch" href="/archives"/><link rel="prefetch" href="/tags"/><meta name="generator" content="Hexo 7.1.1"></head><body bg-style="none"><header><div id="navbar"><div id="nav-info"><a id="site-icon" href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a id="site-name" href="/" title="主页"><div>随便写吧</div><img src="/assets/images/svg/uc/uc-home.svg" class="icon noview" alt="Icon"></a></div><div id="nav-menu"></div><div id="nav-function"><div id="menu-btn"><a href="javascript:void(0);" title="打开菜单"><img src="/assets/images/svg/uc/uc-menu.svg" class="icon noview" alt="Icon"></a></div></div></div></header><div id="menu-aside"><div id="menu-aside-container"><div id="menu-aside-info"><a href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a href="/" title="主页">随便写吧</a></div><hr/></div></div><main><div class="banner"><div class="banner-info"><div class="banner-avatar"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Avatar"/></div><div class="banner-title">「 MEOW 」</div></div></div><div class="post-container"><div class="post-main"><div class="post-content"><h1 class="post-title">算法</h1><div class="post-author"><span>作者: 呼佳慧</span></div><div class="post-meta"><div class="post-info"><div class="post-date"><div class="post-pubdate"><img src="/assets/images/svg/ta/ta-pubdate.svg" class="icon noview" alt="Icon"><span>发表于2025-09-02</span></div><div class="post-update"><img src="/assets/images/svg/ta/ta-update.svg" class="icon noview" alt="Icon"><span>更新于2025-09-10</span></div></div><div class="post-read"></div></div><div class="post-attribute"></div></div><div class="post markdown" indent="false"><h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><p>用空间换时间</p>
+<ol>
+<li>两数之和：<br> 最简单的哈希表用法，在第一次遍历是把以往的查询结果全部记录下来。</li>
+<li>字母异位词：<br> 比起上一个键是nums的数值，值是索引，多了一些小思考，一个是map的键是字符串排序后的结果，值是数组的引用。</li>
+<li>最长连续序列：<br> 先对nums去重排序，这题没有使用map，而是使用了另一个等长的数组，在对应位置维护这个位置数的最长连续数，通过递推公式补充完整。</li>
+</ol>
+<h2 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h2><p>双指针非常灵活，并没有什么固定的模版，需要见机行事</p>
+<ol>
+<li>移动0：<br> 本题的要求将0移动到原数组的末尾，可以采用左右指针，左指针顺次找0，右指针找第一个非0元素，将二者交换位置即可。</li>
+<li>盛水最多的容器：<br> 这个题最重要的是想明白，<em>从左右两侧像中间挪动的过程中，先挪动短板肯定不吃亏</em>，那么双指针的逻辑就自然而然了，左指针和右指针分别代表两块杯壁</li>
+<li><strong>三数之和：</strong><br> 这题稍微有点难，乍一看好像看不出双指针。首先这样的题目O(n）的循环肯定无法解决，而三重循环又难以解决重复问题，且时间复杂度很高。<br> 因此我们先循环遍历第一个元素，然后对于第二个元素和第三个元素就是一个两数之和问题，可以用双指针解决。<br> 理解了大致思路之后重要的就是如何保证没有重复结果，我们可以在第一个元素的遍历时，通过如果当前元素等于上一个元素就跳过，来避免第一个元素重复，接着防止二三元素重复可以用while(nums[left + 1] &#x3D;&#x3D;&#x3D; nums[left]) left++这样的语句跳到与下一个元素不同的元素，再执行左指针右移右指针左移。</li>
+<li><strong>接雨水</strong>：<br> 有点难，主要体现在有小巧思，掌握了这个小巧思就可以实现o（n），O（1）。<br> 我们可以维护一个左侧最大值leftMax,和一个右侧最大值rightMax,分别让他们是高度数组第一个元素和最后元素的值，这么一看这两个最大值似乎毫无意义，因为他们只是首位元素，未经过遍历，并非实际的最大值。<br> 但是对于序号为1的元素leftMax是真实的左侧最大值，假如leftMax &lt; rightMax(未必最大),那么限制序号1的水量的就是leftMax，假如leftMax &gt; rightMax(未必最大)，那么对于序号为 n - 2的元素，rightMax是真实的右侧最大值，限制序号n - 2的水量的就是rightMax。<br> 因此，双指针的写法就自然而然出现了，可以用left，right 分别指示左侧和右侧计算到哪里即可。</li>
+</ol>
+<h2 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h2><p>其实到现在也不明白滑动窗口啥意思，回头再写吧</p>
+<ol>
+<li>无重复字符的最长子串：<br> 这种子串，可以用这个滑动窗口，右侧光管进入，左侧光管出去，右侧不管不顾的进入，然后左侧就往外出知道无重复为止。<br> 问题困难在取舍边界，我写的是left是包含的最后一个，right是要添加的最新一个。两个都包含在内。</li>
+</ol>
+</div><div class="post-reward"><div class="post-reward-btn" title="赞赏作者"><img src="/assets/images/svg/uc/uc-gift.svg" class="icon noview" alt="Icon"><span></span></div><div class="post-reward-content"><div class="post-reward-text"></div><div class="post-reward-list"><a href="/null" target="_blank">致谢名单</a></div></div></div><div class="post-copyright"><div class="post-copyright-info">本作品由 呼佳慧 于 2025-09-02 16:49:12 发布</div><div class="post-copyright-link"><span>作品地址：<a href="https://name9807.github.io/2025/09/02/%E7%AE%97%E6%B3%95/">算法</a></span><button class="copy-text" type="button" data-text="https://name9807.github.io/2025/09/02/%E7%AE%97%E6%B3%95/">复制</button></div><div class="post-copyright-detail">除特别声明外，本站作品均采用 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' title='Attribution-NonCommercial-ShareAlike' target='_blank'>CC BY-NC-SA 4.0</a> 许可协议，转载请注明来自 <a href='/'>随便写吧</a></div><img class="post-copyright-icon noview" src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></div><div class="post-tail-tags"></div></div><aside id="post-sidebar" status="show"><div id="toc-container"><div class="toc-title"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"><span>目录</span></div><div class="toc-content" id="toc-div"><ol class="toc-list"><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#%E7%AE%97%E6%B3%95"><span class="toc-list-text">算法</span></a><ol class="toc-list-child"><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8"><span class="toc-list-text">哈希表</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E5%8F%8C%E6%8C%87%E9%92%88"><span class="toc-list-text">双指针</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="toc-list-text">滑动窗口</span></a></li></ol></li></ol></div></div></aside></div></div><div id="toolbar" hide=""><div id="toolbar-setting-container" hide=""><div class="toolbar-item"><button id="tool-color-mode" title="深色模式" type="button"><img src="/assets/images/svg/ta/ta-moon.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button class="copy-text" id="tool-share" title="分享" type="button" data-text="https://name9807.github.io/2025/09/02/%E7%AE%97%E6%B3%95/"><img src="/assets/images/svg/ta/ta-share.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-plus" title="放大字体" type="button"><img src="/assets/images/svg/ta/ta-text-plus.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-minus" title="缩小字体" type="button"><img src="/assets/images/svg/ta/ta-text-minus.svg" class="icon noview" alt="Icon"></button></div></div><div class="toolbar-container"><div class="toolbar-item"><button id="tool-setting" title="设置" type="button"><img src="/assets/images/svg/ta/ta-setting.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-toc" title="目录" type="button"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-gototop" title="返回顶部" type="button"><img src="/assets/images/svg/ta/ta-up.svg" class="icon noview" alt="Icon"></button></div></div></div></main><footer><div class="footer"><div id="footer-copyright">© 2024 - 2025 <span>💗</span> <a href="/null">呼佳慧</a></div><div id="footer-info"><div id="footer-framework">🚀本站由 <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/chanwj/hexo-theme-meow" title="3.1.0" target="_blank">Meow</a> 强力驱动</div><div id="footer-runtime"><span id="runtime" data-startdate="2024-04-02T22:16:20.000Z">🌻已稳定运行.年.月.天</span></div></div></div></footer><div class="scripts"><script>const GLOBALCONFIG = {
+  root: '/',
+  toolbar: true,
+  lazyload_src: '/assets/images/Meow-Loading.webp',
+  friends: false,
+  codeblock: true,
+  share_text: '🐱Share From Meow',
+  onblur_title: 'Please Come Back～✧(´▽`ʃ♡ƪ)',
+  mouse_click: false,
+  notify:{
+    enable: false,
+    info: '复制成功～转载请标注本文地址',
+    f12_info: '开发者模式已打开，请遵循本站版权协议'
+  },
+  search: {
+    enable: false,
+    path: 'search.json',
+    local: {
+      top_n_per_article: 1,
+      preload: false
+    }
+  },
+  encrypt: false,
+};
+</script><script>if (!localStorage.getItem('color-mode')) {
+  localStorage.setItem('color-mode', 'light' || 'light');
+}
+document.body.setAttribute('data-mode', localStorage.getItem('color-mode'));
+</script>
+<script src="/js/theme/tools/utils.js"></script>
+
+<script src="/js/plugins/dist/lazyload.min.js"></script>
+
+<script src="/js/plugins/view-image.min.js"></script>
+<script>if (localStorage.getItem('font-size')) {
+  document.querySelector('.post').style.fontSize = localStorage.getItem('font-size') + 'px';
+}
+</script>
+<script src="/js/main.js" type="module"></script>
+</div></body></html>

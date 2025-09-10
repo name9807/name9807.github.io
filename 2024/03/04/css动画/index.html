@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="author" content="呼佳慧"/><meta name="copyright" content="呼佳慧"/><meta name="theme-color" content="#FFB347"/><meta name="format-detection" content="telephone=no"/><meta name="keywords" content="Hexo Theme MEOW"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-touch-fullscreen" content="yes"/><meta name="application-name" content="css动画 | 随便写吧"/><meta name="apple-mobile-web-app-title" content="css动画 | 随便写吧"/><meta name="apple-mobile-web-app-status-bar-style" content="#FFB347"/><link rel="canonical" href="https://name9807.github.io/2024/03/04/css动画/"/><meta name="description" content="css动画创建动画ainimation-name:定义的动画名称 animation-duration:规定动画时长 @keyframe规则: ​	@keyframes 规则内指定一个 CSS 样式和动画将逐步从目前的样式更改为新的样式。 123456789101112131415@keyframes myfirst&#123;    0%   &#123;background: red;&amp;...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css动画 | 随便写吧">
+<meta property="og:url" content="https://name9807.github.io/2024/03/04/css%E5%8A%A8%E7%94%BB/index.html">
+<meta property="og:site_name" content="随便写吧">
+<meta property="og:description" content="css动画创建动画ainimation-name:定义的动画名称 animation-duration:规定动画时长 @keyframe规则: ​	@keyframes 规则内指定一个 CSS 样式和动画将逐步从目前的样式更改为新的样式。 123456789101112131415@keyframes myfirst&#123;    0%   &#123;background: red;&amp;...">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://name9807.github.io/2024/03/04/css%E5%8A%A8%E7%94%BB/assets/images/Hexo-Theme-MEOW.png">
+<meta property="article:published_time" content="2024-03-04T12:11:13.000Z">
+<meta property="article:modified_time" content="2024-03-05T11:48:13.167Z">
+<meta property="article:author" content="呼佳慧">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://name9807.github.io/2024/03/04/css%E5%8A%A8%E7%94%BB/assets/images/Hexo-Theme-MEOW.png"><meta name="robots" content="index,follow"/><meta name="googlebot" content="index,follow"/><meta name="revisit-after" content="1 days"/><title>css动画 | 随便写吧</title><link rel="shortcut icon" href="/assets/images/Hexo-Theme-MEOW.ico"><link rel="preconnect" href="/assets"/><link rel="preconnect" href="assets"/>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="prefetch" href="/"/><link rel="prefetch" href="/archives"/><link rel="prefetch" href="/tags"/><meta name="generator" content="Hexo 7.1.1"></head><body bg-style="none"><header><div id="navbar"><div id="nav-info"><a id="site-icon" href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a id="site-name" href="/" title="主页"><div>随便写吧</div><img src="/assets/images/svg/uc/uc-home.svg" class="icon noview" alt="Icon"></a></div><div id="nav-menu"></div><div id="nav-function"><div id="menu-btn"><a href="javascript:void(0);" title="打开菜单"><img src="/assets/images/svg/uc/uc-menu.svg" class="icon noview" alt="Icon"></a></div></div></div></header><div id="menu-aside"><div id="menu-aside-container"><div id="menu-aside-info"><a href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a href="/" title="主页">随便写吧</a></div><hr/></div></div><main><div class="banner"><div class="banner-info"><div class="banner-avatar"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Avatar"/></div><div class="banner-title">「 MEOW 」</div></div></div><div class="post-container"><div class="post-main"><div class="post-content"><h1 class="post-title">css动画</h1><div class="post-author"><span>作者: 呼佳慧</span></div><div class="post-meta"><div class="post-info"><div class="post-date"><div class="post-pubdate"><img src="/assets/images/svg/ta/ta-pubdate.svg" class="icon noview" alt="Icon"><span>发表于2024-03-04</span></div><div class="post-update"><img src="/assets/images/svg/ta/ta-update.svg" class="icon noview" alt="Icon"><span>更新于2025-09-10</span></div></div><div class="post-read"></div></div><div class="post-attribute"></div></div><div class="post markdown" indent="false"><h1 id="css动画"><a href="#css动画" class="headerlink" title="css动画"></a>css动画</h1><h2 id="创建动画"><a href="#创建动画" class="headerlink" title="创建动画"></a>创建动画</h2><p>ainimation-name:定义的动画名称</p>
+<p>animation-duration:规定动画时长</p>
+<p>@keyframe规则:</p>
+<p>​	@keyframes 规则内指定一个 CSS 样式和动画将逐步从目前的样式更改为新的样式。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> myfirst</span><br><span class="line">&#123;</span><br><span class="line">    <span class="number">0%</span>   &#123;<span class="attribute">background</span>: red;&#125;</span><br><span class="line">    <span class="number">25%</span>  &#123;<span class="attribute">background</span>: yellow;&#125;</span><br><span class="line">    <span class="number">50%</span>  &#123;<span class="attribute">background</span>: blue;&#125;</span><br><span class="line">    <span class="number">100%</span> &#123;<span class="attribute">background</span>: green;&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">@-webkit-keyframes</span> myfirst /* Safari 与 Chrome */</span><br><span class="line">&#123;</span><br><span class="line">    <span class="number">0%</span>   &#123;<span class="attribute">background</span>: red;&#125;</span><br><span class="line">    <span class="number">25%</span>  &#123;<span class="attribute">background</span>: yellow;&#125;</span><br><span class="line">    <span class="number">50%</span>  &#123;<span class="attribute">background</span>: blue;&#125;</span><br><span class="line">    <span class="number">100%</span> &#123;<span class="attribute">background</span>: green;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="重复动画"><a href="#重复动画" class="headerlink" title="重复动画:"></a>重复动画:</h2><p>animation-iteration-count:<br>用以指定动画重复的次数，仅仅使用该属性就能使动画重复播放。在该例中，设该属性为infinite以使动画无限重复</p>
+<h2 id="来回运动"><a href="#来回运动" class="headerlink" title="来回运动"></a>来回运动</h2><p>nimation-direction:<br>CSS 属性设置动画是应正向播放、反向播放还是在正向和反向之间交替播放。<br>normal<br>动画在每个循环中正向播放。换句话说，每次动画循环时，动画将重置为起始状态并重新开始。这是默认值。</p>
+<p>reverse<br>动画在每个循环中反向播放。换句话说，每次动画循环时，动画将重置为结束状态并重新开始。动画步骤将反向执行，并且时间函数也将被反转。例如，ease-in 时间函数变为 ease-out。</p>
+<p>alternate<br>动画在每个循环中正反交替播放，第一次迭代是正向播放。确定循环是奇数还是偶数的计数从 1 开始。</p>
+<p>alternate-reverse<br>动画在每个循环中正反交替播放，第一次迭代是反向播放。确定循环是奇数还是偶数的计数从 1 开始。</p>
+<h2 id="CSS-属性-animation-fill-mode-设置-CSS-动画在执行之前和之后如何将样式应用于其目标。"><a href="#CSS-属性-animation-fill-mode-设置-CSS-动画在执行之前和之后如何将样式应用于其目标。" class="headerlink" title="CSS 属性 animation-fill-mode 设置 CSS 动画在执行之前和之后如何将样式应用于其目标。"></a>CSS 属性 animation-fill-mode 设置 CSS 动画在执行之前和之后如何将样式应用于其目标。</h2><p>none<br>当动画未执行时，动画将不会将任何样式应用于目标，而是已经赋予给该元素的 CSS 规则来显示该元素。这是默认值。</p>
+<p>forwards<br>目标将保留由执行期间遇到的最后一个关键帧 (en-US)计算值。</p>
+<p>backwards<br>动画将在应用于目标时立即应用第一个关键帧中定义的值，并在animation-delay期间保留此值。</p>
+<p>both<br>动画将遵循forwards和backwards的规则，从而在两个方向上扩展动画属性。</p>
+<h2 id="animation-delay-CSS-属性指定从应用动画到元素开始执行动画之前等待的时间量。"><a href="#animation-delay-CSS-属性指定从应用动画到元素开始执行动画之前等待的时间量。" class="headerlink" title="animation-delay CSS 属性指定从应用动画到元素开始执行动画之前等待的时间量。"></a>animation-delay CSS 属性指定从应用动画到元素开始执行动画之前等待的时间量。</h2><p>动画应该开始的时间偏移量，从应用动画到元素的时刻开始计算。可以用秒（s）或毫秒（ms）指定。单位是必需的。</p>
+<h2 id="动画的暂停与播放"><a href="#动画的暂停与播放" class="headerlink" title="动画的暂停与播放"></a>动画的暂停与播放</h2><p>animation-play-state CSS 属性设置动画是运行还是暂停。</p>
+<p>running<br>当前动画正在运行。</p>
+<p>paused<br>当前动画已被停止。</p>
+<h1 id="css的转换"><a href="#css的转换" class="headerlink" title="css的转换"></a>css的转换</h1><h2 id="css2D转换方法"><a href="#css2D转换方法" class="headerlink" title="css2D转换方法"></a>css2D转换方法</h2><ol>
+<li>translate():<br> translate()方法，根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动。<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">50px</span>,<span class="number">100px</span>);</span><br><span class="line">-ms-<span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">50px</span>,<span class="number">100px</span>); <span class="comment">/* IE 9 */</span></span><br><span class="line">-webkit-<span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">50px</span>,<span class="number">100px</span>); <span class="comment">/* Safari and Chrome */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>rotate():<br> rotate()方法，在一个给定度数顺时针旋转的元素。负值是允许的，这样是元素逆时针旋转。<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">30deg</span>);</span><br><span class="line">-ms-<span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">30deg</span>); <span class="comment">/* IE 9 */</span></span><br><span class="line">-webkit-<span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">30deg</span>); <span class="comment">/* Safari and Chrome */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>scale():<br> scale()方法，该元素增加或减少的大小，取决于宽度（X轴）和高度（Y轴）的参数：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-ms-<span class="attribute">transform</span>:<span class="built_in">scale</span>(<span class="number">2</span>,<span class="number">3</span>); <span class="comment">/* IE 9 */</span></span><br><span class="line">-webkit-<span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">2</span>,<span class="number">3</span>); <span class="comment">/* Safari */</span></span><br><span class="line"><span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">2</span>,<span class="number">3</span>); <span class="comment">/* 标准语法 */</span></span><br></pre></td></tr></table></figure></li>
+<li>skew():<br> 包含两个参数值，分别表示X轴和Y轴倾斜的角度，如果第二个参数为空，则默认为0，参数为负表示向相反方向倾斜。</li>
+</ol>
+<ul>
+<li>skewX(<angle>);表示只在X轴(水平方向)倾斜。</li>
+<li>skewY(<angle>);表示只在Y轴(垂直方向)倾斜。<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="attribute">transform</span>: <span class="built_in">skew</span>(<span class="number">30deg</span>,<span class="number">20deg</span>);</span><br><span class="line">-ms-<span class="attribute">transform</span>: <span class="built_in">skew</span>(<span class="number">30deg</span>,<span class="number">20deg</span>); <span class="comment">/* IE 9 */</span></span><br><span class="line">-webkit-<span class="attribute">transform</span>: <span class="built_in">skew</span>(<span class="number">30deg</span>,<span class="number">20deg</span>); <span class="comment">/* Safari and Chrome */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="5">
+<li>matrix():<br>matrix()方法和2D变换方法合并成一个。</li>
+</ol>
+<p>matrix 方法有六个参数，包含旋转，缩放，移动（平移）和倾斜功能。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="attribute">transform</span>:<span class="built_in">matrix</span>(<span class="number">0.866</span>,<span class="number">0.5</span>,-<span class="number">0.5</span>,<span class="number">0.866</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">-ms-<span class="attribute">transform</span>:<span class="built_in">matrix</span>(<span class="number">0.866</span>,<span class="number">0.5</span>,-<span class="number">0.5</span>,<span class="number">0.866</span>,<span class="number">0</span>,<span class="number">0</span>); <span class="comment">/* IE 9 */</span></span><br><span class="line">-webkit-<span class="attribute">transform</span>:<span class="built_in">matrix</span>(<span class="number">0.866</span>,<span class="number">0.5</span>,-<span class="number">0.5</span>,<span class="number">0.866</span>,<span class="number">0</span>,<span class="number">0</span>); <span class="comment">/* Safari and Chrome */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="css3D转换"><a href="#css3D转换" class="headerlink" title="css3D转换"></a>css3D转换</h2><ol>
+<li>rotateX()方法，围绕其在一个给定度数X轴旋转的元素。<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotateX</span>(<span class="number">120deg</span>);</span><br><span class="line">    -webkit-<span class="attribute">transform</span>: <span class="built_in">rotateX</span>(<span class="number">120deg</span>); <span class="comment">/* Safari 与 Chrome */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>rotateY()方法，围绕其在一个给定度数Y轴旋转的元素。<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotateY</span>(<span class="number">130deg</span>);</span><br><span class="line">    -webkit-<span class="attribute">transform</span>: <span class="built_in">rotateY</span>(<span class="number">130deg</span>); <span class="comment">/* Safari 与 Chrome */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>transform</td>
+<td>向元素应用 2D 或 3D 转换。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>transform-origin</td>
+<td>允许你改变被转换元素的位置。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>transform-style</td>
+<td>规定被嵌套元素如何在 3D 空间中显示。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>perspective</td>
+<td>规定 3D 元素的透视效果。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>perspective-origin</td>
+<td>规定 3D 元素的底部位置。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>backface-visibility</td>
+<td>定义元素在不面对屏幕时是否可见。</td>
+<td>3</td>
+</tr>
+</tbody></table>
+<ol>
+<li><p>transform-origin</p>
+<p> <strong><code>transform-origin</code></strong> CSS 属性让你更改一个元素变形的原点。<br> transform-origin属性可以使用一个，两个或三个值来指定，其中每个值都表示一个偏移量。没有明确定义的偏移将重置为其对应的初始值。<br><br> 如果定义了两个或更多值并且没有值的关键字，或者唯一使用的关键字是center，则第一个值表示水平偏移量，第二个值表示垂直偏移量。<br><br> 三个值：<br> 前两个值和只有两个值时的用法相同。<br> <strong>第三个值必须是<length>。它始终代表 Z 轴偏移量。</strong><br> 值<br> x-offset<br> 定义变形中心距离盒模型的左侧的<length>或<percentage>偏移值。<br><br> offset-keyword<br> left，right，top，bottom 或 center 中之一，定义相对应的变形中心偏移。<br><br> y-offset<br> 定义变形中心距离盒模型的顶的<length>或<percentage>偏移值。<br><br> x-offset-keyword<br> left，right 或 center 中之一，定义相对应的变形中心偏移。<br><br> y-offset-keyword<br> top，bottom 或 center 中之一，定义相对应的变形中心偏移。<br><br> z-offset<br> 定义变形中心距离用户视线（z&#x3D;0 处）的<length>（不能是<percentage>）偏移值。</p>
+</li>
+</ol>
+<p>&#x2F;&#x2F;待补充</p>
+<p>3D 转换方法</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)</td>
+<td>定义 3D 转换，使用 16 个值的 4x4 矩阵。</td>
+</tr>
+<tr>
+<td>translate3d(x,y,z)</td>
+<td>定义 3D 转化。</td>
+</tr>
+<tr>
+<td>translateX(x)</td>
+<td>定义 3D 转化，仅使用用于 X 轴的值。</td>
+</tr>
+<tr>
+<td>translateY(y)</td>
+<td>定义 3D 转化，仅使用用于 Y 轴的值。</td>
+</tr>
+<tr>
+<td>translateZ(z)</td>
+<td>定义 3D 转化，仅使用用于 Z 轴的值。</td>
+</tr>
+<tr>
+<td>scale3d(x,y,z)</td>
+<td>定义 3D 缩放转换。</td>
+</tr>
+<tr>
+<td>scaleX(x)</td>
+<td>定义 3D 缩放转换，通过给定一个 X 轴的值。</td>
+</tr>
+<tr>
+<td>scaleY(y)</td>
+<td>定义 3D 缩放转换，通过给定一个 Y 轴的值。</td>
+</tr>
+<tr>
+<td>scaleZ(z)</td>
+<td>定义 3D 缩放转换，通过给定一个 Z 轴的值。</td>
+</tr>
+<tr>
+<td>rotate3d(x,y,z,angle)</td>
+<td>定义 3D 旋转。</td>
+</tr>
+<tr>
+<td>rotateX(angle)</td>
+<td>定义沿 X 轴的 3D 旋转。</td>
+</tr>
+<tr>
+<td>rotateY(angle)</td>
+<td>定义沿 Y 轴的 3D 旋转。</td>
+</tr>
+<tr>
+<td>rotateZ(angle)</td>
+<td>定义沿 Z 轴的 3D 旋转。</td>
+</tr>
+<tr>
+<td>perspective(n)</td>
+<td>定义 3D 转换元素的透视视图。</td>
+</tr>
+</tbody></table>
+<h1 id="css过渡"><a href="#css过渡" class="headerlink" title="css过渡"></a>css过渡</h1><table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">描述</th>
+<th align="left">CSS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9jc3NyZWYvY3NzMy1wci10cmFuc2l0aW9uLmh0bWw=">transition</span></td>
+<td align="left">简写属性，用于在一个属性中设置四个过渡属性。</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9jc3NyZWYvY3NzMy1wci10cmFuc2l0aW9uLXByb3BlcnR5Lmh0bWw=">transition-property</span></td>
+<td align="left">规定应用过渡的 CSS 属性的名称。</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9jc3NyZWYvY3NzMy1wci10cmFuc2l0aW9uLWR1cmF0aW9uLmh0bWw=">transition-duration</span></td>
+<td align="left">定义过渡效果花费的时间。默认是 0。</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9jc3NyZWYvY3NzMy1wci10cmFuc2l0aW9uLXRpbWluZy1mdW5jdGlvbi5odG1s">transition-timing-function</span></td>
+<td align="left">规定过渡效果的时间曲线。默认是 “ease”。</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9jc3NyZWYvY3NzMy1wci10cmFuc2l0aW9uLWRlbGF5Lmh0bWw=">transition-delay</span></td>
+<td align="left">规定过渡效果何时开始。默认是 0。</td>
+<td align="left">3</td>
+</tr>
+</tbody></table>
+</div><div class="post-reward"><div class="post-reward-btn" title="赞赏作者"><img src="/assets/images/svg/uc/uc-gift.svg" class="icon noview" alt="Icon"><span></span></div><div class="post-reward-content"><div class="post-reward-text"></div><div class="post-reward-list"><a href="/null" target="_blank">致谢名单</a></div></div></div><div class="post-copyright"><div class="post-copyright-info">本作品由 呼佳慧 于 2024-03-04 20:11:13 发布</div><div class="post-copyright-link"><span>作品地址：<a href="https://name9807.github.io/2024/03/04/css%E5%8A%A8%E7%94%BB/">css动画</a></span><button class="copy-text" type="button" data-text="https://name9807.github.io/2024/03/04/css%E5%8A%A8%E7%94%BB/">复制</button></div><div class="post-copyright-detail">除特别声明外，本站作品均采用 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' title='Attribution-NonCommercial-ShareAlike' target='_blank'>CC BY-NC-SA 4.0</a> 许可协议，转载请注明来自 <a href='/'>随便写吧</a></div><img class="post-copyright-icon noview" src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></div><div class="post-tail-tags"></div></div><aside id="post-sidebar" status="show"><div id="toc-container"><div class="toc-title"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"><span>目录</span></div><div class="toc-content" id="toc-div"><ol class="toc-list"><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#css%E5%8A%A8%E7%94%BB"><span class="toc-list-text">css动画</span></a><ol class="toc-list-child"><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E5%88%9B%E5%BB%BA%E5%8A%A8%E7%94%BB"><span class="toc-list-text">创建动画</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E9%87%8D%E5%A4%8D%E5%8A%A8%E7%94%BB"><span class="toc-list-text">重复动画:</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E6%9D%A5%E5%9B%9E%E8%BF%90%E5%8A%A8"><span class="toc-list-text">来回运动</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#CSS-%E5%B1%9E%E6%80%A7-animation-fill-mode-%E8%AE%BE%E7%BD%AE-CSS-%E5%8A%A8%E7%94%BB%E5%9C%A8%E6%89%A7%E8%A1%8C%E4%B9%8B%E5%89%8D%E5%92%8C%E4%B9%8B%E5%90%8E%E5%A6%82%E4%BD%95%E5%B0%86%E6%A0%B7%E5%BC%8F%E5%BA%94%E7%94%A8%E4%BA%8E%E5%85%B6%E7%9B%AE%E6%A0%87%E3%80%82"><span class="toc-list-text">CSS 属性 animation-fill-mode 设置 CSS 动画在执行之前和之后如何将样式应用于其目标。</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#animation-delay-CSS-%E5%B1%9E%E6%80%A7%E6%8C%87%E5%AE%9A%E4%BB%8E%E5%BA%94%E7%94%A8%E5%8A%A8%E7%94%BB%E5%88%B0%E5%85%83%E7%B4%A0%E5%BC%80%E5%A7%8B%E6%89%A7%E8%A1%8C%E5%8A%A8%E7%94%BB%E4%B9%8B%E5%89%8D%E7%AD%89%E5%BE%85%E7%9A%84%E6%97%B6%E9%97%B4%E9%87%8F%E3%80%82"><span class="toc-list-text">animation-delay CSS 属性指定从应用动画到元素开始执行动画之前等待的时间量。</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E5%8A%A8%E7%94%BB%E7%9A%84%E6%9A%82%E5%81%9C%E4%B8%8E%E6%92%AD%E6%94%BE"><span class="toc-list-text">动画的暂停与播放</span></a></li></ol></li><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#css%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-list-text">css的转换</span></a><ol class="toc-list-child"><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#css2D%E8%BD%AC%E6%8D%A2%E6%96%B9%E6%B3%95"><span class="toc-list-text">css2D转换方法</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#css3D%E8%BD%AC%E6%8D%A2"><span class="toc-list-text">css3D转换</span></a></li></ol></li><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#css%E8%BF%87%E6%B8%A1"><span class="toc-list-text">css过渡</span></a></li></ol></div></div></aside></div></div><div id="toolbar" hide=""><div id="toolbar-setting-container" hide=""><div class="toolbar-item"><button id="tool-color-mode" title="深色模式" type="button"><img src="/assets/images/svg/ta/ta-moon.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button class="copy-text" id="tool-share" title="分享" type="button" data-text="https://name9807.github.io/2024/03/04/css%E5%8A%A8%E7%94%BB/"><img src="/assets/images/svg/ta/ta-share.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-plus" title="放大字体" type="button"><img src="/assets/images/svg/ta/ta-text-plus.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-minus" title="缩小字体" type="button"><img src="/assets/images/svg/ta/ta-text-minus.svg" class="icon noview" alt="Icon"></button></div></div><div class="toolbar-container"><div class="toolbar-item"><button id="tool-setting" title="设置" type="button"><img src="/assets/images/svg/ta/ta-setting.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-toc" title="目录" type="button"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-gototop" title="返回顶部" type="button"><img src="/assets/images/svg/ta/ta-up.svg" class="icon noview" alt="Icon"></button></div></div></div></main><footer><div class="footer"><div id="footer-copyright">© 2024 - 2025 <span>💗</span> <a href="/null">呼佳慧</a></div><div id="footer-info"><div id="footer-framework">🚀本站由 <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/chanwj/hexo-theme-meow" title="3.1.0" target="_blank">Meow</a> 强力驱动</div><div id="footer-runtime"><span id="runtime" data-startdate="2024-04-02T22:16:20.000Z">🌻已稳定运行.年.月.天</span></div></div></div></footer><div class="scripts"><script>const GLOBALCONFIG = {
+  root: '/',
+  toolbar: true,
+  lazyload_src: '/assets/images/Meow-Loading.webp',
+  friends: false,
+  codeblock: true,
+  share_text: '🐱Share From Meow',
+  onblur_title: 'Please Come Back～✧(´▽`ʃ♡ƪ)',
+  mouse_click: false,
+  notify:{
+    enable: false,
+    info: '复制成功～转载请标注本文地址',
+    f12_info: '开发者模式已打开，请遵循本站版权协议'
+  },
+  search: {
+    enable: false,
+    path: 'search.json',
+    local: {
+      top_n_per_article: 1,
+      preload: false
+    }
+  },
+  encrypt: false,
+};
+</script><script>if (!localStorage.getItem('color-mode')) {
+  localStorage.setItem('color-mode', 'light' || 'light');
+}
+document.body.setAttribute('data-mode', localStorage.getItem('color-mode'));
+</script>
+<script src="/js/theme/tools/utils.js"></script>
+
+<script src="/js/plugins/dist/lazyload.min.js"></script>
+
+<script src="/js/plugins/view-image.min.js"></script>
+<script>if (localStorage.getItem('font-size')) {
+  document.querySelector('.post').style.fontSize = localStorage.getItem('font-size') + 'px';
+}
+</script>
+<script src="/js/main.js" type="module"></script>
+</div></body></html>
