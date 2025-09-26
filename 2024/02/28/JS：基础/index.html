@@ -1,0 +1,605 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="author" content="呼佳慧"/><meta name="copyright" content="呼佳慧"/><meta name="theme-color" content="#FFB347"/><meta name="format-detection" content="telephone=no"/><meta name="keywords" content="Hexo Theme MEOW"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-touch-fullscreen" content="yes"/><meta name="application-name" content="JS：基础 | 随便写吧"/><meta name="apple-mobile-web-app-title" content="JS：基础 | 随便写吧"/><meta name="apple-mobile-web-app-status-bar-style" content="#FFB347"/><link rel="canonical" href="https://name9807.github.io/2024/02/28/JS：基础/"/><meta name="description" content="变量我们可以使用 var、let 或 const 声明变量来存储数据。  var声明的变量既是全局变量，也是顶层变量，也是全局对象上的属性  存在变量提升：  变量会在所有代码执行前被声明，没赋值。  能够对一个变量进行多次声明，后面声明的变量会覆盖前面的变量声明。  函数提升优先级高于变量，且函数声明不会被变量声明覆盖；但是会被变量赋值覆盖；  let是ES6新增的命令，用来声明变量。所声...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS：基础 | 随便写吧">
+<meta property="og:url" content="https://name9807.github.io/2024/02/28/JS%EF%BC%9A%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="随便写吧">
+<meta property="og:description" content="变量我们可以使用 var、let 或 const 声明变量来存储数据。  var声明的变量既是全局变量，也是顶层变量，也是全局对象上的属性  存在变量提升：  变量会在所有代码执行前被声明，没赋值。  能够对一个变量进行多次声明，后面声明的变量会覆盖前面的变量声明。  函数提升优先级高于变量，且函数声明不会被变量声明覆盖；但是会被变量赋值覆盖；  let是ES6新增的命令，用来声明变量。所声...">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://name9807.github.io/2024/02/28/JS%EF%BC%9A%E5%9F%BA%E7%A1%80/assets/images/Hexo-Theme-MEOW.png">
+<meta property="article:published_time" content="2024-02-28T10:58:12.000Z">
+<meta property="article:modified_time" content="2025-09-26T14:40:38.729Z">
+<meta property="article:author" content="呼佳慧">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://name9807.github.io/2024/02/28/JS%EF%BC%9A%E5%9F%BA%E7%A1%80/assets/images/Hexo-Theme-MEOW.png"><meta name="robots" content="index,follow"/><meta name="googlebot" content="index,follow"/><meta name="revisit-after" content="1 days"/><title>JS：基础 | 随便写吧</title><link rel="shortcut icon" href="/assets/images/Hexo-Theme-MEOW.ico"><link rel="preconnect" href="/assets"/><link rel="preconnect" href="assets"/>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="prefetch" href="/"/><link rel="prefetch" href="/archives"/><link rel="prefetch" href="/tags"/><meta name="generator" content="Hexo 7.1.1"></head><body bg-style="none"><header><div id="navbar"><div id="nav-info"><a id="site-icon" href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a id="site-name" href="/" title="主页"><div>随便写吧</div><img src="/assets/images/svg/uc/uc-home.svg" class="icon noview" alt="Icon"></a></div><div id="nav-menu"></div><div id="nav-function"><div id="menu-btn"><a href="javascript:void(0);" title="打开菜单"><img src="/assets/images/svg/uc/uc-menu.svg" class="icon noview" alt="Icon"></a></div></div></div></header><div id="menu-aside"><div id="menu-aside-container"><div id="menu-aside-info"><a href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a href="/" title="主页">随便写吧</a></div><hr/></div></div><main><div class="banner"><div class="banner-info"><div class="banner-avatar"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Avatar"/></div><div class="banner-title">「 MEOW 」</div></div></div><div class="post-container"><div class="post-main"><div class="post-content"><h1 class="post-title">JS：基础</h1><div class="post-author"><span>作者: 呼佳慧</span></div><div class="post-meta"><div class="post-info"><div class="post-date"><div class="post-pubdate"><img src="/assets/images/svg/ta/ta-pubdate.svg" class="icon noview" alt="Icon"><span>发表于2024-02-28</span></div><div class="post-update"><img src="/assets/images/svg/ta/ta-update.svg" class="icon noview" alt="Icon"><span>更新于2025-09-26</span></div></div><div class="post-read"></div></div><div class="post-attribute"><div class="post-categories"><img src="/assets/images/svg/ta/ta-category.svg" class="icon noview" alt="Icon"><span><a class="post-categories-link" href="/categories/js/">js</a></span></div></div></div><div class="post markdown" indent="false"><h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p>我们可以使用 var、let 或 const 声明变量来存储数据。</p>
+<ul>
+<li><p><code>var</code>声明的变量既是全局变量，也是顶层变量，也是全局对象上的属性<br>  存在<strong>变量提升</strong>：<br>  变量会在所有代码执行前被声明，没赋值。<br>  能够对一个变量进行多次声明，后面声明的变量会覆盖前面的变量声明。<br>  <strong>函数提升优先级高于变量</strong>，且函数声明不会被变量声明覆盖；但是会被变量赋值覆盖；</p>
+</li>
+<li><p><code>let</code>是<code>ES6</code>新增的命令，用来声明变量。所声明的变量，只在<code>let</code>命令所在的代码块内有效。<br>  声明它之前，变量<code>a</code>是不存在的，这时如果用到它，就会抛出一个错误，这个现象成为<strong>暂时性死区</strong>。</p>
+<p>  <code>let</code>不允许在相同作用域中重复声明。</p>
+</li>
+<li><p><code>const</code>声明一个只读的常量，一旦声明，常量的值就不能改变。</p>
+<p>  <code>const</code>一旦声明变量，就必须立即初始化，不能留到以后赋值。</p>
+<p>  如果之前用<code>var</code>或<code>let</code>声明过变量，再用<code>const</code>声明同样会报错</p>
+</li>
+</ul>
+<p>合理的分配内存,先提前变量&amp;函数,提前预留空间。</p>
+<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><ol>
+<li><p>全局作用域:<br> 全局作用域中的变量是全局变量,可以在任意位置访问</p>
+</li>
+<li><p>局部作用域:<br> 块作用域只能在内部访问</p>
+<ol>
+<li><p>let具有块作用域,代码块内部的变量在外部无法访问</p>
+</li>
+<li><p>使用var声明的变量不具有块作用域,但具有函数作用域</p>
+</li>
+</ol>
+<p> 函数作用域在函数调用时产生,产生全新作用域</p>
+</li>
+<li><p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240229152953802.png"  alt="image-20240229152953802"></p>
+</li>
+</ol>
+<h1 id="javascript标识符"><a href="#javascript标识符" class="headerlink" title="javascript标识符"></a>javascript标识符</h1><p>所有 JavaScript <em><strong>变量</strong></em>必须以<em><strong>唯一的名称</strong></em>的<em><strong>标识</strong></em>。</p>
+<p>这些唯一的名称称为<em><strong>标识符</strong></em>。</p>
+<p>构造变量名称（唯一标识符）的通用规则是：</p>
+<ul>
+<li>名称可包含字母、数字、下划线和美元符号</li>
+<li>名称也可以 以字母，$ 和 _ 开头</li>
+<li>名称对大小写敏感（y 和 Y 是不同的变量）</li>
+<li>保留字无法用作变量名称</li>
+</ul>
+<p><strong>命名规范</strong>:<br>驼峰命名法:maxLength<br>类名会使用大驼峰命名法:MaxLength<br>常量的字母全大写MAX_LENGTH</p>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>JavaScript 中有八种基本的数据类型（译注：前七种为基本数据类型，也称为原始类型，而 object 为复杂数据类型）。</p>
+<p>&#x3D;&#x3D;我们可以通过 typeof 运算符查看存储在变量中的数据类型&#x3D;&#x3D;(值的类型,变量没有类型)</p>
+<ul>
+<li><p>两种形式：typeof x 或者 typeof(x)。</p>
+</li>
+<li><p>以字符串的形式返回类型名称，例如 “string”。</p>
+</li>
+<li><p>Number </p>
+<ul>
+<li>用于任何类型的数字：整数或浮点数，在 ±(253-1) 范围内的整数。</li>
+<li>infinity(数字超出范围后显示,数字一种)</li>
+<li>NaN,特殊数值,非法数字</li>
+<li>0b-2 0o-8 0x-16  可以这么创建,输出还是十进制</li>
+</ul>
+</li>
+<li><p>Bigint </p>
+<ul>
+<li>用于任意长度的整数。使用n结尾,无限大(内存)不能混合计算</li>
+</ul>
+</li>
+<li><p>String </p>
+<ul>
+<li>用于字符串：一个字符串可以包含 0 个或多个字符，所以没有单独的单字符类型。</li>
+<li>模版字符串<code>aaaaa$&#123;变量&#125;</code></li>
+</ul>
+</li>
+<li><p>Boolean </p>
+<ul>
+<li>用于 true 和 false。</li>
+<li>true不一定等于1,false不一定等于0。</li>
+</ul>
+</li>
+<li><p>Null </p>
+<ul>
+<li>用于未知的值 —— 只有一个 null 值的独立类型。</li>
+<li>null是表示一个空对象指针。</li>
+<li>typeof null 会返回 “object” —— 这是 JavaScript 编程语言的一个错误，实际上它并不是一个 object。</li>
+</ul>
+</li>
+<li><p>Undefined </p>
+<ul>
+<li>用于未定义的值 —— 只有一个 undefined 值的独立类型。</li>
+<li>在使用var 声明变量但未对其加初始化时，这个变量就是undefined。</li>
+</ul>
+</li>
+<li><p>Symbol </p>
+<ul>
+<li>用于唯一的标识符。</li>
+<li>let c&#x3D;symbol()</li>
+</ul>
+</li>
+<li><p>Object </p>
+<ul>
+<li>用于更复杂的数据结构，比如 function、Array、Date。</li>
+</ul>
+</li>
+</ul>
+<p>前七为原始数据,是不可变类型</p>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240228201550896.png"  alt="image-20240228201550896"></p>
+<p>一旦创建,不可修改,修改变量,只是改变指向的地址,使其指向新创建的原始数据</p>
+<h1 id="值的比较"><a href="#值的比较" class="headerlink" title="值的比较"></a>值的比较</h1><ul>
+<li><p>运算符</p>
+<ul>
+<li><div class="table-container"><table>
+<thead>
+<tr>
+<th>等值检测运算符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&#x3D;&#x3D;（相等）</td>
+<td>比较两个操作数的值是否相等</td>
+</tr>
+<tr>
+<td>!&#x3D;（不相等）</td>
+<td>比较两个操作数的值是否不相等</td>
+</tr>
+<tr>
+<td>&#x3D;&#x3D;&#x3D;（全等）</td>
+<td>比较两个操作数的值是否相等，同时检测它们的类型是否相同</td>
+</tr>
+<tr>
+<td>!&#x3D;&#x3D;（不全等）</td>
+<td>比较两个操作数的值是否不相等，同时检测它们的类型是否不相同</td>
+</tr>
+</tbody></table></div>
+</li>
+</ul>
+</li>
+</ul>
+<p>比较规则</p>
+<ol>
+<li>比较运算符始终返回布尔值。</li>
+<li>非数值进行关系运算时,将其转换为数值比较,</li>
+<li>同时两个字符串的比较，不转换数值,会按照“词典”顺序逐字符地比较大小。</li>
+<li>在相等运算中，应注意以下几个问题：<ol>
+<li>如果操作数是布尔值，则先转换为数值，其中 false 转为 0，true 转换为 1。</li>
+<li>如果一个操作数是字符串，另一个操作数是数字，则先尝试把字符串转换为数字。</li>
+<li>如果一个操作数是字符串，另一个操作数是对象，则先尝试把对象转换为字符串。</li>
+<li>如果一个操作数是数字，另一个操作数是对象，则先尝试把对象转换为数字。</li>
+<li>如果两个操作数都是对象，则比较引用地址。如果引用地址相同，则相等；否则不等。</li>
+</ol>
+</li>
+<li>在非严格相等 &#x3D;&#x3D; 下，null 和 undefined 相等且各自不等于任何其他的值。</li>
+<li>NaN与任何值都不相等，包括它自己。任何操作数与NaN比较，都是false</li>
+<li>在使用 &gt; 或 &lt; 进行比较时，需要注意变量可能为 null&#x2F;undefined 的情况。比较好的方法是单独检查变量是否等于 null&#x2F;undefined。</li>
+</ol>
+<h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><ol>
+<li><p>显式类型转换</p>
+<ol>
+<li><p>将其他数据类型转换成String类型</p>
+<ul>
+<li>toString()</li>
+</ul>
+<p>   该方法&#x3D;&#x3D;不会影响到原变量，它会将转换的结构返回&#x3D;&#x3D;。但是注意，<em><strong>Null和Undefined没有toString()方法</strong></em>，如果调用它们的方法，则会报错。</p>
+<ul>
+<li>String()</li>
+</ul>
+</li>
+</ol>
+<p>   将被转换的数据作为参数传递给函数。使用String函数做类型强制转换时，对于Number和Boolean就是调用toString()方法，对于null和undefined，就不会调用toString()方法，它会将null直接转换成”null”，将undefined转换成”undefined”。<br> 2. 将其他的数据类型转换为Number类型</p>
+<pre><code> - Number()
+     - 如果是纯数字的字符串，则直接将其转换为数字。
+     - 如果字符串中有非数字的内容，则转换为NaN。
+     - 布尔类型转换成数字：Ture转成1；False转成0。
+     - Null转成数字0。
+     - Undefined转成数字NaN。
+
+ - parseInt()，parseFloat()
+     - 针对字符串转换成数字
+
+     - parseInt()把一个字符串转换为一个整数，**只取整数部分**；
+     - parseFloat()把一个字符串转换为一个浮点数，可获得有效小数;
+     - 对非String使用parseInt()或parseFloat()，它会将其转换为String
+</code></pre>
+<ol start="3">
+<li><p>将其他的数据类型转换为Boolean类型</p>
+<ul>
+<li><p>Boolean()</p>
+<ul>
+<li>对于数字，0和NaN是false，其余的都是true。</li>
+<li>对于字符串，空串是false，其余的都是true。</li>
+<li>对于null和undefined，都是false。</li>
+<li>对于对象，都是true</li>
+<li>所有表示空性质,错误的,没有的转换为false</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>隐式类型转换</p>
+<ol>
+<li>转换为String类型<ol>
+<li>为任意的数据加一个空串</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>	</p>
+<div class="code-container" code-lang="Plaintext"><div class="codebox"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var a = 123;</span><br><span class="line">a = a + ‘’;//a:&quot;123&quot;</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+
+
+<ol start="3">
+<li>转换为Number类型<ol>
+<li>在数据前面放个+</li>
+</ol>
+</li>
+</ol>
+ <div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">&#x27;123&#x27;</span></span><br><span class="line">a = +a;<span class="comment">//a:123</span></span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+<ol start="4">
+<li><p>转换为Boolean类型</p>
+</li>
+<li><p>为任意的数据取两次反<br>  <div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div></p>
+</li>
+</ol>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="函数内容"><a href="#函数内容" class="headerlink" title="函数内容"></a>函数内容</h2><ol>
+<li><p>函数是什么？</p>
+<ol>
+<li>函数是在其中有一组代码的逻辑构件，用来执行特定任务。实际上为了易于调试和维护，函数允许以更有组织的方式去编写代码。函数还允许代码重用。</li>
+<li>在JavaScript里，函数实际上是<em><strong>对象</strong></em>， 每个函数都是Function类型的实例， 而Function也有属性和方法。因为函数是对象， 所以函数名就是指向函数对象的指针</li>
+</ol>
+</li>
+<li><p>如何创建一个函数？</p>
+<ol>
+<li><p>使用Function构造函数创建函数</p>
+<ol>
+<li><p>在这种方法中，函数是在“函数”的构造函数的帮助下创建的。从技术上讲，这种方法比使用函数表达式语法和函数声明语句语法去声明函数的方法效率要低。</p>
+</li>
+<li><pre><code class="JavaScript"> const sum2 = new Function(&quot;a1&quot;, &quot;a2&quot;, &quot;return a1 + a2&quot;)
+ 
+ console.log(sum2(1, 3));
+ <div class="code-container" code-lang="Plaintext"><div class="codebox"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">2. 使用函数表达式</span><br><span class="line">	1.   通常这种方法与变量分配相同。简而言之，函数主体被视为一个表达式，并且该表达式被分配给一个变量。使用这种语法定义的函数可以是命名函数或匿名函数。</span><br><span class="line"></span><br><span class="line">	2. ```JavaScript</span><br><span class="line">		const sum = function (a1, a2) &#123;</span><br><span class="line">		    return a1 + a2</span><br><span class="line">		&#125;</span><br><span class="line">		let a = sum(1, 2)</span><br><span class="line">		console.log(a) </span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>使用函数声明</p>
+<ol>
+<li><p>这种方法是 JavaScript 中常用的老派方法。在关键字“function”之后，你必须指定函数的名称。之后，如果函数接受多个参数或参数，也需要提及它们。虽然这部分是完全可选的。</p>
+</li>
+<li><p>&#x3D;&#x3D;函数提升&#x3D;&#x3D;<br> 使用函数声明创建的函数会在其它代码执行前被创建</p>
+</li>
+<li><pre><code class="JavaScript"> function 函数名(参数1, 参数2) &#123;
+ console.log(&quot;我是一个函数&quot;)
+ &#125;
+ 例 ： 
+ function sum(a1 , a2) &#123;
+ return a1 + a2
+ &#125;
+ let a=sum(1,2);
+ <div class="code-container" code-lang="Plaintext"><div class="codebox"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">4. 箭头函数</span><br><span class="line">	</span><br><span class="line">	1.   箭头函数相当于是函数表达式创建函数的更短的版本，但是相对于函数声明，不能使用 arguments，super，也不能用作构造函数，也没有prototype属性</span><br><span class="line">	</span><br><span class="line">	2. ```JavaScript</span><br><span class="line">		let 函数名 = (参数1, 参数2) =&gt; &#123;</span><br><span class="line">		&#125;</span><br><span class="line">		const frontEnd = (frontEnd) =&gt; &#123;</span><br><span class="line">		    console.log(frontEnd + &#x27; yyds&#x27;)</span><br><span class="line">		&#125;</span><br><span class="line">		frontEnd(&#x27;frontEnd&#x27;)</span><br><span class="line">		//如果只有一个参数，甚至可以省略圆括号，使代码更短</span><br><span class="line">		const fe = a =&gt; a + 1</span><br><span class="line">		//如果没有参数，圆括号将是空的（但圆括号应该保留）</span><br><span class="line">		let sayHi = () =&gt; alert(&quot;Hello!&quot;);</span><br><span class="line">		//箭头函数的返回值可以直接写在箭头后面,设置对象作为返回值用()括起来</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+</code></pre>
+</li>
+<li><p>立即执行函数(IIFE)<br> 匿名函数,只会调用一次,可以避免变量冲突</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>函数参数</p>
+<ol>
+<li><p>函数重载</p>
+<ol>
+<li>函数通过参数的个数和类型不同来创建不同的函数签名，通过调用函数时传入的参数个数和参数类型来进行命名参数的验证。</li>
+<li>但是 ， 在js中后声明的同名函数会对前面声明的函数进行一个覆盖</li>
+</ol>
+</li>
+<li><p>默认函数值</p>
+<ol>
+<li><p>在有默认参数的函数中，调用arguments<br> <strong><code>arguments</code></strong> 是一个对应于传递给函数的参数的类数组对象</p>
+</li>
+<li><p>函数的默认参数只有在函数被调用的时候才会求值，不会在函数定义时求值</p>
+</li>
+<li><p>函数每次调用都会重新创建默认值</p>
+</li>
+<li><p>计算默认值的函数只有在调用函数但未传相应参数时才会被调用</p>
+</li>
+<li><pre><code class="JavaScript"> function names(name = &#39;frontEnd&#39;) &#123;
+   console.log(name);
+ &#125;
+ names()//frontend
+ 
+ function log() &#123;
+   console.log(&#39;我被调用了&#39;);
+   return 2;
+ &#125;
+ function al(l = log()) &#123;
+   console.log(l);
+ &#125;
+ al(1);//1
+ al();//我被调用了 2
+ <div class="code-container" code-lang="Plaintext"><div class="codebox"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">3. 类数组arguments对象</span><br><span class="line">	1. 如果一个函数传递了三个参数，你可以以如下方式引用他们：</span><br><span class="line">		- ```JavaScript</span><br><span class="line">			arguments[0]</span><br><span class="line">			arguments[1]</span><br><span class="line">			arguments[2]</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+ - ```JavaScript
+     var fun = function () &#123;
+         console.log(arguments);
+         console.log(arguments[0]);
+     &#125;
+     fun(1, 2, 3, 4, 5)
+     <div class="code-container" code-lang="Plaintext"><div class="codebox"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">		- ![img](js基础/-17091188883801.png)</span><br><span class="line"></span><br><span class="line">		- </span><br><span class="line">	</span><br><span class="line">4. this</span><br><span class="line">	![image-20240229162438981](js基础/image-20240229162438981.png)</span><br><span class="line">	箭头函数的this</span><br><span class="line">	![image-20240229162805185](js基础/image-20240229162805185.png)</span><br><span class="line">	</span><br><span class="line">4. 传递实参是传递不是变量本身,而是变量中储存的值,</span><br><span class="line">	</span><br><span class="line">4. 将函数当做参数</span><br><span class="line">	</span><br><span class="line">	1. 顾名思义，就是某个函数的参数是另一个函数</span><br><span class="line">		- ```JavaScript</span><br><span class="line">			function callSomeFunction(someFunction, someArgnment) &#123;</span><br><span class="line">			  return someFunction(someArgnment)</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			function add(number) &#123;</span><br><span class="line">			  return number + 10</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			function sayHello(name) &#123;</span><br><span class="line">			  return &#x27;Hello &#x27; + name</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			let result = callSomeFunction(add, 10)</span><br><span class="line">			</span><br><span class="line">			console.log(result);</span><br><span class="line">			</span><br><span class="line">			let result2 = callSomeFunction(sayHello, &#x27;xiaobb&#x27;)</span><br><span class="line">			</span><br><span class="line">			console.log(result2);</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>回调函数</p>
+<ol>
+<li>什么是回调函数？<ol>
+<li>mdn官腔：回调函数是作为参数传给另一个函数的函数，然后通过在外部函数内部调用该回调函数以完成某种操作。</li>
+<li>人话：回调函数是一个函数，将会在另一个函数完成执行后立即执行。回调函数是一个作为参数传给另一个 JavaScript 函数的函数。这个回调函数会在传给的函数内部执行。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>高阶函数<br> 函数也可以作为返回值<br> 函数作为返回值是可以,动态生成新函数</p>
+<p> 闭包:可以将不想被看到的内容,放到两个函数之间</p>
+</li>
+</ol>
+<h2 id="通过call和apply调用函数"><a href="#通过call和apply调用函数" class="headerlink" title="通过call和apply调用函数"></a>通过call和apply调用函数</h2><ol>
+<li><p>call&amp;apply:</p>
+<ul>
+<li>第一个参数,会成为函数的this</li>
+</ul>
+</li>
+<li><p>call的实参直接在第一个参数后一个个列出</p>
+</li>
+<li><p>apply得失参需要通过数组传递</p>
+</li>
+</ol>
+<h2 id="bind"><a href="#bind" class="headerlink" title="bind"></a>bind</h2><p>用来创建一个新的函数,可以指定this并且绑定参数</p>
+<p>但是箭头函数无法由call,apply bind指定</p>
+<h1 id="面向对象思想"><a href="#面向对象思想" class="headerlink" title="面向对象思想"></a>面向对象思想</h1><ol>
+<li>面向过程，就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步步实现，使用时在一个个调用函数就行了</li>
+<li>面向对象，就是把事务分解成一个个对象，然后由对象之间分工合作完成。面向对象是以对象功能来划分问题</li>
+</ol>
+<p>举个最简单点的例子，就是把大象放进冰箱。</p>
+<p>面向过程的思路</p>
+<p>打开冰箱门<br>把大象塞进冰箱<br>关冰箱门</p>
+<p>面向对象的思路，是赋予冰箱开门关门的操作，给大象进门的操作，然后冰箱和大象两个对象合作完成任务；</p>
+<p><strong>面向过程的优点：性能比面向对象高，比较适合和硬件联系紧密的东西</strong></p>
+<p><strong>面向对象的优点：易维护、易复用、易扩展、更适合多人合作的大项目。</strong></p>
+<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240229163549063.png"  alt="image-20240229163549063"></p>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240229163914205.png"  alt="image-20240229163914205"></p>
+<h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240229164144835.png"  alt="image-20240229164144835"></p>
+<h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240229165128867.png"  alt="image-20240229165128867"></p>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240229165321474.png"  alt="image-20240229165321474"></p>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240229165604251.png"  alt="image-20240229165604251">可以通过重写父类内容修改</p>
+<p>重写构造函数时,第一行代码是super(),并且可以使用super调用父类方法</p>
+<h2 id="对象的内存结构"><a href="#对象的内存结构" class="headerlink" title="对象的内存结构"></a>对象的内存结构</h2><ol>
+<li><p>对象自身中</p>
+<ul>
+<li>直接通过对象本身添加</li>
+<li>通过类来添加的属性</li>
+</ul>
+</li>
+<li><p>原型对象__proto__(属性)</p>
+<ul>
+<li>当访问属性,先找对象自身,找不到再去原型中寻找</li>
+<li><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240229171031117.png"  alt="image-20240229171031117"></li>
+</ul>
+</li>
+<li><p>原型对象也有原型,<br> <img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240229171359632.png"  alt="image-20240229171359632"></p>
+</li>
+</ol>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240229171614630.png"  alt="image-20240229171614630"></p>
+<h2 id="对象："><a href="#对象：" class="headerlink" title="对象："></a>对象：</h2><p>对象（object）是大括号定义的无序的数据集合，<strong>由键值对构成</strong></p>
+<p>对象也是变量。但是对象包含很多值。</p>
+<p>这段代码把<em><strong>多个值</strong></em>（20230001, 21, 张三）赋给名为 student的<em><strong>变量</strong></em>：</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> student= &#123;<span class="attr">id</span>:<span class="string">&quot;20230001&quot;</span>, <span class="attr">age</span>:<span class="number">21</span>, <span class="attr">name</span>:<span class="string">&quot;张三&quot;</span>&#125;;</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p> 值以<em><strong>名称:值</strong></em>对（即键值对）的方式来书写（名称和值由冒号分隔）。</p>
+<p>JavaScript 对象是<em><strong>被命名值</strong></em>的容器。</p>
+<h3 id="对象属性"><a href="#对象属性" class="headerlink" title="对象属性"></a><strong>对象属性</strong></h3><p>（JavaScript 对象中的）名称:值对被称为<em><strong>属性</strong></em>。</p>
+<p>我们也可以理解为对象的<strong>状态</strong>或对象的<strong>数据</strong></p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> student =&#123;</span><br><span class="line">    <span class="attr">status</span>:<span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<h3 id="对象方法"><a href="#对象方法" class="headerlink" title="对象方法"></a><strong>对象方法</strong></h3><p>对象也可以有<em><strong>方法</strong></em>。</p>
+<p>方法是在对象上执行的<em><strong>动作</strong></em>。</p>
+<p>方法以<em><strong>函数定义</strong></em>被存储在属性中。</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> student =&#123;</span><br><span class="line">    <span class="attr">sayhello</span>:<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello&quot;</span>)</span><br><span class="line">    &#125;，</span><br><span class="line">    <span class="comment">// 简写</span></span><br><span class="line">    <span class="title function_">sayhi</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hi&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240229162954720.png"  alt="image-20240229162954720"></p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a><strong>实例</strong></h3><div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  <span class="attr">firstName</span>: <span class="string">&quot;Bill&quot;</span>,</span><br><span class="line">  lastName : <span class="string">&quot;Gates&quot;</span>,</span><br><span class="line">  id       : <span class="number">678</span>,</span><br><span class="line">  fullName : <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">firstName</span> + <span class="string">&quot; &quot;</span> + <span class="variable language_">this</span>.<span class="property">lastName</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<h3 id="访问对象属性"><a href="#访问对象属性" class="headerlink" title="访问对象属性"></a><strong>访问对象属性</strong></h3><div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">objectName.<span class="property">propertyName</span></span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p>或者,当名称过于特殊不能直接使用</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">objectName[<span class="string">&quot;propertyName&quot;</span>]<span class="comment">//中括号可以放变量</span></span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p>也可以使用symbol创建属性,不希望被外界访问的属性(不常用)</p>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240228203643672.png"  alt="image-20240228203643672"></p>
+<p>也可以通过”in”运算符检查对象是否有某属性</p>
+<h3 id="访问对象方法"><a href="#访问对象方法" class="headerlink" title="访问对象方法"></a><strong>访问对象方法</strong></h3><div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">objectName.<span class="title function_">methodName</span>()</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<h3 id="对象的声明方式"><a href="#对象的声明方式" class="headerlink" title="对象的声明方式"></a>对象的声明方式</h3><ol>
+<li>声明字面量对象</li>
+<li>通过Object类创建对象 <div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建空对象</span></span><br><span class="line">		<span class="keyword">let</span> obj1 = &#123;&#125;</span><br><span class="line">		<span class="keyword">let</span> obj2 = <span class="keyword">new</span> <span class="title class_">Object</span>();</span><br><span class="line">		<span class="comment">// 添加属性</span></span><br><span class="line">		obj1.<span class="property">key1</span> = <span class="string">&quot;value1&quot;</span></span><br><span class="line">		obj2.<span class="property">key2</span> = <span class="number">12</span></span><br><span class="line">		obj1[<span class="string">&quot;key&quot;</span>] = <span class="literal">false</span></span><br><span class="line">		<span class="comment">// 添加方法</span></span><br><span class="line">		obj2.<span class="property">hi</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">		    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hi&quot;</span>)</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div></li>
+</ol>
+<p>​	</p>
+<h3 id="枚举属性"><a href="#枚举属性" class="headerlink" title="枚举属性"></a>枚举属性</h3><p>for in语句  符号添加的属性是不可枚举的</p>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240228204239196.png"  alt="image-20240228204239196"></p>
+<h3 id="可变类型"><a href="#可变类型" class="headerlink" title="可变类型"></a>可变类型</h3><p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240228204447632.png"  alt="image-20240228204447632"></p>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240228204733271.png"  alt="image-20240228204733271"></p>
+<p>两个变量同时修改</p>
+<h2 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h2><p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240229153320807.png"  alt="image-20240229153320807"></p>
+<p>向window对象添加的属性会自动成为全局变量</p>
+<p>使用var设置的全局变量,都会作为window对象的属性保存(let不会,而是存在???,增加了变量的安全性)</p>
+<p>使用function声明的函数都会作为window对象的方法保存</p>
+<h2 id="instanceof-hasown"><a href="#instanceof-hasown" class="headerlink" title="instanceof hasown"></a>instanceof hasown</h2><ol>
+<li>instanceof检查一个对象是否是一个类的实例,实际是检查该对象的原型链是否有改父类实例.<br> object是所有对象的原型,object自己也有原型</li>
+<li>in原型和自身都检查,hasown检查自身是否含有某属性</li>
+</ol>
+<h2 id="new运算符"><a href="#new运算符" class="headerlink" title="new运算符"></a>new运算符</h2><p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/image-20240229172439111.png"  alt="image-20240229172439111"></p>
+<h1 id="js数组与字符串"><a href="#js数组与字符串" class="headerlink" title="js数组与字符串"></a>js数组与字符串</h1><h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h4 id="字符串是什么？"><a href="#字符串是什么？" class="headerlink" title="字符串是什么？"></a>字符串是什么？</h4><p>上过小学二年级的我们都知道，JS有7种基本数据类型和复杂数据类型，基本数据类型存储在栈中，和其他语言不同，JS中的字符串是基本数据类型中的一种</p>
+<h4 id="语法基础"><a href="#语法基础" class="headerlink" title="语法基础"></a>语法基础</h4><p>字符串可以用双引号包裹，也可以用单引号包裹，JS中的字符串是动态的，不需要去为他设置长度。</p>
+<h4 id="字符串常用属性方法"><a href="#字符串常用属性方法" class="headerlink" title="字符串常用属性方法"></a>字符串常用属性方法</h4><p>至于为什么字符串有方法，这点和JS中的包装类有关，大家课后可以自行去了解，目前大家只需要会用就可以了。</p>
+<h5 id="获得字符串长度的length属性："><a href="#获得字符串长度的length属性：" class="headerlink" title="获得字符串长度的length属性："></a>获得字符串长度的length属性：</h5><p>使用字符串的length属性可以查看当前字符串中字符的数量，就算其中包括双字符也会按照单字符计算：</p>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/js%E5%9F%BA%E7%A1%80/-17091189837393.png"  alt="img"></p>
+<p>str长度按理来讲正常会为5，为6的原因是“😧”是进行增补过编码的字符，length属性按照16位码元作为一个字符去处理字符串，但是“😧”会占32位，所以他会被当成“😧”两个字符看待。</p>
+<h5 id="拼接字符串的concat方法"><a href="#拼接字符串的concat方法" class="headerlink" title="拼接字符串的concat方法"></a>拼接字符串的concat方法</h5><p>concat方法用于连接（合并&#x2F;拼接）字符串，使用方法为:&#x3D;&#x3D;也可以拼接数组&#x3D;&#x3D;</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> str2 = str.<span class="title function_">concat</span>(<span class="string">&quot; world&quot;</span>, <span class="string">&quot; qwq&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str); </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str2); </span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p>字符串也可以使用加运算符来拼接：</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&quot;hello&quot;</span> + <span class="string">&quot; world&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str); <span class="comment">// hello world</span></span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p>实际开发中更倾向于使用+运算符进行字符串拼接</p>
+<h5 id="字符串切片方法slice、substr、substring"><a href="#字符串切片方法slice、substr、substring" class="headerlink" title="字符串切片方法slice、substr、substring"></a>字符串切片方法slice、substr、substring</h5><p>切片方法，顾名思义，就是将字符串切成某一段的一片：</p>
+<p>他接受两个参数，第一个参数是开始的位置（必传），第二个参数是结束的位置&#x3D;&#x3D;数组同,并且可以实行数组浅拷贝&#x3D;&#x3D;</p>
+<p>当传入负数时，按照从末位开始算，-1表示倒数第一位</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&quot;一二三四五六七八&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> strSplice = str.<span class="title function_">slice</span>(<span class="number">0</span>,<span class="number">6</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(strSplice);</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p>substr substring也有一样的效果，只是传参和应用场景不同，这部分留作作业写在作业里面。</p>
+<h5 id="删除左右空格的trim方法"><a href="#删除左右空格的trim方法" class="headerlink" title="删除左右空格的trim方法"></a>删除左右空格的trim方法</h5><p>和上面的一样，trim方法会返回一个新字符串，删除了左右的所有空格。</p>
+<p>在实际开发中会用到这个方法进行用户输入数据的处理</p>
+<h5 id="将字符串打碎成数组的split方法"><a href="#将字符串打碎成数组的split方法" class="headerlink" title="将字符串打碎成数组的split方法"></a>将字符串打碎成数组的split方法</h5><div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&quot;一二三四五六七八&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> engStr = <span class="string">&quot;hello world you qwq&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">split</span>(<span class="string">&quot;&quot;</span>));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(engStr.<span class="title function_">split</span>(<span class="string">&quot; &quot;</span>));</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<h5 id="字符串的大小写转换方法toLowerCase-toUpperCase"><a href="#字符串的大小写转换方法toLowerCase-toUpperCase" class="headerlink" title="字符串的大小写转换方法toLowerCase toUpperCase"></a>字符串的大小写转换方法toLowerCase toUpperCase</h5><p>这两个方法比较简单，需要各位自学后在作业里完成，并像上面一样写几个简单的小demo。</p>
+<h5 id="includes"><a href="#includes" class="headerlink" title="includes"></a>includes</h5><p>用来检查字符串是否包含某些内容</p>
+<h5 id="startwith-endwith"><a href="#startwith-endwith" class="headerlink" title="startwith endwith"></a>startwith endwith</h5><p>检查字符串是否以指定内容开头结尾</p>
+<h5 id="padstart-end"><a href="#padstart-end" class="headerlink" title="padstart end"></a>padstart end</h5><p>补充内容控制长度</p>
+<h5 id="replace-replaceAll"><a href="#replace-replaceAll" class="headerlink" title="replace&#x2F;replaceAll"></a>replace&#x2F;replaceAll</h5><p>用xxx替换字符串中xxx返回字符串</p>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h4 id="数组是什么？"><a href="#数组是什么？" class="headerlink" title="数组是什么？"></a>数组是什么？</h4><p>数组和上面所说的字符串不一样，他是一种复杂的数据类型，存储在堆中。</p>
+<p>在JS的数组中，可以任意的存放各种类型的数据（这点和大多数其他语言不同），并且JS的数组是动态的，他会自动为你扩充大小。</p>
+<p>在开发中，数组有时候也会存入一系列对象，这在JS中是被允许的，而且也会有遍历的方法，详见下文</p>
+<h4 id="如何访问数组？"><a href="#如何访问数组？" class="headerlink" title="如何访问数组？"></a>如何访问数组？</h4><p>与C语言类似，JS的数组也是通过[ ]进行访问的，索引值0依旧代表第一个元素，以此类推。</p>
+<p>arry.at()&#x2F;&#x2F;可以接受负索引作为参数</p>
+<h4 id="检查数组长度的length属性"><a href="#检查数组长度的length属性" class="headerlink" title="检查数组长度的length属性"></a>检查数组长度的length属性</h4><p>和字符串的属性类似，数组会有一个length属性供我们查看数组中有多少个元素。</p>
+<p>虽然到这里大家很容易就可以想到可以使用for循环和length属性遍历数组中的元素，但请先不要这样做，下面会有更好的方式去遍历数组。</p>
+<h4 id="转换数组为字符串的join方法"><a href="#转换数组为字符串的join方法" class="headerlink" title="转换数组为字符串的join方法"></a>转换数组为字符串的join方法</h4><p>其实在JS中，数组也是一种特殊的对象，所有对象都会拥有toString方法用于返回一个和该对象有关的字符串，数组也不例外，他可以返回一个用逗号相连的字符串。</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="string">&quot;qwq&quot;</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">toString</span>());</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p>使用join方法可以直接返回一个以传入参数为分隔连接起来的字符串</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="string">&quot;qwq&quot;</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">join</span>(<span class="string">&quot;&quot;</span>));</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p>不推荐使用toString方法，因为toString方法在任何对象（包括各种数组以外的对象）join方法相对更好用。</p>
+<h4 id="数组的推入与删除push-pop-shift-unshift-splice-reverse"><a href="#数组的推入与删除push-pop-shift-unshift-splice-reverse" class="headerlink" title="数组的推入与删除push pop shift unshift splice reverse"></a>数组的推入与删除push pop shift unshift splice reverse</h4><p>使用push pop shift unshift方法可以操作数组最前面一项和最后面一项</p>
+<p>push：向数组的最后推入一项,或多项,并返回新的长度</p>
+<p>pop：移除并返回数组的最后一项</p>
+<p>shift：移除数组的第一项</p>
+<p>unshift：向数组最前方推入一项或多项,并返回数组长度</p>
+<p>splice:可以删除,添加,插入,替换,数组中的元素,</p>
+<pre><code>- 删除的起始位置
+- 删除的数量
+- 要插入的元素(放入切片的地方)
+- 返回被删除的元素
+</code></pre>
+<p>reverse:反转数组</p>
+<h5 id="push和pop方法可以构建类似栈的处理方式"><a href="#push和pop方法可以构建类似栈的处理方式" class="headerlink" title="push和pop方法可以构建类似栈的处理方式"></a>push和pop方法可以构建类似栈的处理方式</h5><p>使用push向末尾推入新的一项，用pop删除最后一项，这样的操作方式和栈的工作原理一致</p>
+<h5 id="shift和push方法可以构建类似队列的处理方式"><a href="#shift和push方法可以构建类似队列的处理方式" class="headerlink" title="shift和push方法可以构建类似队列的处理方式"></a>shift和push方法可以构建类似队列的处理方式</h5><p>使用shift和push方法可以构建类似队列的处理方式，使用push推入最后一项，使用shift删除最前面的一项。</p>
+<p>有关栈和队列的知识如果不明白需要自行去补，这部分是计算机相当重要的一个思维方式。</p>
+<h4 id="数组的迭代方法map，forEach"><a href="#数组的迭代方法map，forEach" class="headerlink" title="数组的迭代方法map，forEach"></a>数组的迭代方法map，forEach</h4><p>数组有自己的迭代方式，不需要我们手动使用for循环去遍历数组</p>
+<h5 id="forof语句"><a href="#forof语句" class="headerlink" title="forof语句:"></a>forof语句:</h5><p>(处理可迭代对象) for(let value of arr){}</p>
+<p>forin(处理对象)</p>
+<h5 id="forEach方法："><a href="#forEach方法：" class="headerlink" title="forEach方法："></a>forEach方法：</h5><p>forEach是不带有返回值的方法：</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line">arr.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(item);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<h5 id="map方法："><a href="#map方法：" class="headerlink" title="map方法："></a>map方法：</h5><p>map是带有返回值的方法，并且map方法比forEach要更快，他会返回一个新的数组；</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="keyword">let</span> arrNew = arr.<span class="title function_">map</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> item + <span class="number">1</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arrNew);</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p>并且，map方法可以方便进行链式调用</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="keyword">let</span> arrNew = arr</span><br><span class="line">  .<span class="title function_">map</span>(<span class="function">(<span class="params">item，index</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> item + <span class="number">1</span>;</span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">filter</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> item &gt; <span class="number">2</span> ? item : <span class="literal">undefined</span>;</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arrNew);</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p>在实际开发中，由于map拥有这样可以返回新数组、运行效率高、可以链式调用的特性，我们通常使用map而不是forEach方法</p>
+<h4 id="数组的过滤方法filter"><a href="#数组的过滤方法filter" class="headerlink" title="数组的过滤方法filter"></a>数组的过滤方法filter</h4><p><code>filter</code>方法用于对数组进行过滤。它会<strong>创建一个新数组</strong>，新数组中的元素是通过检查指定数组中符合条件的所有元素。</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line"><span class="keyword">var</span> result = arr.<span class="title function_">filter</span>(<span class="keyword">function</span> (<span class="params">number</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> number &gt; <span class="number">3</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p>上述代码中，<code>filter</code> 为数组中的每个元素调用一次 callback 函数，并利用所有使得 callback 返回 true 或 等价于 true 的值 的元素创建一个新数组。那些没有通过 callback 测试的元素会被跳过，不会被包含在新数组中。</p>
+<h4 id="数组中查找某个元素的位置indexOf"><a href="#数组中查找某个元素的位置indexOf" class="headerlink" title="数组中查找某个元素的位置indexOf"></a>数组中查找某个元素的位置indexOf</h4><p><em><code>array</code></em><code>.indexOf(</code><em><code>item</code></em><code>,</code><em><code>start</code></em><code>)</code>方法可返回数组中某个指定的元素位置。该方法将从头到尾地检索数组，看它是否含有对应的元素。开始检索的位置在数组 start 处或数组的开头（没有指定 start 参数时）。如果找到一个 item，则<strong>返回 item 的第一次出现的位置</strong>。如果在数组中<strong>没找到指定元素则返回 -1。</strong></p>
+ <div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fruits = [<span class="string">&quot;Banana&quot;</span>, <span class="string">&quot;Orange&quot;</span>, <span class="string">&quot;Apple&quot;</span>, <span class="string">&quot;Mango&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> index = fruits.<span class="title function_">indexOf</span>(<span class="string">&quot;Apple&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(index);</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p>lastindof 同上从后往前查</p>
+<h1 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h1><p><strong>定义</strong>：允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。ES6中允许从数组中提取值，按照对应位置，对变量赋值，对象也可以实现解构</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> tmp = <span class="title function_">foo</span>(),</span><br><span class="line">a = tmp[<span class="number">0</span>], b = tmp[<span class="number">1</span>], c = tmp[<span class="number">2</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a, b, c);</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p>上例可以看到，我们进行一个手动赋值，把foo()返回数组中的值赋给独立变量a,b,c ，为了实现这一点我们需要一个临时变量<code>tmp</code>。</p>
+<h5 id="1）数组解构"><a href="#1）数组解构" class="headerlink" title="1）数组解构"></a>1）数组解构</h5><div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">let</span> [a, b, c，d] = <span class="title function_">foo</span>();</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(a)<span class="comment">//1</span></span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(b)<span class="comment">//2</span></span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(c)<span class="comment">//3</span></span><br><span class="line"><span class="comment">//如果解构不成功，变量的值为undefined</span></span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<h5 id="2）对象解构"><a href="#2）对象解构" class="headerlink" title="2）对象解构"></a>2）对象解构</h5><div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">let</span> person = &#123; <span class="attr">name</span>: <span class="string">&#x27;zhangsan&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;; </span><br><span class="line"> <span class="keyword">let</span> &#123; name, age &#125; = person;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(name); <span class="comment">// &#x27;zhangsan&#x27; </span></span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(age); <span class="comment">// 20</span></span><br><span class="line"><span class="comment">//注意：对象的解构与数组有一个重要的不同。数组的元素是按次序排列的，变量的取值由它的位置决定；</span></span><br><span class="line"><span class="comment">//而对象的属性没有次序，变量必须与属性同名，才能取到正确的值。</span></span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p>我们还可以指定其他的属性名</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123;<span class="attr">name</span>: myName, <span class="attr">age</span>: myAge&#125; = person; <span class="comment">// myName myAge 属于别名</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myName); <span class="comment">// &#x27;zhangsan&#x27; </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myAge); <span class="comment">// 20</span></span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p>这实际上说明，对象的解构赋值是下面形式的简写</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">bar</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="attr">x</span>: <span class="number">4</span>,</span><br><span class="line">        <span class="attr">y</span>: <span class="number">5</span>,</span><br><span class="line">        <span class="attr">z</span>: <span class="number">6</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> &#123; <span class="attr">x</span>: x, <span class="attr">y</span>: y, <span class="attr">z</span>: z &#125; = <span class="title function_">bar</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(x, y, z);</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p>如果属性名和要赋值的变量名相同，这种语法可以更简短一些</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">bar</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="attr">x</span>: <span class="number">4</span>,</span><br><span class="line">        <span class="attr">y</span>: <span class="number">5</span>,</span><br><span class="line">        <span class="attr">z</span>: <span class="number">6</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> &#123; x, y, z &#125; = <span class="title function_">bar</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(x, y, z);</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<h5 id="3）小结"><a href="#3）小结" class="headerlink" title="3）小结"></a>3）小结</h5><ul>
+<li>解构赋值就是把数据解构分解，然后给变量进行赋值</li>
+<li>如果解构<strong>不成功</strong>，变量跟数值个数<strong>不匹配</strong>的时候，变量的值为**<code>undefined</code>**</li>
+<li>数组解构用中括号包裹，多个变量用逗号隔开，对象解构用花括号包裹，多个变量用逗号隔开</li>
+<li>利用解构赋值能够让我们方便的去取对象的属性跟方法</li>
+<li>以上只是一些基本的用法，我们还可以在解构的同时指定参数的默认值，对数组对象进行多次解构等。</li>
+</ul>
+<h1 id="对象字面量"><a href="#对象字面量" class="headerlink" title="对象字面量"></a>对象字面量</h1><h5 id="属性的简洁表示法"><a href="#属性的简洁表示法" class="headerlink" title="属性的简洁表示法"></a>属性的简洁表示法</h5><p>ES6允许对象的属性直接写变量，这时候属性名是变量名，属性值是变量值。在大括号里面，就可以直接写入变量和函数，作为对象的属性和方法。这样的书写更加简洁。</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> age = <span class="number">12</span>;</span><br><span class="line"><span class="keyword">const</span> name = <span class="string">&quot;Amy&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> person = &#123;age, name&#125;;</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p> 方法名也可以简写</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  <span class="title function_">sayHi</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hi&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">person.<span class="title function_">sayHi</span>();  <span class="comment">//&quot;Hi&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  <span class="attr">sayHi</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hi&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<h5 id="属性名表达式"><a href="#属性名表达式" class="headerlink" title="属性名表达式"></a>属性名表达式</h5><p>ES6允许用表达式作为属性名，但是一定要将表达式放在方括号内。</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line"> [<span class="string">&quot;he&quot;</span>+<span class="string">&quot;llo&quot;</span>]()&#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="string">&quot;Hi&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.<span class="title function_">hello</span>();  <span class="comment">//&quot;Hi&quot;</span></span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p>注意点：属性的简洁表示法和属性名表达式不能同时使用，否则会报错。</p>
+<div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123; [str] &#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj);</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<h1 id="对象的拓展运算符"><a href="#对象的拓展运算符" class="headerlink" title="对象的拓展运算符"></a>对象的拓展运算符</h1><p>拓展运算符（…）用于取出参数对象所有可遍历属性然后拷贝到当前对象。</p>
+<h5 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h5><div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = &#123;<span class="attr">name</span>: <span class="string">&quot;Amy&quot;</span>, <span class="attr">age</span>: <span class="number">15</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> someone = &#123; ...person &#125;;</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<h5 id="可用于合并两个对象"><a href="#可用于合并两个对象" class="headerlink" title="可用于合并两个对象"></a>可用于合并两个对象</h5><div class="code-container" code-lang="Javascript"><div class="codebox"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> age = &#123;<span class="attr">age</span>: <span class="number">15</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> name = &#123;<span class="attr">name</span>: <span class="string">&quot;Amy&quot;</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> person = &#123;...age, ...name&#125;;</span><br></pre></td></tr></table></figure><div class="code-fold" title="Fold/Open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></div><div class="code-copy" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></div></div></div>
+
+<p>同样，对于数组也有扩展运算符，用法基本一致。</p>
+<h1 id="map"><a href="#map" class="headerlink" title="map"></a>map</h1><p>用来存储键值对形式的数据</p>
+<ol>
+<li>size:map中属性的数量</li>
+<li>map.set可以用任意类型当key</li>
+<li>arry.from(map)能将map转数组<br> …展开转换</li>
+<li>数组也可以转map</li>
+</ol>
+<h1 id="set"><a href="#set" class="headerlink" title="set"></a>set</h1><p>用来创建集合,和数组类似,不能存储重复数据(简单数组去重)</p>
+<ol>
+<li>size获取数量</li>
+<li>add添加</li>
+<li>delete删除</li>
+<li>has检查</li>
+</ol>
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p>定义一个字符串的规则,检查字符串是否符合规则</p>
+</div><div class="post-reward"><div class="post-reward-btn" title="赞赏作者"><img src="/assets/images/svg/uc/uc-gift.svg" class="icon noview" alt="Icon"><span></span></div><div class="post-reward-content"><div class="post-reward-text"></div><div class="post-reward-list"><a href="/null" target="_blank">致谢名单</a></div></div></div><div class="post-copyright"><div class="post-copyright-info">本作品由 呼佳慧 于 2024-02-28 18:58:12 发布</div><div class="post-copyright-link"><span>作品地址：<a href="https://name9807.github.io/2024/02/28/JS%EF%BC%9A%E5%9F%BA%E7%A1%80/">JS：基础</a></span><button class="copy-text" type="button" data-text="https://name9807.github.io/2024/02/28/JS%EF%BC%9A%E5%9F%BA%E7%A1%80/">复制</button></div><div class="post-copyright-detail">除特别声明外，本站作品均采用 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' title='Attribution-NonCommercial-ShareAlike' target='_blank'>CC BY-NC-SA 4.0</a> 许可协议，转载请注明来自 <a href='/'>随便写吧</a></div><img class="post-copyright-icon noview" src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></div><div class="post-tail-tags"></div></div><aside id="post-sidebar" status="show"><div id="toc-container"><div class="toc-title"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"><span>目录</span></div><div class="toc-content" id="toc-div"><ol class="toc-list"><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-list-text">变量</span></a><ol class="toc-list-child"><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-list-text">作用域</span></a></li></ol></li></ol></li><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#javascript%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-list-text">javascript标识符</span></a></li><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-list-text">数据类型</span></a></li><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#%E5%80%BC%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-list-text">值的比较</span></a></li><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-list-text">类型转换</span></a></li><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-list-text">函数</span></a><ol class="toc-list-child"><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E5%87%BD%E6%95%B0%E5%86%85%E5%AE%B9"><span class="toc-list-text">函数内容</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E9%80%9A%E8%BF%87call%E5%92%8Capply%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-list-text">通过call和apply调用函数</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#bind"><span class="toc-list-text">bind</span></a></li></ol></li><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%9D%E6%83%B3"><span class="toc-list-text">面向对象思想</span></a><ol class="toc-list-child"><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E7%B1%BB"><span class="toc-list-text">类</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-list-text">构造函数</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E5%B0%81%E8%A3%85"><span class="toc-list-text">封装</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E5%A4%9A%E6%80%81"><span class="toc-list-text">多态</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-list-text">继承</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84"><span class="toc-list-text">对象的内存结构</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E5%AF%B9%E8%B1%A1%EF%BC%9A"><span class="toc-list-text">对象：</span></a><ol class="toc-list-child"><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7"><span class="toc-list-text">对象属性</span></a></li><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="toc-list-text">对象方法</span></a></li><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-list-text">实例</span></a></li><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#%E8%AE%BF%E9%97%AE%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7"><span class="toc-list-text">访问对象属性</span></a></li><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#%E8%AE%BF%E9%97%AE%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="toc-list-text">访问对象方法</span></a></li><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%A3%B0%E6%98%8E%E6%96%B9%E5%BC%8F"><span class="toc-list-text">对象的声明方式</span></a></li><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#%E6%9E%9A%E4%B8%BE%E5%B1%9E%E6%80%A7"><span class="toc-list-text">枚举属性</span></a></li><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#%E5%8F%AF%E5%8F%98%E7%B1%BB%E5%9E%8B"><span class="toc-list-text">可变类型</span></a></li></ol></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#window%E5%AF%B9%E8%B1%A1"><span class="toc-list-text">window对象</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#instanceof-hasown"><span class="toc-list-text">instanceof hasown</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#new%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-list-text">new运算符</span></a></li></ol></li><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#js%E6%95%B0%E7%BB%84%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-list-text">js数组与字符串</span></a><ol class="toc-list-child"><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-list-text">字符串</span></a></li><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-list-text">数组</span></a></li></ol></li></ol></li><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC"><span class="toc-list-text">解构赋值</span></a></li><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#%E5%AF%B9%E8%B1%A1%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="toc-list-text">对象字面量</span></a></li><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-list-text">对象的拓展运算符</span></a></li><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#map"><span class="toc-list-text">map</span></a></li><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#set"><span class="toc-list-text">set</span></a></li><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-list-text">正则表达式</span></a></li></ol></div></div></aside></div></div><div id="toolbar" hide=""><div id="toolbar-setting-container" hide=""><div class="toolbar-item"><button id="tool-color-mode" title="深色模式" type="button"><img src="/assets/images/svg/ta/ta-moon.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button class="copy-text" id="tool-share" title="分享" type="button" data-text="https://name9807.github.io/2024/02/28/JS%EF%BC%9A%E5%9F%BA%E7%A1%80/"><img src="/assets/images/svg/ta/ta-share.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-plus" title="放大字体" type="button"><img src="/assets/images/svg/ta/ta-text-plus.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-minus" title="缩小字体" type="button"><img src="/assets/images/svg/ta/ta-text-minus.svg" class="icon noview" alt="Icon"></button></div></div><div class="toolbar-container"><div class="toolbar-item"><button id="tool-setting" title="设置" type="button"><img src="/assets/images/svg/ta/ta-setting.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-toc" title="目录" type="button"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-gototop" title="返回顶部" type="button"><img src="/assets/images/svg/ta/ta-up.svg" class="icon noview" alt="Icon"></button></div></div></div></main><footer><div class="footer"><div id="footer-copyright">© 2024 - 2025 <span>💗</span> <a href="/null">呼佳慧</a></div><div id="footer-info"><div id="footer-framework">🚀本站由 <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/chanwj/hexo-theme-meow" title="3.1.0" target="_blank">Meow</a> 强力驱动</div><div id="footer-runtime"><span id="runtime" data-startdate="2024-04-02T22:16:20.000Z">🌻已稳定运行.年.月.天</span></div></div></div></footer><div class="scripts"><script>const GLOBALCONFIG = {
+  root: '/',
+  toolbar: true,
+  lazyload_src: '/assets/images/Meow-Loading.webp',
+  friends: false,
+  codeblock: true,
+  share_text: '🐱Share From Meow',
+  onblur_title: 'Please Come Back～✧(´▽`ʃ♡ƪ)',
+  mouse_click: false,
+  notify:{
+    enable: false,
+    info: '复制成功～转载请标注本文地址',
+    f12_info: '开发者模式已打开，请遵循本站版权协议'
+  },
+  search: {
+    enable: false,
+    path: 'search.json',
+    local: {
+      top_n_per_article: 1,
+      preload: false
+    }
+  },
+  encrypt: false,
+};
+</script><script>if (!localStorage.getItem('color-mode')) {
+  localStorage.setItem('color-mode', 'light' || 'light');
+}
+document.body.setAttribute('data-mode', localStorage.getItem('color-mode'));
+</script>
+<script src="/js/theme/tools/utils.js"></script>
+
+<script src="/js/plugins/dist/lazyload.min.js"></script>
+
+<script src="/js/plugins/view-image.min.js"></script>
+<script>if (localStorage.getItem('font-size')) {
+  document.querySelector('.post').style.fontSize = localStorage.getItem('font-size') + 'px';
+}
+</script>
+<script src="/js/main.js" type="module"></script>
+</div></body></html>
