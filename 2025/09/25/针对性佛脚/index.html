@@ -1,0 +1,247 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="author" content="呼佳慧"/><meta name="copyright" content="呼佳慧"/><meta name="theme-color" content="#FFB347"/><meta name="format-detection" content="telephone=no"/><meta name="keywords" content="Hexo Theme MEOW"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-touch-fullscreen" content="yes"/><meta name="application-name" content="随便写吧 | 随便写吧"/><meta name="apple-mobile-web-app-title" content="随便写吧 | 随便写吧"/><meta name="apple-mobile-web-app-status-bar-style" content="#FFB347"/><link rel="canonical" href="https://name9807.github.io/2025/09/25/针对性佛脚/"/><meta name="description" content="针对性佛脚    同源策略是什么？   是浏览器限制不同源之间的交互的安全策略。规定了只有协议，域名，端口三者都相同时，网页脚本才可以访问另一个网页内容。 同源策略的使用场景？ 防止CSRF（跨站请求伪造），防止隐私泄露 解决跨域的方法？ CORS：后端设置响应头，access-control-allow-origin允许指定源访问。 JSONP：好像是只支持GET已经过时了 配置反向...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="随便写吧 | 随便写吧">
+<meta property="og:url" content="https://name9807.github.io/2025/09/25/%E9%92%88%E5%AF%B9%E6%80%A7%E4%BD%9B%E8%84%9A/index.html">
+<meta property="og:site_name" content="随便写吧">
+<meta property="og:description" content="针对性佛脚    同源策略是什么？   是浏览器限制不同源之间的交互的安全策略。规定了只有协议，域名，端口三者都相同时，网页脚本才可以访问另一个网页内容。 同源策略的使用场景？ 防止CSRF（跨站请求伪造），防止隐私泄露 解决跨域的方法？ CORS：后端设置响应头，access-control-allow-origin允许指定源访问。 JSONP：好像是只支持GET已经过时了 配置反向...">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://name9807.github.io/2025/09/25/%E9%92%88%E5%AF%B9%E6%80%A7%E4%BD%9B%E8%84%9A/assets/images/Hexo-Theme-MEOW.png">
+<meta property="article:published_time" content="2025-09-25T07:41:30.172Z">
+<meta property="article:modified_time" content="2025-09-25T07:41:30.770Z">
+<meta property="article:author" content="呼佳慧">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://name9807.github.io/2025/09/25/%E9%92%88%E5%AF%B9%E6%80%A7%E4%BD%9B%E8%84%9A/assets/images/Hexo-Theme-MEOW.png"><meta name="robots" content="index,follow"/><meta name="googlebot" content="index,follow"/><meta name="revisit-after" content="1 days"/><title>随便写吧 | 随便写吧</title><link rel="shortcut icon" href="/assets/images/Hexo-Theme-MEOW.ico"><link rel="preconnect" href="/assets"/><link rel="preconnect" href="assets"/>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="prefetch" href="/"/><link rel="prefetch" href="/archives"/><link rel="prefetch" href="/tags"/><meta name="generator" content="Hexo 7.1.1"></head><body bg-style="none"><header><div id="navbar"><div id="nav-info"><a id="site-icon" href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a id="site-name" href="/" title="主页"><div>随便写吧</div><img src="/assets/images/svg/uc/uc-home.svg" class="icon noview" alt="Icon"></a></div><div id="nav-menu"></div><div id="nav-function"><div id="menu-btn"><a href="javascript:void(0);" title="打开菜单"><img src="/assets/images/svg/uc/uc-menu.svg" class="icon noview" alt="Icon"></a></div></div></div></header><div id="menu-aside"><div id="menu-aside-container"><div id="menu-aside-info"><a href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a href="/" title="主页">随便写吧</a></div><hr/></div></div><main><div class="banner"><div class="banner-info"><div class="banner-avatar"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Avatar"/></div><div class="banner-title">「 MEOW 」</div></div></div><div class="post-container"><div class="post-main"><div class="post-content"><h1 class="post-title"></h1><div class="post-author"><span>作者: 呼佳慧</span></div><div class="post-meta"><div class="post-info"><div class="post-date"><div class="post-pubdate"><img src="/assets/images/svg/ta/ta-pubdate.svg" class="icon noview" alt="Icon"><span>发表于2025-09-25</span></div><div class="post-update"><img src="/assets/images/svg/ta/ta-update.svg" class="icon noview" alt="Icon"><span>更新于2025-09-26</span></div></div><div class="post-read"></div></div><div class="post-attribute"></div></div><div class="post markdown" indent="false"><ul>
+<li><p><input disabled="" type="checkbox"> </p>
+<h1 id="针对性佛脚"><a href="#针对性佛脚" class="headerlink" title="针对性佛脚"></a>针对性佛脚</h1></li>
+<li><p><input checked="" disabled="" type="checkbox"> </p>
+<ol>
+<li>同源策略是什么？<br>   是浏览器限制不同源之间的交互的安全策略。规定了只有协议，域名，端口三者都相同时，网页脚本才可以访问另一个网页内容。</li>
+<li>同源策略的使用场景？<br> 防止CSRF（跨站请求伪造），防止隐私泄露</li>
+<li>解决跨域的方法？<ul>
+<li>CORS：后端设置响应头，access-control-allow-origin允许指定源访问。</li>
+<li>JSONP：好像是只支持GET已经过时了</li>
+<li>配置反向代理</li>
+</ul>
+</li>
+<li></li>
+</ol>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> </p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> 
+\</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> </p>
+<ul>
+<li><input disabled="" type="checkbox"> <ul>
+<li><input checked="" disabled="" type="checkbox"> 同源策略是什么<br>  \2. 同源策略使用场景<br>  \3. jsonp 及其不足<br>  \4. CDN 一般放什么数据<br>  \5. 同源策略在什么场景下有限制<br>  \6. 页面嵌入 iframe 有什么限制<br>  \7. MVVM<br>  \8. MVVM 和 MVP 区别<br>  \9. 还有什么模型<br>  \10. HTML 常用标签<br>  \11. src 和 href 的区别<br>  \12. 常用布局方式<br>  \13. 网页中右下角固定<br>  \14. flex 一行五个卡片 最后一个不占用空间<br>  \15. js 数据类型<br>  \16. vue 双向绑定原理？对于数组呢？<br>  \17. 先执行父组件的生命周期还是 mixin 的生命周期<br>  \18. mixin 定义相同变量以哪个为主</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+Promise.all<br>\1. 是什么<br>\2. 入参顺序与出参顺序为什么相同<br>  \5. Vue<br>\1. Vue2 与 Vue3 的区别<br>\2. 不同版本所使用的状态管理库的区别<br>\3. 为什么不学 React（他觉得 Vue 很简单）<br>  \6. Node 会吗，不会<br>  \7. 循环<br>\1. 有哪些循环，区别是什么<br>\2. 哪些可以 break，为什么可以，为什么不可以<br>  \8. 什么时候能来，能实习多久</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+作者：daisy9542<br>  链接：<a target="_blank" rel="noopener" href="https://www.nowcoder.com/feed/main/detail/b13a70f2970f4b09b1670a8ca5d16f6f?sourceSSR=search">https://www.nowcoder.com/feed/main/detail/b13a70f2970f4b09b1670a8ca5d16f6f?sourceSSR=search</a><br>  来源：牛客网</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+<a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?content_id=263136352&content_type=Article&match_order=1&q=CSS+%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD&zhida_source=entity">CSS 垂直居中</a>有哪些方法？追问：如果有两个 div，一个设置了 <code>[display: block](https://zhida.zhihu.com/search?content_id=263136352&amp;content_type=Article&amp;match_order=1&amp;q=display%3A+block&amp;zhida_source=entity)</code>，另一个怎么让它占满整个容器？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+\2. <code>px</code>、<code>rem</code>、<code>vw</code> 有什么区别？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+\3. 深拷贝和浅拷贝有什么区别？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+\4. 怎么把一个<a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?content_id=263136352&content_type=Article&match_order=1&q=%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E6%88%90%E6%A0%91%E5%BD%A2%E7%BB%93%E6%9E%84&zhida_source=entity">一维数组转换成树形结构</a>？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+\5. 怎么取消一个定时器？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+\6. <code>git pull</code> 和 <code>[git fetch](https://zhida.zhihu.com/search?content_id=263136352&amp;content_type=Article&amp;match_order=1&amp;q=git+fetch&amp;zhida_source=entity)</code> 有什么区别？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+\7. 你同事在一个他自己的分支上写好了一个通用方法，你怎么用 git 把这个方法拿到你的分支上用？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+自我介绍（简要描述项目经历，重点是前端框架的选择）</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+讲一下你对MVVM和MVC模式的理解，以及两者的区别</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+React的生命周期有哪些？请你举例说明</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+你在前端性能优化方面有哪些经验？如何减少页面加载时间？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+什么是事件委托？可以举个例子说明吗？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+手写一个简单的防抖函数，如何避免多个请求发出？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+你如何理解异步编程？Promise和async&#x2F;await的区别是什么？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+作者：张不惑_<br>  链接：<a target="_blank" rel="noopener" href="https://www.nowcoder.com/feed/main/detail/49b9f253e193472ca89fc05ca59dc5a5?sourceSSR=enterprise">https://www.nowcoder.com/feed/main/detail/49b9f253e193472ca89fc05ca59dc5a5?sourceSSR=enterprise</a><br>  来源：牛客网</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+vue2和vue3区别</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+2.了解跨端吗，RN和taro，说一下他们底层原理（怎么实现跨端的）</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+3.react和vue区别</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+4.讲解一下react中常用hook</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+5.为什么react要用hook而不用之前那种类的方式</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+6.讲解一下304状态码</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+7.强缓存和协商缓存</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+8.cache control有哪些常见字段</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+9.跨域有哪些常见字段（access control allow-*一系列）</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+10.跨域怎么携带cookie（with Credentials），还有其他方式嘛</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+11.有哪些常见的跨域方式</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+12.怎么减少包大小，有哪些常见做法（分包和把图片部署到网络上CDN加速）</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+13.了解webpack嘛，还知道其他构建工具吗，讲解一下他们的区别</p>
+</li>
+<li><p><input disabled="" type="checkbox"> </p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+作者：许愿赢在转折点<br>  链接：<a target="_blank" rel="noopener" href="https://www.nowcoder.com/discuss/800076643397021696?sourceSSR=enterprise">https://www.nowcoder.com/discuss/800076643397021696?sourceSSR=enterprise</a><br>  来源：牛客网</p>
+</li>
+<li><p><input disabled="" type="checkbox"> </p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+接触前端开发有多长时间？为什么在三月份从上一段实习离开？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+英语六级分数是多少？平时看英文文档还是中文文档？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+请介绍一下 Promise，它是什么？Promise 有几种状态？Promise.then() 是做什么用的？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+（代码场景题）给定一个状态为 fulfilled 的 Promise P1，当 .then() 的回调函数分别正常返回、抛出错误、返回 null、返回一个新的 Promise P3 时，新的 Promise P2 的状态和值分别是什么？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+（代码场景题）给定一个状态为 rejected 的 Promise P1，当 .then() 的回调函数分别正常返回、抛出错误、返回 null、返回一个新的 Promise 时，新的 Promise P2 的状态和值&#x2F;原因分别是什么？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+用过 React 18 吗？用过哪些 React Hooks？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+（场景题）对于一个翻页器组件，有哪些属性可以用 useMemo 来进行计算缓存？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+对 Redux 的使用达到了什么程度？用过 Redux Toolkit 吗？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+看过 Redux 的源码吗？底层是如何实现的？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+Redux 中 Reducer 的入参和出参分别是什么？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+编写 Reducer 时需要注意什么？可以在 Reducer 中执行有副作用的操作（如弹窗）吗？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+Redux 是如何通过一个根 Reducer (rootReducer) 来合并管理多个状态切片 (slice) 的？（考察 combineReducers，没答出来</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+Redux Middleware 是用来做什么的？什么情况下需要用到中间件？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+（TypeScript 问题）如何提取一个函数类型的返回类型？了解哪些 TypeScript 的工具类型函数？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+在 any 和 unknown 之间，会如何选择来为一个变量声明类型？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> </p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+作者：等 offer 时刷了会儿抖音<br>  链接：<a target="_blank" rel="noopener" href="https://www.nowcoder.com/discuss/799035047452942336?sourceSSR=enterprise">https://www.nowcoder.com/discuss/799035047452942336?sourceSSR=enterprise</a><br>  来源：牛客网</p>
+</li>
+<li><p><input disabled="" type="checkbox"> </p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+1.cesium绘制动效效果，飞线，图形类型<br>  2.状态管理pinia，路由vue-router<br>  3.v-if和v-show的区别<br>  4.元素在视窗范围内不可见的方法<br>  5.visibility和opacity两者有何区别<br>  6.display：none会引起页面重绘还是重排<br>  7.你在开发一个页面时候，有哪些方法可以减少重排和重绘？（减少DOM操作）<br>  8.前端路由有哪几种方式<br>  9.导航首位如何实现<br>  10.Webpack 和Vite的区别，为什么Vite快？<br>  11.Vite通过什么编译<br>  12.Webpack有使用过吗<br>  13.实现图片懒加载方式？如何判断滚动到这个图片资源？<br>  14.有了解过intersectionObserve这个API吗<br>  15.http状态码301、302<br>  16.前后端交互中，数据请求部分如何实现？是用了第三方库实现的吗？具体用什么来发送请求<br>  17.项目中对于视频可视化，逐帧转你是通过什么实现的？<br>  18.视频处理工具FFmpeg有了解过吗？<br>  19.视频帧有哪几种？视频上传过程？<br>  20.Promise中有哪些方法？<br>  21.localstorage<br>  22.如何实现子元素水平垂直居中？<br>  23.Grid布局中1fr表示什么<br>  24.rem，em有什么区别？宽度设置50vw表示什么？<br>  25.页面加载优化方式有哪些？<br>  26.服务端渲染相比普通渲染的优势？<br>  27.假如需要你新学习一个技术栈和框架的使用，你会哪几个方面规划你的学习路径，比如说你的学习时间很短只有一周时间<br>  28.小程序了解过吗？<br>  29.AI开发工具，如何帮助学习？</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+作者：面的都会<br>  链接：<a target="_blank" rel="noopener" href="https://www.nowcoder.com/feed/main/detail/6398116ff5f44486802577d125dbdbc7?sourceSSR=enterprise">https://www.nowcoder.com/feed/main/detail/6398116ff5f44486802577d125dbdbc7?sourceSSR=enterprise</a><br>  来源：牛客网</p>
+</li>
+<li><p><input disabled="" type="checkbox"> </p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+\1. 项目拷打<br>  \2. css 常见的定位方式<br>  \3. 如何实现水平垂直居中<br>  \4. js 闭包应用场景<br>  \5. js 事件循环<br>  \6. 讲一下 promise<br>  \7. react key 的作用，什么时候用 key 比较好<br>  \8. react 虚拟 dom 的作用<br>  \9. react 生命周期<br>  \10. 常见的打包工具<br>  \11. 前端如何应对高并发请求<br>  \12. 线上故障怎么排查与处理，具体流程是什么<br>  \13. 前端如何与后端和测试协作，排期冲突怎么办</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+作者：山长水远_<br>  链接：<a target="_blank" rel="noopener" href="https://www.nowcoder.com/feed/main/detail/32eb646ab6944f0c8730afe93766e905?sourceSSR=enterprise">https://www.nowcoder.com/feed/main/detail/32eb646ab6944f0c8730afe93766e905?sourceSSR=enterprise</a><br>  来源：牛客网</p>
+</li>
+</ul>
+</div><div class="post-reward"><div class="post-reward-btn" title="赞赏作者"><img src="/assets/images/svg/uc/uc-gift.svg" class="icon noview" alt="Icon"><span></span></div><div class="post-reward-content"><div class="post-reward-text"></div><div class="post-reward-list"><a href="/null" target="_blank">致谢名单</a></div></div></div><div class="post-copyright"><div class="post-copyright-info">本作品由 呼佳慧 于 2025-09-25 15:41:30 发布</div><div class="post-copyright-link"><span>作品地址：<a href="https://name9807.github.io/2025/09/25/%E9%92%88%E5%AF%B9%E6%80%A7%E4%BD%9B%E8%84%9A/"></a></span><button class="copy-text" type="button" data-text="https://name9807.github.io/2025/09/25/%E9%92%88%E5%AF%B9%E6%80%A7%E4%BD%9B%E8%84%9A/">复制</button></div><div class="post-copyright-detail">除特别声明外，本站作品均采用 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' title='Attribution-NonCommercial-ShareAlike' target='_blank'>CC BY-NC-SA 4.0</a> 许可协议，转载请注明来自 <a href='/'>随便写吧</a></div><img class="post-copyright-icon noview" src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></div><div class="post-tail-tags"></div></div><aside id="post-sidebar" status="show"><div id="toc-container"><div class="toc-title"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"><span>目录</span></div><div class="toc-content" id="toc-div"><ol class="toc-list"><li class="toc-list-item toc-list-level-1"><a class="toc-list-link" href="#%E9%92%88%E5%AF%B9%E6%80%A7%E4%BD%9B%E8%84%9A"><span class="toc-list-text">针对性佛脚</span></a></li></ol></div></div></aside></div></div><div id="toolbar" hide=""><div id="toolbar-setting-container" hide=""><div class="toolbar-item"><button id="tool-color-mode" title="深色模式" type="button"><img src="/assets/images/svg/ta/ta-moon.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button class="copy-text" id="tool-share" title="分享" type="button" data-text="https://name9807.github.io/2025/09/25/%E9%92%88%E5%AF%B9%E6%80%A7%E4%BD%9B%E8%84%9A/"><img src="/assets/images/svg/ta/ta-share.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-plus" title="放大字体" type="button"><img src="/assets/images/svg/ta/ta-text-plus.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-minus" title="缩小字体" type="button"><img src="/assets/images/svg/ta/ta-text-minus.svg" class="icon noview" alt="Icon"></button></div></div><div class="toolbar-container"><div class="toolbar-item"><button id="tool-setting" title="设置" type="button"><img src="/assets/images/svg/ta/ta-setting.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-toc" title="目录" type="button"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-gototop" title="返回顶部" type="button"><img src="/assets/images/svg/ta/ta-up.svg" class="icon noview" alt="Icon"></button></div></div></div></main><footer><div class="footer"><div id="footer-copyright">© 2024 - 2025 <span>💗</span> <a href="/null">呼佳慧</a></div><div id="footer-info"><div id="footer-framework">🚀本站由 <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/chanwj/hexo-theme-meow" title="3.1.0" target="_blank">Meow</a> 强力驱动</div><div id="footer-runtime"><span id="runtime" data-startdate="2024-04-02T22:16:20.000Z">🌻已稳定运行.年.月.天</span></div></div></div></footer><div class="scripts"><script>const GLOBALCONFIG = {
+  root: '/',
+  toolbar: true,
+  lazyload_src: '/assets/images/Meow-Loading.webp',
+  friends: false,
+  codeblock: true,
+  share_text: '🐱Share From Meow',
+  onblur_title: 'Please Come Back～✧(´▽`ʃ♡ƪ)',
+  mouse_click: false,
+  notify:{
+    enable: false,
+    info: '复制成功～转载请标注本文地址',
+    f12_info: '开发者模式已打开，请遵循本站版权协议'
+  },
+  search: {
+    enable: false,
+    path: 'search.json',
+    local: {
+      top_n_per_article: 1,
+      preload: false
+    }
+  },
+  encrypt: false,
+};
+</script><script>if (!localStorage.getItem('color-mode')) {
+  localStorage.setItem('color-mode', 'light' || 'light');
+}
+document.body.setAttribute('data-mode', localStorage.getItem('color-mode'));
+</script>
+<script src="/js/theme/tools/utils.js"></script>
+
+<script src="/js/plugins/dist/lazyload.min.js"></script>
+
+<script src="/js/plugins/view-image.min.js"></script>
+<script>if (localStorage.getItem('font-size')) {
+  document.querySelector('.post').style.fontSize = localStorage.getItem('font-size') + 'px';
+}
+</script>
+<script src="/js/main.js" type="module"></script>
+</div></body></html>
