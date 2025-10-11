@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="author" content="呼佳慧"/><meta name="copyright" content="呼佳慧"/><meta name="theme-color" content="#FFB347"/><meta name="format-detection" content="telephone=no"/><meta name="keywords" content="js,html"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-touch-fullscreen" content="yes"/><meta name="application-name" content="JS：事件模型 | 随便写吧"/><meta name="apple-mobile-web-app-title" content="JS：事件模型 | 随便写吧"/><meta name="apple-mobile-web-app-status-bar-style" content="#FFB347"/><link rel="canonical" href="https://name9807.github.io/2025/09/18/JS：事件模型/"/><meta name="description" content="事件与事件流javascript中的事件，可以理解就是在HTML文档或者浏览器中发生的一种交互操作，使得网页具备互动性， 常见的有加载事件、鼠标事件、自定义事件等 由于DOM是一个树结构，如果在父子节点绑定事件时候，当触发子节点的时候，就存在一个顺序问题，这就涉及到了事件流的概念 事件流都会经历三个阶段：  事件捕获阶段(capture phase) 处于目标阶段(target phase)...">
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="author" content="呼佳慧"/><meta name="copyright" content="呼佳慧"/><meta name="theme-color" content="#FFB347"/><meta name="format-detection" content="telephone=no"/><meta name="keywords" content="js,html"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-touch-fullscreen" content="yes"/><meta name="application-name" content="JS：事件模型 | 随便写吧"/><meta name="apple-mobile-web-app-title" content="JS：事件模型 | 随便写吧"/><meta name="apple-mobile-web-app-status-bar-style" content="#FFB347"/><link rel="canonical" href="https://name9807.github.io/2025/09/18/JS：事件模型/"/><meta name="description" content="事件与事件流javascript中的事件，可以理解就是在HTML文档或者浏览器中发生的一种交互操作，使得网页具备互动性， 常见的有加载事件、鼠标事件、自定义事件等 由于DOM是一个树结构，如果在父子节点绑定事件时候，当触发子节点的时候，就存在一个顺序问题，这就涉及到了事件流的概念 事件流都会经历三个阶段：  事件捕获阶段(capture phase)  处于目标阶段(target phase...">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS：事件模型 | 随便写吧">
 <meta property="og:url" content="https://name9807.github.io/2025/09/18/JS%EF%BC%9A%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/index.html">
 <meta property="og:site_name" content="随便写吧">
-<meta property="og:description" content="事件与事件流javascript中的事件，可以理解就是在HTML文档或者浏览器中发生的一种交互操作，使得网页具备互动性， 常见的有加载事件、鼠标事件、自定义事件等 由于DOM是一个树结构，如果在父子节点绑定事件时候，当触发子节点的时候，就存在一个顺序问题，这就涉及到了事件流的概念 事件流都会经历三个阶段：  事件捕获阶段(capture phase) 处于目标阶段(target phase)...">
+<meta property="og:description" content="事件与事件流javascript中的事件，可以理解就是在HTML文档或者浏览器中发生的一种交互操作，使得网页具备互动性， 常见的有加载事件、鼠标事件、自定义事件等 由于DOM是一个树结构，如果在父子节点绑定事件时候，当触发子节点的时候，就存在一个顺序问题，这就涉及到了事件流的概念 事件流都会经历三个阶段：  事件捕获阶段(capture phase)  处于目标阶段(target phase...">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://name9807.github.io/2025/09/18/JS%EF%BC%9A%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/assets/images/Hexo-Theme-MEOW.png">
 <meta property="article:published_time" content="2025-09-18T06:45:57.000Z">
-<meta property="article:modified_time" content="2025-09-26T14:19:11.092Z">
+<meta property="article:modified_time" content="2025-10-11T06:32:52.390Z">
 <meta property="article:author" content="呼佳慧">
 <meta property="article:tag" content="js">
 <meta property="article:tag" content="html">
@@ -18,9 +18,27 @@
 <p>由于<code>DOM</code>是一个树结构，如果在父子节点绑定事件时候，当触发子节点的时候，就存在一个顺序问题，这就涉及到了事件流的概念</p>
 <p>事件流都会经历三个阶段：</p>
 <ul>
-<li>事件捕获阶段(capture phase)</li>
-<li>处于目标阶段(target phase)</li>
-<li>事件冒泡阶段(bubbling phase)</li>
+<li><p>事件捕获阶段(capture phase)</p>
+</li>
+<li><p>处于目标阶段(target phase)</p>
+</li>
+<li><p>事件冒泡阶段(bubbling phase)</p>
+<p>  在 JavaScript 中，大部分事件会沿着 DOM 树向上冒泡（从触发元素到祖先元素），但有一些事件不会冒泡。以下是常见的不会冒泡的事件：</p>
+<ol>
+<li><strong>focus</strong>：元素获得焦点时触发</li>
+<li><strong>blur</strong>：元素失去焦点时触发</li>
+<li><strong>mouseenter</strong>：鼠标进入元素时触发（与 <code>mouseover</code> 不同，后者会冒泡）</li>
+<li><strong>mouseleave</strong>：鼠标离开元素时触发（与 <code>mouseout</code> 不同，后者会冒泡）</li>
+<li><strong>load</strong>：资源（如图片、脚本）加载完成时触发</li>
+<li><strong>unload</strong>：资源卸载完成时触发</li>
+<li><strong>error</strong>：发生错误时触发（如图片加载失败）</li>
+<li><strong>abort</strong>：资源加载被中断时触发</li>
+<li><strong>scroll</strong>：元素滚动时触发（虽然不会冒泡，但可以通过 <code>window</code> 监听）</li>
+<li><strong>resize</strong>：窗口或元素大小改变时触发</li>
+</ol>
+<p>  这些事件之所以不冒泡，通常是因为它们与特定元素的状态或资源加载过程相关，不需要在 DOM 树中向上传播。例如，<code>focus</code> 和 <code>blur</code> 仅与当前获得 &#x2F; 失去焦点的元素相关，而 <code>mouseenter</code>&#x2F;<code>mouseleave</code> 设计为不冒泡是为了避免父元素重复触发事件。</p>
+<p>  需要注意的是，虽然 <code>focus</code> 和 <code>blur</code> 本身不冒泡，但可以通过 <code>focusin</code> 和 <code>focusout</code> 事件来监听类似行为，这两个事件是会冒泡的。</p>
+</li>
 </ul>
 <h2 id="事件模型"><a href="#事件模型" class="headerlink" title="事件模型"></a>事件模型</h2><p>事件模型可以分为三种：</p>
 <ul>
